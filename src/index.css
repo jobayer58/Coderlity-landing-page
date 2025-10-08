@@ -1,40 +1,43 @@
 .icon-div {
     width: 56px;
     height: 56px;
-    border-radius: 50%; /* fully rounded */
+    border-radius: 50%;
+    /* fully rounded */
     background-color: #E9EBF1;
-  }
+}
 
-.icon{
+.icon {
     padding: 2px 6px;
-    margin: 4px ;
+    margin: 4px;
     font-size: 30px;
-    display: flex ;
+    display: flex;
     justify-items: center;
     justify-content: center;
     align-items: center;
 }
 
 
-.div-parent{
+.div-parent {
     background-color: #F3F4F6;
     padding: 6px 0px 4rem 0px;
 }
 
-.card-div{
+.card-div {
     align-items: center;
     justify-content: center;
 }
 
-.card1{
-    
-    min-height: 400px;
+.card1 {
+
+    height: 410px;
+    max-width: 366px;
     background-color: white;
+    overflow: hidden;
 }
 
 .dollarSize {
-  font-size: 28px;
-  font-weight: bold;
-  color: black;
-  
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+
 }
