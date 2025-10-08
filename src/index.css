@@ -1,0 +1,36 @@
+.icon-div {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%; /* fully rounded */
+    background-color: #E9EBF1;
+  }
+
+.icon{
+    padding: 2px 6px;
+    margin: 4px ;
+    font-size: 30px;
+    display: flex ;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+}
+.font-color{
+    color: #555555;
+}
+
+.div-parent{
+    background-color: #F3F4F6;
+    padding: 6px 0px 20px 0px;
+}
+
+.card-div{
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.card1{
+    
+    height: 400px;
+    background-color: white;
+}
