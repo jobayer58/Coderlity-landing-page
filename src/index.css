@@ -16,7 +16,7 @@
     align-items: center;
 }
 
-
+/* top products */
 .div-parent {
     background-color: #F3F4F6;
     padding: 6px 0px 4rem 0px;
@@ -40,4 +40,9 @@
     font-weight: bold;
     color: black;
 
+}
+
+/* sponsored */
+.sponsored{
+    /* height: 42px; */
 }
