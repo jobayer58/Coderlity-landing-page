@@ -14,29 +14,22 @@
     justify-content: center;
     align-items: center;
 }
-.font-color{
-    color: #555555;
-}
+
 
 .div-parent{
     background-color: #F3F4F6;
-    padding: 6px 0px 20px 0px;
+    padding: 6px 0px 4rem 0px;
 }
 
 .card-div{
-    justify-items: center;
     align-items: center;
     justify-content: center;
 }
 
 .card1{
     
-    height: 420px;
+    min-height: 400px;
     background-color: white;
-}
-
-.liveText{
-    color: #FF946A;
 }
 
 .dollarSize {
