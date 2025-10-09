@@ -133,6 +133,7 @@ body {
     background-color: #E6F3FF;
     padding: 4px 12px;
     border-radius: 8px;
+    color: black;
 }
 
 .input-Nav {
@@ -163,6 +164,50 @@ body {
 .threeDot{
     font-size: 35px;
 }
+
+
+/*  */
+
+/* Floating Logos Background */
+.floating-logos {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.floating-logo {
+  position: absolute;
+  opacity: 1; 
+  animation: float 6s ease-in-out infinite;
+  width: auto; 
+  height: auto;
+  max-width: 120px; 
+  max-height: 120px;
+  filter: none; 
+}
+
+/* Different positions with original sizes */
+.logo-1 { top: 20%; left: 15%; animation-delay: 0s; max-width: 100px; }
+.logo-2 { top: 22%; right: 18%; animation-delay: 1s; max-width: 110px; }
+.logo-3 { top: 45%; left: 25%; animation-delay: 2s; max-width: 90px; }
+.logo-4 { top: 45%; right: 8%; animation-delay: 3s; max-width: 105px; }
+.logo-5 { bottom: 25%; right: 25%; animation-delay: 4s; max-width: 120px; }
+.logo-6 { top: 65%; left: 10%; animation-delay: 5s; max-width: 95px; }
+.logo-7 { bottom: 15%; right: 18%; animation-delay: 1.5s; max-width: 85px; }
+.logo-8 { top: 35%; left: 25%; animation-delay: 2.5s; max-width: 80px; }
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg) scale(1); 
+  }
+  50% { 
+    transform: translateY(-20px) rotate(5deg) scale(1.1); 
+  }
+}
+
 
 
 

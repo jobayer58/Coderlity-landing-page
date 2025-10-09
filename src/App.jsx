@@ -21,6 +21,14 @@ import banner1 from '../src/assets/iamges/banner1.png'
 import banner2 from '../src/assets/iamges/banner2.png'
 import spinning from '../src/assets/iamges/spinning 1.png'
 import { BiMessageDetail } from "react-icons/bi"
+import logo1 from '../src/assets/iamges/logo1.png'
+import logo2 from '../src/assets/iamges/logo2.png'
+import logo3 from '../src/assets/iamges/logo3.png'
+import logo4 from '../src/assets/iamges/logo4.png'
+import logo5 from '../src/assets/iamges/logo5.png'
+import logo6 from '../src/assets/iamges/logo6.png'
+import logo7 from '../src/assets/iamges/logo7.png'
+import logo8 from '../src/assets/iamges/logo8.png'
 
 
 function App() {
@@ -87,6 +95,17 @@ function App() {
 
         {/*banner  */}
         <section className="banner-section">
+          {/* Background Floating Logos */}
+          <div className="floating-logos">
+            <img src={logo1} alt="" className="floating-logo logo-1" />
+            <img src={logo2} alt="" className="floating-logo logo-2" />
+            <img src={logo3} alt="" className="floating-logo logo-3" />
+            <img src={logo4} alt="" className="floating-logo logo-4" />
+            <img src={logo5} alt="" className="floating-logo logo-5" />
+            <img src={logo6} alt="" className="floating-logo logo-6" />
+            {/* <img src={logo7} alt="" className="floating-logo logo-5" />
+            <img src={logo8} alt="" className="floating-logo logo-6" /> */}
+          </div>
           <div>
             <h5 className="text">Looking for Your One Stop Solution? </h5>
             <h1 className="text-description">Complete Digital Solutions <br />
