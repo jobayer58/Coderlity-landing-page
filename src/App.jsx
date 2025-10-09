@@ -14,9 +14,13 @@ import { SiHostinger } from "react-icons/si"
 import { GrJs } from "react-icons/gr"
 import logo from '../src/assets/iamges/web logo1 1 1.svg'
 // import { Navbar } from "react-bootstrap"
-import { Button, Col, Container, Nav, Navbar, Row } from "react-bootstrap";
-import { PiSignIn } from "react-icons/pi"
-import { IoApps } from "react-icons/io5"
+import { Button, ButtonGroup, ButtonToolbar, Col, Container, InputGroup, Nav, Navbar, Row } from "react-bootstrap";
+import { PiDotsThreeVerticalBold, PiSignIn } from "react-icons/pi"
+import { IoApps, IoCall } from "react-icons/io5"
+import banner1 from '../src/assets/iamges/banner1.png'
+import banner2 from '../src/assets/iamges/banner2.png'
+import spinning from '../src/assets/iamges/spinning 1.png'
+import { BiMessageDetail } from "react-icons/bi"
 
 
 function App() {
@@ -88,6 +92,50 @@ function App() {
             <h1 className="text-description">Complete Digital Solutions <br />
               for Your Business</h1>
           </div>
+          <ButtonToolbar className="btnToolbar">
+            <Button variant="dark" className="bannerBtn1">
+              <IoCall className="IoCall" /> Book an intro call
+            </Button>
+            <Button variant="light" className="bannerBtn2">
+              Explore Our Work
+            </Button>
+          </ButtonToolbar>
+
+          <InputGroup className="inputImg">
+            <img src={banner2} alt="" />
+            <img src={banner1} alt="" />
+          </InputGroup>
+
+          <Row className="align-items-center input-Nav">
+            <Col xs="auto">
+              <img src={spinning} alt="" />
+            </Col>
+
+            <Col>
+              <Nav className="banner-btn-parent ">
+                <Nav.Link className="banner-btn">Web Application</Nav.Link>
+                <Nav.Link className="banner-btn">Mobile Application</Nav.Link>
+                <Nav.Link className="banner-btn">Zacta E-Invoicing</Nav.Link>
+                <Nav.Link className="banner-btn">Digital Marketing</Nav.Link>
+                <Nav.Link className="banner-btn">UI/UX</Nav.Link>
+                <Nav.Link className="banner-btn">Tech Consultency</Nav.Link>
+              </Nav>
+            </Col>
+
+            <Col xs="auto">
+              <Row className="message-parent g-2">
+                <Col xs="auto">
+                  <div className="message-div">
+                    <BiMessageDetail className="message" />
+                  </div>
+                </Col>
+                <Col xs="auto">
+                  <PiDotsThreeVerticalBold className="threeDot" />
+                </Col>
+              </Row>
+            </Col>
+          </Row>
+
         </section>
 
       </header>

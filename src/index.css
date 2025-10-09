@@ -1,14 +1,19 @@
 /* font */
+/* work font */
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+/* jet brains */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
-body{
+body {
     font-family: "Work Sans", sans-serif;
 }
+
 /* header */
 .headerBg {
     background: linear-gradient(90deg, #d3eaff, #ffffff, #d3eaff);
 
 }
+
 /* navbar */
 
 .container {
@@ -20,9 +25,11 @@ body{
     padding: 20px 80px;
 
 }
-.nav-parent{
+
+.nav-parent {
     justify-content: center;
 }
+
 .nav-li {
     font-weight: 600;
     gap: 8px;
@@ -57,23 +64,105 @@ body{
 }
 
 /* banner */
-.banner-section{
+.banner-section {
     padding: 3rem 0rem;
-    border:#000;
+    border: #000;
 }
 
-.text{
+.text {
     padding: 1rem 0rem;
+    font-family: "JetBrains Mono", monospace;
     text-align: center;
 }
 
-.text-description{
+.text-description {
     font-size: 4rem;
     text-align: center;
     font-weight: 600;
 }
 
+.btnToolbar {
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #E6F3FF; */
+    padding: 2rem 0rem;
+}
 
+.bannerBtn1 {
+    padding: 10px 16px;
+    display: inline-flex;
+    gap: 5px;
+    align-items: center;
+    font-weight: 600;
+}
+
+.bannerBtn2 {
+    border: 1px solid;
+    padding: 10px 16px;
+    border-radius: 6px;
+    gap: 5px;
+    font-weight: 600;
+
+}
+
+.IoCall {
+    background-color: #0088FF;
+    height: 24px;
+    width: 24px;
+    padding: 4px;
+    border-radius: 4px;
+
+}
+
+.inputImg {
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    padding: 1rem 0rem;
+}
+
+.banner-btn-parent {
+    gap: 1rem;
+    justify-content: center;
+    
+}
+
+.banner-btn {
+    font-weight: 500;
+    background-color: #E6F3FF;
+    padding: 4px 12px;
+    border-radius: 8px;
+}
+
+.input-Nav {
+    justify-content: space-between;
+    padding: 3rem 6rem;
+    align-items: center;
+}
+.message-parent{
+    align-items: center;
+    
+}
+.message-div {
+  border: 2px solid #9BA3BC;
+  border-radius: 50%;
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  
+}
+
+.message {
+    font-size: 30px;
+    color: #0088FF;
+}
+.threeDot{
+    font-size: 35px;
+}
 
 
 
