@@ -121,7 +121,7 @@ function App() {
 
         </Navbar>
 
-        {/*banner  */}
+        {/*banner section */}
         <section className="banner-section">
           {/* Background Floating Logos */}
           <div className="floating-logos">
@@ -170,7 +170,7 @@ function App() {
             </Col>
 
             <Col xs="auto">
-              <Row className="message-parent g-2">
+              <Row className="message-parent ">
                 <Col xs="auto">
                   <div className="message-div">
                     <BiMessageDetail className="message" />
@@ -314,7 +314,7 @@ function App() {
 
       <section className="" style={{ backgroundColor: '#FAFAFA' }}>
         {/* sponsored section */}
-        <section className="py-4">
+        <section className="py-4 sponsored">
           <div className="py-4" style={{ backgroundColor: '#FFFFFF' }}>
             <div className="d-flex justify-content-around gap-5">
               <img src={sponsored1} alt="sponsor" className="img-fluid" />
