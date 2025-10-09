@@ -10,12 +10,11 @@ import sponsored4 from '../src/assets/iamges/sponsored4.png'
 import sponsored5 from '../src/assets/iamges/sponsored5.png'
 import sponsored6 from '../src/assets/iamges/sponsored6.png'
 import sponsored7 from '../src/assets/iamges/sponsored7.png'
-import Marquee from "react-fast-marquee"
 import { SiHostinger } from "react-icons/si"
 import { GrJs } from "react-icons/gr"
 import logo from '../src/assets/iamges/web logo1 1 1.svg'
 // import { Navbar } from "react-bootstrap"
-import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import { Button, Col, Container, Nav, Navbar, Row } from "react-bootstrap";
 import { PiSignIn } from "react-icons/pi"
 import { IoApps } from "react-icons/io5"
 
@@ -26,61 +25,63 @@ function App() {
     <main>
       <header className="headerBg">
         <Navbar expand="lg" variant="light">
-          <Container className="  py-2">
-            {/* Left: Logo */}
-            <Navbar.Brand href="#">
-              <img src={logo} alt="Logo" height="50" />
-            </Navbar.Brand>
 
-            {/* Center: Nav Links */}
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse
-              id="basic-navbar-nav"
-              className="justify-content-center"
-            >
-              <Nav className="fw-semibold d-flex align-items-center gap-2">
-                <Nav.Link href="#">
-                  Home <MdKeyboardArrowDown />
-                </Nav.Link>
-                <span className="divider">/</span>
+          {/* Left: Logo */}
+          <Navbar.Brand href="#">
+            <img src={logo} alt="Logo" />
+          </Navbar.Brand>
 
-                <Nav.Link href="#">
-                  Services <MdKeyboardArrowDown />
-                </Nav.Link>
-                <span className="divider">/</span>
+          {/* Center: Nav Links */}
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse
+            id="basic-navbar-nav"
+            className="justify-content-center"
+          >
+            <Nav className=" nav-div">
+              <Nav.Link href="#">
+                Home <MdKeyboardArrowDown />
+              </Nav.Link>
+              <span className="divider">/</span>
 
-                <Nav.Link href="#">
-                  Products <MdKeyboardArrowDown />
-                </Nav.Link>
-                <span className="divider">/</span>
+              <Nav.Link href="#">
+                Services <MdKeyboardArrowDown />
+              </Nav.Link>
+              <span className="divider">/</span>
 
-                <Nav.Link href="#">
-                  Digital Marketing <MdKeyboardArrowDown />
-                </Nav.Link>
-                <span className="divider">/</span>
+              <Nav.Link href="#">
+                Products <MdKeyboardArrowDown />
+              </Nav.Link>
+              <span className="divider">/</span>
 
-                <Nav.Link href="#">
-                  Company <MdKeyboardArrowDown />
-                </Nav.Link>
-                <span className="divider">/</span>
-              </Nav>
-            </Navbar.Collapse>
+              <Nav.Link href="#">
+                Digital Marketing <MdKeyboardArrowDown />
+              </Nav.Link>
+              <span className="divider">/</span>
 
-            {/* Right: My Account + IoApps */}
-            <div className="d-flex align-items-center gap-3">
-              <Button
-                variant="dark"
-                className="d-flex justify-content-center align-items-center gap-1 px-3 py-2"
-              >
+              <Nav.Link href="#">
+                Company <MdKeyboardArrowDown />
+              </Nav.Link>
+              <span className="divider">/</span>
+            </Nav>
+          </Navbar.Collapse>
+
+          {/* Right: My Account + IoApps */}
+
+          <Row className="account-div">
+            <Col xs="auto">
+              <Button variant="dark" className="accountBtn">
                 <PiSignIn /> My Account
               </Button>
-              <IoApps className="fs-3 ioApps" />
-            </div>
-          </Container>
+            </Col>
+            <Col xs="auto">
+              <IoApps className="ioApps" />
+            </Col>
+          </Row>
+
         </Navbar>
       </header>
 
-      
+
       {/* domain purchase section */}
       <section>
         <div className="" style={{
