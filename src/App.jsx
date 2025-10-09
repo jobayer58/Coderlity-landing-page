@@ -23,7 +23,8 @@ function App() {
 
   return (
     <main>
-      <header className="headerBg">
+      <header className="headerBg" >
+        {/* navbar */}
         <Navbar expand="lg" variant="light">
 
           {/* Left: Logo */}
@@ -35,9 +36,9 @@ function App() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse
             id="basic-navbar-nav"
-            className="justify-content-center"
+            className="nav-parent"
           >
-            <Nav className=" nav-div">
+            <Nav className=" nav-li">
               <Nav.Link href="#">
                 Home <MdKeyboardArrowDown />
               </Nav.Link>
@@ -79,6 +80,16 @@ function App() {
           </Row>
 
         </Navbar>
+
+        {/*banner  */}
+        <section className="banner-section">
+          <div>
+            <h5 className="text">Looking for Your One Stop Solution? </h5>
+            <h1 className="text-description">Complete Digital Solutions <br />
+              for Your Business</h1>
+          </div>
+        </section>
+
       </header>
 
 
@@ -86,7 +97,7 @@ function App() {
       <section>
         <div className="" style={{
           background: 'linear-gradient(90deg, #D5EBFF, #E4F2FF, #D5EBFF)',
-          minHeight: '300px',
+          minHeight: '300px', marginTop: '200px',
         }}>
           {/* icon parent */}
           <div>

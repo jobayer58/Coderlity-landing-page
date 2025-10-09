@@ -1,33 +1,30 @@
-/* header */
-/* navbar */
-.headerBg {
-    background: linear-gradient(90deg, #d3eaff40, #ffffff, #d3eaff40);
-    min-height: 400px;
-}
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-.container{
+body{
+    font-family: "Work Sans", sans-serif;
+}
+/* header */
+.headerBg {
+    background: linear-gradient(90deg, #d3eaff, #ffffff, #d3eaff);
+
+}
+/* navbar */
+
+.container {
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
 .navbar {
-  padding: 20px 80px;
-    
-}
+    padding: 20px 80px;
 
-.account-div{
-    align-items: center;
-    
 }
-.accountBtn {
-    padding: 10px 16px;
-    display: inline-flex;
-    gap: 5px;
-    align-items: center;
+.nav-parent{
+    justify-content: center;
 }
-
-.nav-div{
-    font-weight: 500;
+.nav-li {
+    font-weight: 600;
     gap: 8px;
     align-items: center;
 }
@@ -41,11 +38,40 @@
 }
 
 
+.account-div {
+    align-items: center;
+    justify-content: center;
+
+}
+
+.accountBtn {
+    padding: 10px 16px;
+    display: inline-flex;
+    gap: 5px;
+    align-items: center;
+}
+
 .ioApps {
     color: gray;
     font-size: 28px;
 }
 
+/* banner */
+.banner-section{
+    padding: 3rem 0rem;
+    border:#000;
+}
+
+.text{
+    padding: 1rem 0rem;
+    text-align: center;
+}
+
+.text-description{
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 600;
+}
 
 
 
