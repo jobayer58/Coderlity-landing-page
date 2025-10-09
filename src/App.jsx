@@ -92,7 +92,7 @@ function App() {
 
         </Navbar>
 
-        {/*banner  */}
+        {/*banner section */}
         <section className="banner-section">
           {/* Background Floating Logos */}
           <div className="floating-logos">

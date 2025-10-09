@@ -196,11 +196,11 @@ body {
 .logo-1 { top: 20%; left: 15%; animation-delay: 0s; max-width: 100px; }
 .logo-2 { top: 22%; right: 18%; animation-delay: 1s; max-width: 110px; }
 .logo-3 { top: 45%; left: 25%; animation-delay: 2s; max-width: 90px; }
-.logo-4 { top: 45%; right: 8%; animation-delay: 3s; max-width: 105px; }
-.logo-5 { bottom: 25%; right: 25%; animation-delay: 4s; max-width: 120px; }
-.logo-6 { top: 65%; left: 10%; animation-delay: 5s; max-width: 95px; }
-.logo-7 { bottom: 25%; right: 18%; animation-delay: 1.5s; max-width: 85px; }
-.logo-8 { top: 35%; left: 12%; animation-delay: 2.5s; max-width: 80px; }
+.logo-4 { top: 35%; right: 6%; animation-delay: 3s; max-width: 105px; }
+.logo-5 { bottom: 30%; right: 11%; animation-delay: 4s; max-width: 120px; }
+.logo-6 { top: 55%; left: 11%; animation-delay: 5s; max-width: 95px; }
+.logo-7 { bottom: 45%; right: 22%; animation-delay: 1.5s; max-width: 85px; }
+.logo-8 { top: 35%; left: 4%; animation-delay: 2.5s; max-width: 80px; }
 
 @keyframes float {
   0%, 100% { 
