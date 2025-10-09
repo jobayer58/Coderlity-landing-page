@@ -1,4 +1,4 @@
-import { MdDomain } from "react-icons/md"
+import { MdDomain, MdKeyboardArrowDown } from "react-icons/md"
 import image1 from '../src/assets/iamges/image1.png'
 import image2 from '../src/assets/iamges/image2.png'
 import image3 from '../src/assets/iamges/image3.png'
@@ -11,26 +11,157 @@ import sponsored5 from '../src/assets/iamges/sponsored5.png'
 import sponsored6 from '../src/assets/iamges/sponsored6.png'
 import sponsored7 from '../src/assets/iamges/sponsored7.png'
 import Marquee from "react-fast-marquee"
+import { SiHostinger } from "react-icons/si"
+import { GrJs } from "react-icons/gr"
+import logo from '../src/assets/iamges/web logo1 1 1.svg'
+// import { Navbar } from "react-bootstrap"
+import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import { PiSignIn } from "react-icons/pi"
+import { IoApps } from "react-icons/io5"
 
 
 function App() {
 
   return (
     <main>
+      <header className="headerBg">
+        <Navbar expand="lg" variant="light">
+          <Container className="d-flex justify-content-between align-items-center py-2">
+            {/* Left: Logo */}
+            <Navbar.Brand href="#">
+              <img src={logo} alt="Logo" height="50" />
+            </Navbar.Brand>
+
+            {/* Center: Nav Links */}
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse
+              id="basic-navbar-nav"
+              className="justify-content-center"
+            >
+              <Nav className="fw-semibold d-flex align-items-center gap-2">
+                <Nav.Link href="#">
+                  Home <MdKeyboardArrowDown />
+                </Nav.Link>
+                <span className="divider">/</span>
+
+                <Nav.Link href="#">
+                  Services <MdKeyboardArrowDown />
+                </Nav.Link>
+                <span className="divider">/</span>
+
+                <Nav.Link href="#">
+                  Products <MdKeyboardArrowDown />
+                </Nav.Link>
+                <span className="divider">/</span>
+
+                <Nav.Link href="#">
+                  Digital Marketing <MdKeyboardArrowDown />
+                </Nav.Link>
+                <span className="divider">/</span>
+
+                <Nav.Link href="#">
+                  Company <MdKeyboardArrowDown />
+                </Nav.Link>
+                <span className="divider">/</span>
+              </Nav>
+            </Navbar.Collapse>
+
+            {/* Right: My Account + IoApps */}
+            <div className="d-flex align-items-center gap-3">
+              <Button
+                variant="dark"
+                className="d-flex justify-content-center align-items-center gap-1 px-3 py-2"
+              >
+                <PiSignIn /> My Account
+              </Button>
+              <IoApps className="fs-3 ioApps" />
+            </div>
+          </Container>
+        </Navbar>
+      </header>
       {/* domain purchase section */}
-      {/* <section>
-        <div className="" style={{ backgroundColor: '#E6F3FF' }}>
-          <div className=" icon-div " >
-            <MdDomain className=" icon" />
+      <section>
+        <div className="" style={{
+          background: 'linear-gradient(90deg, #D5EBFF, #E4F2FF, #D5EBFF)',
+          minHeight: '300px',
+        }}>
+          {/* icon parent */}
+          <div>
+
+            {/* 1st icon */}
+            <div className="">
+              <div className=" icon-div " >
+                <MdDomain className=" icon" />
+              </div>
+              <p className="fw-medium">Domain</p>
+
+            </div>
+            {/* 2 icon */}
+            <div className="">
+              <div className=" icon-div " >
+                <SiHostinger className="icon" />
+              </div>
+              <p className="fw-medium">Hosting</p>
+
+            </div>
+            {/* 3 icon */}
+            <div className="">
+              <div className=" icon-div " >
+                <GrJs className="icon" />
+              </div>
+              <p className="fw-medium ">Web Application</p>
+
+            </div>
+            {/* 4 icon */}
+            <div className="">
+              <div className=" icon-div " >
+                <MdDomain className=" icon" />
+              </div>
+              <p className="fw-medium">Mobile Application</p>
+
+            </div>
+            {/* 4 icon */}
+            <div className="">
+              <div className=" icon-div " >
+                <MdDomain className=" icon" />
+              </div>
+              <p className="fw-medium">ERP Solution</p>
+
+            </div>
+            {/* 5 icon */}
+            <div className="">
+              <div className=" icon-div " >
+                <MdDomain className=" icon" />
+              </div>
+              <p className="fw-medium">Digital Marketing</p>
+
+            </div>
+
+            {/* 6 icon */}
+            <div className="">
+              <div className=" icon-div " >
+                <MdDomain className=" icon" />
+              </div>
+              <p className="fw-medium">UI/UX</p>
+
+            </div>
+            {/* 7 icon */}
+            <div className="">
+              <div className=" icon-div " >
+                <MdDomain className=" icon" />
+              </div>
+              <p className="fw-medium">Tech Consultency</p>
+
+            </div>
+
 
           </div>
-
         </div>
-      </section> */}
+      </section>
 
       {/* top products */}
       <section>
-        <div className="div-parent">
+        <div className="products">
           {/* text */}
           <div className="text-center py-5">
             <h1>Our Top Products</h1>
@@ -131,19 +262,15 @@ function App() {
         {/* sponsored section */}
         <section className="py-4">
           <div className="py-4" style={{ backgroundColor: '#FFFFFF' }}>
-            <Marquee pauseOnHover={false} gradient={false} speed={50}>
-              <div className="d-flex align-items-center gap-5">
-                <img src={sponsored1} alt="sponsor" className="img-fluid" />
-                <img src={sponsored2} alt="sponsor" className="img-fluid" />
-                <img src={sponsored3} alt="sponsor" className="img-fluid" />
-                <img src={sponsored4} alt="sponsor" className="img-fluid" />
-                <img src={sponsored5} alt="sponsor" className="img-fluid" />
-                <img src={sponsored6} alt="sponsor" className="img-fluid" />
-                <img src={sponsored7} alt="sponsor" className="img-fluid" />
-                <img src={sponsored3} alt="sponsor" className="img-fluid" />
-
-              </div>
-            </Marquee>
+            <div className="d-flex justify-content-around gap-5">
+              <img src={sponsored1} alt="sponsor" className="img-fluid" />
+              <img src={sponsored2} alt="sponsor" className="img-fluid" />
+              <img src={sponsored3} alt="sponsor" className="img-fluid" />
+              <img src={sponsored4} alt="sponsor" className="img-fluid" />
+              <img src={sponsored5} alt="sponsor" className="img-fluid" />
+              <img src={sponsored6} alt="sponsor" className="img-fluid" />
+              <img src={sponsored7} alt="sponsor" className="img-fluid" />
+            </div>
           </div>
         </section>
 

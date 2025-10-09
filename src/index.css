@@ -1,23 +1,70 @@
+/* header */
+/* navbar */
+.headerBg {
+  background: linear-gradient(90deg, #d3eaff40, #ffffff, #d3eaff40) ; 
+  min-height: 400px;
+}
+
+
+
+ul li {
+    text-decoration: none;
+}
+
+.nav-li {
+    display: flex;
+}
+
+.navLink{
+    gap: 20px;
+}
+
+.ioApps{
+    color: gray;
+}
+
+.navbar-nav .nav-link {
+  color: #000 
+}
+
+.navbar-nav .nav-link:hover {
+  color: blue
+}
+
+.navbarDiv{
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .icon-div {
     width: 56px;
     height: 56px;
-    border-radius: 50%;
-    /* fully rounded */
     background-color: #E9EBF1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .icon {
-    padding: 2px 6px;
-    margin: 4px;
-    font-size: 30px;
-    display: flex;
-    justify-items: center;
-    justify-content: center;
-    align-items: center;
+    font-size: 25px;
+    color: #000;
 }
 
+
 /* top products */
-.div-parent {
+.products {
     background-color: #F3F4F6;
     padding: 6px 0px 4rem 0px;
 }
@@ -28,7 +75,6 @@
 }
 
 .card1 {
-
     height: 410px;
     max-width: 366px;
     background-color: white;
@@ -43,6 +89,6 @@
 }
 
 /* sponsored */
-.sponsored{
+.sponsored {
     /* height: 42px; */
 }
