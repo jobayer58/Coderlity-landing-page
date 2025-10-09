@@ -26,7 +26,7 @@ function App() {
     <main>
       <header className="headerBg">
         <Navbar expand="lg" variant="light">
-          <Container className="d-flex justify-content-between align-items-center py-2">
+          <Container className="  py-2">
             {/* Left: Logo */}
             <Navbar.Brand href="#">
               <img src={logo} alt="Logo" height="50" />
@@ -79,6 +79,8 @@ function App() {
           </Container>
         </Navbar>
       </header>
+
+      
       {/* domain purchase section */}
       <section>
         <div className="" style={{
