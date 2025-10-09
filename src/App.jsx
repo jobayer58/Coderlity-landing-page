@@ -354,24 +354,34 @@ function App() {
         </Container>
       </section>
 
-      <section className="" style={{ backgroundColor: '#FAFAFA' }}>
-        {/* sponsored section */}
-        <section className="py-4">
-          <div className="py-4" style={{ backgroundColor: '#FFFFFF' }}>
-            <div className="d-flex justify-content-around gap-5">
-              <img src={sponsored1} alt="sponsor" className="img-fluid" />
-              <img src={sponsored2} alt="sponsor" className="img-fluid" />
-              <img src={sponsored3} alt="sponsor" className="img-fluid" />
-              <img src={sponsored4} alt="sponsor" className="img-fluid" />
-              <img src={sponsored5} alt="sponsor" className="img-fluid" />
-              <img src={sponsored6} alt="sponsor" className="img-fluid" />
-              <img src={sponsored7} alt="sponsor" className="img-fluid" />
-            </div>
-          </div>
-        </section>
-
-
-      </section>
+      {/* sponsored section */}
+      <section className="sponsored-section">
+      <Container fluid className=" sponsored-container">
+        <Row className="sponsored-row">
+          <Col xs={4} sm={3} md={2} lg="auto" className="text-center">
+            <img src={sponsored1} alt="sponsor" className="img-fluid" />
+          </Col>
+          <Col xs={4} sm={3} md={2} lg="auto" className="text-center">
+            <img src={sponsored2} alt="sponsor" className="img-fluid" />
+          </Col>
+          <Col xs={4} sm={3} md={2} lg="auto" className="text-center">
+            <img src={sponsored3} alt="sponsor" className="img-fluid" />
+          </Col>
+          <Col xs={4} sm={3} md={2} lg="auto" className="text-center">
+            <img src={sponsored4} alt="sponsor" className="img-fluid" />
+          </Col>
+          <Col xs={4} sm={3} md={2} lg="auto" className="text-center">
+            <img src={sponsored5} alt="sponsor" className="img-fluid" />
+          </Col>
+          <Col xs={4} sm={3} md={2} lg="auto" className="text-center">
+            <img src={sponsored6} alt="sponsor" className="img-fluid" />
+          </Col>
+          <Col xs={4} sm={3} md={2} lg="auto" className="text-center">
+            <img src={sponsored7} alt="sponsor" className="img-fluid" />
+          </Col>
+        </Row>
+      </Container>
+    </section>
 
     </main>
   )
