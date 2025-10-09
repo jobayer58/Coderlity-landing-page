@@ -14,7 +14,7 @@ import { SiHostinger } from "react-icons/si"
 import { GrJs } from "react-icons/gr"
 import logo from '../src/assets/iamges/web logo1 1 1.svg'
 // import { Navbar } from "react-bootstrap"
-import { Button, ButtonGroup, ButtonToolbar, Col, Container, InputGroup, Nav, Navbar, Row } from "react-bootstrap";
+import { Button, ButtonGroup, ButtonToolbar, Card, Col, Container, InputGroup, Nav, Navbar, Row } from "react-bootstrap";
 import { PiDotsThreeVerticalBold, PiSignIn } from "react-icons/pi"
 import { IoApps, IoCall } from "react-icons/io5"
 import banner1 from '../src/assets/iamges/banner1.png'
@@ -29,35 +29,6 @@ import logo5 from '../src/assets/iamges/logo5.png'
 import logo6 from '../src/assets/iamges/logo6.png'
 import logo7 from '../src/assets/iamges/logo7.png'
 import logo8 from '../src/assets/iamges/logo8.png'
-
-
-const productsData = [
-  {
-    id: 1,
-    image: image1,
-    title: "SignalLab - Forex And Crypto Trading Signal Platform",
-    rating: 5,
-    category: "Laravel",
-    price: 49,
-  },
-  {
-    id: 2,
-    image: image2,
-    title: "Xcash - Ultimate Wallet Solution",
-    rating: 5,
-    category: "Laravel",
-    price: 149,
-  },
-  {
-    id: 3,
-    image: image3,
-    title: "HYIPLAB - Complete HYIP Investment System",
-    rating: 5,
-    category: "Laravel",
-    price: 199,
-  },
-];
-
 
 function App() {
 
@@ -121,7 +92,7 @@ function App() {
 
         </Navbar>
 
-        {/*banner section */}
+        {/*banner  */}
         <section className="banner-section">
           {/* Background Floating Logos */}
           <div className="floating-logos">
@@ -170,7 +141,7 @@ function App() {
             </Col>
 
             <Col xs="auto">
-              <Row className="message-parent ">
+              <Row className="message-parent g-2">
                 <Col xs="auto">
                   <div className="message-div">
                     <BiMessageDetail className="message" />
@@ -270,51 +241,122 @@ function App() {
 
       {/* top products */}
       <section className="top-products">
-        <div className="products-container">
-          {/* Text Section */}
-          <div className="products-header">
+        <Container>
+          {/* text section */}
+          <div className="text-div">
             <h1>Our Top Products</h1>
-            <p>
-              We offer a range of high-quality digital products, including PHP Laravel frameworks,
-              HTML React JS front-end templates, and MERN projects, designed to meet the needs of
-              modern web development.
+            <p className="product-description">
+              We offer a range of high-quality digital products, including PHP
+              Laravel frameworks, HTML React JS <br className="d-none d-md-block" />
+              front-end templates, and MERN projects, designed to meet the needs
+              of modern web development.
             </p>
           </div>
 
-          {/* Cards Section */}
-          <div className="products-grid">
-            {productsData.map((product) => (
-              <div className="product-card" key={product.id}>
-                <img src={product.image} alt={product.title} className="product-image" />
-                <div className="product-info">
-                  <h4 className="product-title">{product.title}</h4>
-                  <div className="product-rating">
-                    <span className="rating-text">Rating: </span>
-                    <span className="rating-score">{product.rating}/5</span>
+          {/* cards section */}
+          <div className="cards-container">
+            {/* Card 1 */}
+            <div className="card-wrapper">
+              <Card className="product-card">
+                <div className="card-image-container">
+                  <Card.Img variant="top" src={image1} />
+                  <div className="version-badge version-bg-color1">Version <span className="span-badge-text">3.2</span></div>
+                </div>
+                <Card.Body>
+                  <Card.Title className="card-title">
+                    SignalLab - Forex And Crypto <br /> Trading Signal Platform
+                  </Card.Title>
+                  <div className="rating">
+                    Ratting: <span className="span-tag">5/5</span>
                     <div className="stars">
-                      {[...Array(product.rating)].map((_, i) => (
-                        <FaStar key={i} className="star-icon" />
-                      ))}
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
                     </div>
                   </div>
-                  <p className="product-category">
-                    Category: <span>{product.category}</span>
+                  <p>
+                    Category: <span className="span-tag">Laravel</span>
                   </p>
                   <hr />
-                  <p className="product-price">
-                    Live Preview: <span>${product.price}</span>
+                  <p className="price-line">
+                    Live Preview: <span className="dollarSize">$49</span>
                   </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+                </Card.Body>
+              </Card>
+            </div>
 
+            {/* Card 2 */}
+            <div className="card-wrapper">
+              <Card className="product-card">
+                <div className="card-image-container">
+                  <Card.Img variant="top" src={image2} />
+                  <div className="version-badge version-bg-color2">Version <span className="span-badge-text">3.1</span></div>
+                </div>
+                <Card.Body>
+                  <Card.Title className="card-title">
+                    Xcash - Ultimate Wallet <br /> Solution
+                  </Card.Title>
+                  <div className="rating">
+                    Ratting: <span className="span-tag">5/5</span>
+                    <div className="stars">
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                    </div>
+                  </div>
+                  <p>
+                    Category: <span className="span-tag">Laravel</span>
+                  </p>
+                  <hr />
+                  <p className="price-line">
+                    Live Preview: <span className="dollarSize">$149</span>
+                  </p>
+                </Card.Body>
+              </Card>
+            </div>
+
+            {/* Card 3 */}
+            <div className="card-wrapper">
+              <Card className="product-card">
+                <div className="card-image-container">
+                  <Card.Img variant="top" src={image3} />
+                  <div className="version-badge version-bg-color3">Version <span className="span-badge-text">5.6</span></div>
+                </div>
+                <Card.Body>
+                  <Card.Title className="card-title">
+                    HYIPLAB - Complete HYIP <br /> Investment System
+                  </Card.Title>
+                  <div className="rating">
+                    Ratting: <span className="span-tag">5/5</span>
+                    <div className="stars">
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                    </div>
+                  </div>
+                  <p>
+                    Category: <span className="span-tag">Laravel</span>
+                  </p>
+                  <hr />
+                  <p className="price-line">
+                    Live Preview: <span className="dollarSize">$199</span>
+                  </p>
+                </Card.Body>
+              </Card>
+            </div>
+          </div>
+        </Container>
+      </section>
 
       <section className="" style={{ backgroundColor: '#FAFAFA' }}>
         {/* sponsored section */}
-        <section className="py-4 sponsored">
+        <section className="py-4">
           <div className="py-4" style={{ backgroundColor: '#FFFFFF' }}>
             <div className="d-flex justify-content-around gap-5">
               <img src={sponsored1} alt="sponsor" className="img-fluid" />

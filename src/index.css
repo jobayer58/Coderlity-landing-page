@@ -4,11 +4,10 @@
 /* jet brains */
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
-
 body {
     font-family: "Work Sans", sans-serif;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     overflow-x: hidden;
 }
 
@@ -67,7 +66,7 @@ body {
     font-size: 28px;
 }
 
-/* banner section */
+/* banner */
 .banner-section {
     padding: 3rem 0rem;
     border: #000;
@@ -129,7 +128,7 @@ body {
 .banner-btn-parent {
     gap: 1rem;
     justify-content: center;
-
+    
 }
 
 .banner-btn {
@@ -140,37 +139,32 @@ body {
     color: black;
 }
 
-
 .input-Nav {
     justify-content: space-between;
+    padding: 3rem 6rem;
     align-items: center;
-    padding: 20px 80px;
-    overflow-x: hidden;
 }
-
-.message-parent {
+.message-parent{
     align-items: center;
-
+    
 }
-
 .message-div {
-    border: 2px solid #9BA3BC;
-    border-radius: 50%;
-    width: 72px;
-    height: 72px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-
+  border: 2px solid #9BA3BC;
+  border-radius: 50%;
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  
 }
 
 .message {
     font-size: 30px;
     color: #0088FF;
 }
-
-.threeDot {
+.threeDot{
     font-size: 35px;
 }
 
@@ -179,96 +173,43 @@ body {
 
 /* Floating Logos Background */
 .floating-logos {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 
 .floating-logo {
-    position: absolute;
-    opacity: 1;
-    animation: float 6s ease-in-out infinite;
-    width: auto;
-    height: auto;
-    max-width: 120px;
-    max-height: 120px;
-    filter: none;
+  position: absolute;
+  opacity: 1; 
+  animation: float 6s ease-in-out infinite;
+  width: auto; 
+  height: auto;
+  max-width: 120px; 
+  max-height: 120px;
+  filter: none; 
 }
 
 /* Different positions with original sizes */
-.logo-1 {
-    top: 20%;
-    left: 15%;
-    animation-delay: 0s;
-    max-width: 100px;
-}
-
-.logo-2 {
-    top: 22%;
-    right: 18%;
-    animation-delay: 1s;
-    max-width: 110px;
-}
-
-.logo-3 {
-    top: 45%;
-    left: 25%;
-    animation-delay: 2s;
-    max-width: 90px;
-}
-
-.logo-4 {
-    top: 45%;
-    right: 8%;
-    animation-delay: 3s;
-    max-width: 105px;
-}
-
-.logo-5 {
-    bottom: 25%;
-    right: 25%;
-    animation-delay: 4s;
-    max-width: 120px;
-}
-
-.logo-6 {
-    top: 65%;
-    left: 10%;
-    animation-delay: 5s;
-    max-width: 95px;
-}
-
-.logo-7 {
-    bottom: 45%;
-    right: 18%;
-    animation-delay: 1.5s;
-    max-width: 85px;
-}
-
-.logo-8 {
-    top: 35%;
-    left: 6%;
-    animation-delay: 2.5s;
-    max-width: 80px;
-}
+.logo-1 { top: 20%; left: 15%; animation-delay: 0s; max-width: 100px; }
+.logo-2 { top: 22%; right: 18%; animation-delay: 1s; max-width: 110px; }
+.logo-3 { top: 45%; left: 25%; animation-delay: 2s; max-width: 90px; }
+.logo-4 { top: 45%; right: 8%; animation-delay: 3s; max-width: 105px; }
+.logo-5 { bottom: 25%; right: 25%; animation-delay: 4s; max-width: 120px; }
+.logo-6 { top: 65%; left: 10%; animation-delay: 5s; max-width: 95px; }
+.logo-7 { bottom: 25%; right: 18%; animation-delay: 1.5s; max-width: 85px; }
+.logo-8 { top: 35%; left: 12%; animation-delay: 2.5s; max-width: 80px; }
 
 @keyframes float {
-
-    0%,
-    100% {
-        transform: translateY(0px) rotate(0deg) scale(1);
-    }
-
-    50% {
-        transform: translateY(-20px) rotate(5deg) scale(1.1);
-    }
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg) scale(1); 
+  }
+  50% { 
+    transform: translateY(-20px) rotate(5deg) scale(1.1); 
+  }
 }
-
-
-
 
 
 
@@ -294,95 +235,188 @@ body {
 
 /* top products */
 .top-products {
-    padding: 50px 0;
+  padding: 60px 0;
+  background-color: #F3F4F6;
+}
+.text-div{
     text-align: center;
+    padding: 20px 0px;
+}
+.product-description {
+  color: #555555;
+  font-weight: 400;
+  margin-top: 20px;
 }
 
-.products-header h1 {
-    font-size: 53px;
-    font-weight: 600;
+/* Cards Container - Base */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
-.products-header p {
-    color: #555555;
-    font-size: 18px;
-    max-width: 900px;
-    margin: 0 auto;
-    line-height: 1.6;
-    padding: 25px 0px 35px 0px;
-
-}
-
-.products-grid {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 0 10px;
+.card-wrapper {
+  flex: 0 0 auto;
+  max-width: 366px;
 }
 
 .product-card {
-    max-width: 370px;
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    text-align: left;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.product-image {
+.card-title{
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 140%;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.stars {
+  display: flex;
+  color: #FFAE00;
+}
+.span-tag{
+    font-weight: 700;
+}
+.price-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ff946a;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+
+.dollarSize {
+  font-size: 28px;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.card-image-container {
+  position: relative;
+  display: block;
+}
+
+.version-badge {
+  position: absolute;
+  top: 0px;
+  right: 8px;
+  background: blue;
+  color: white;
+  width: 50px;
+  height: 55px;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+}
+.version-bg-color1{
+    background-color: chocolate;
+}
+.version-bg-color2{
+    background-color: green;
+}
+.version-bg-color3{
+    background-color: cadetblue;
+}
+.span-badge-text{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* 📱 Mobile Devices (0px - 576px) */
+@media (max-width: 576px) {
+  .cards-container {
+    gap: 12px;
+    padding: 0 8px;
+  }
+  
+  .card-wrapper {
     width: 100%;
-    display: block;
+    max-width: 100%;
+  }
+  
+  .product-card {
+    margin: 0 auto;
+  }
 }
 
-.product-info {
-    padding: 15px;
+/* 📱 Mobile Large (577px - 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .cards-container {
+    gap: 14px;
+    padding: 0 12px;
+  }
+  
+  .card-wrapper {
+    width: calc(50% - 7px); /* 2 cards with gap */
+  }
 }
 
-.product-title {
-    font-weight: 700;
-    line-height: 1.5;
-    font-size: 22px;
+/* 💻 Tablet (769px - 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+  .cards-container {
+    gap: 16px;
+  }
+  
+  .card-wrapper {
+    width: calc(50% - 8px); /* 2 cards with gap */
+  }
 }
 
-.product-rating {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    margin-bottom: 5px;
+/* 💻 Laptop (993px - 1200px) */
+@media (min-width: 993px) and (max-width: 1200px) {
+  .cards-container {
+    gap: 16px;
+  }
+  
+  .card-wrapper {
+    width: calc(33.333% - 11px); /* 3 cards with gap */
+  }
 }
 
-.rating-score {
-    font-weight: 700;
+/* 🖥️ Large Desktop (1201px and above) */
+@media (min-width: 1201px) {
+  .cards-container {
+    gap: 16px;
+  }
+  
+  .card-wrapper {
+    width: calc(33.333% - 11px); /* 3 cards with gap */
+  }
 }
 
-.star-icon {
-    color: #ffae00;
-}
-
-.product-category span {
-    font-weight: 700;
-}
-
-.product-price {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #ff946a;
-    font-weight: 600;
-    margin: 0px;
-}
-
-.product-price span {
+/* Extra Small Devices Safety */
+@media (max-width: 400px) {
+  .cards-container {
+    gap: 10px;
+    padding: 0 4px;
+  }
+  
+  .card-wrapper {
+    width: 100%;
+  }
+  
+  .dollarSize {
     font-size: 24px;
-    font-weight: 700;
-    color: black;
-    bottom: 0px;
+  }
 }
-
 /* sponsored */
 .sponsored {
-    padding: 0px 65px;
+    /* height: 42px; */
 }
-
-.img-fluid {}
