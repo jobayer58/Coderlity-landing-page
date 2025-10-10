@@ -67,20 +67,36 @@ body {
 }
 
 /*  */
-/* Services Dropdown Styles */
+/* Navigation Item Styles */
 .services-dropdown-container {
   position: relative;
   display: inline-block;
 }
 
+.services-dropdown-container.active .services-link {
+  color: #007bff !important;
+}
+
+.services-dropdown-container.active .services-link svg {
+  color: #007bff !important;
+}
+
+/* Services Dropdown Styles */
 .services-dropdown-card {
   position: absolute;
   top: 100%;
   left: 0;
   width: 800px;
   z-index: 1000;
-  margin-top: 0; /* Remove margin to eliminate gap */
-  padding-top: 10px; /* Add padding instead of margin */
+  margin-top: 0;
+  padding-top: 30px;
+  transition: all 0.3s ease;
+}
+
+/* Right positioned dropdown */
+.services-dropdown-card.dropdown-right {
+  left: auto;
+  right: 0;
 }
 
 .services-dropdown-card::before {
@@ -91,6 +107,12 @@ body {
   right: 0;
   height: 20px;
   background: transparent;
+}
+
+.services-dropdown-card.dropdown-right::before {
+  left: auto;
+  right: 0;
+  width: 100%;
 }
 
 .services-dropdown-card .card {
@@ -115,22 +137,23 @@ body {
 
 .service-item:hover,
 .service-item.active {
-  background-color: #007CE8; /* Blue background */
+  background-color: #007bff;
+  border-color: #007bff;
 }
 
-.service-item:hover .service-name ,
+.service-item:hover .service-name,
 .service-item.active .service-name {
-  color: white; /* White text */
+  color: white;
 }
 
 .service-item:hover .service-icon,
 .service-item.active .service-icon {
-  color: white; /* White icon */
+  color: white;
 }
 
 .service-item:hover .service-description,
 .service-item.active .service-description {
-  color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .service-header {
@@ -156,7 +179,7 @@ body {
   font-size: 13px;
   color: #666;
   margin-top: 8px;
-  padding-left: 0px; /* 34px dile title and esc center hoy */
+  padding-left: 0px; /* 34px dile title er sathe center hoy */
   line-height: 1.4;
 }
 
@@ -185,16 +208,23 @@ body {
   position: relative;
 }
 
-/* Adjust hover behavior for the services link */
-.services-link:hover {
-  color: #007bff !important;
-}
-
 /* Make sure the dropdown doesn't cause layout shifts */
 .nav-li {
   position: static;
 }
 
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .services-dropdown-card {
+    width: 700px;
+  }
+}
+
+@media (max-width: 992px) {
+  .services-dropdown-card {
+    width: 600px;
+  }
+}
 
 /* banner section */
 .banner-section {

@@ -28,13 +28,38 @@ import logo5 from '../src/assets/iamges/logo5.png'
 import logo6 from '../src/assets/iamges/logo6.png'
 import logo7 from '../src/assets/iamges/logo7.png'
 import logo8 from '../src/assets/iamges/logo8.png'
-import { useEffect, useRef, useState } from "react"
+import {  useRef, useState } from "react"
 
 function App() {
-  const [showServicesDropdown, setShowServicesDropdown] = useState(false);
-  const [hoveredService, setHoveredService] = useState(null);
-  const dropdownRef = useRef(null);
+  const [activeDropdown, setActiveDropdown] = useState(null);
+  const [dropdownPosition, setDropdownPosition] = useState('left');
+  const [hoveredItems, setHoveredItems] = useState({
+    services: null,
+    products: null,
+    digitalMarketing: null,
+    webHosting: null,
+    company: null
+  });
+
+  const dropdownRefs = {
+    services: useRef(null),
+    products: useRef(null),
+    digitalMarketing: useRef(null),
+    webHosting: useRef(null),
+    company: useRef(null)
+  };
+
+  const navItemRefs = {
+    services: useRef(null),
+    products: useRef(null),
+    digitalMarketing: useRef(null),
+    webHosting: useRef(null),
+    company: useRef(null)
+  };
+
   const timeoutRef = useRef(null);
+
+
   const servicesData = [
     {
       id: 1,
@@ -158,184 +183,327 @@ function App() {
     }
   ];
 
-  // Fixed useEffect - removed servicesData from dependencies
-  useEffect(() => {
-  if (showServicesDropdown && !hoveredService) {
-    setHoveredService(servicesData[0]);
-  }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-}, [showServicesDropdown, hoveredService]);
+  // Products data
+  const productsData = [
+    {
+      id: 1,
+      name: "Software Products",
+      icon: <MdWeb />,
+      description: "Ready-to-use software solutions",
+      subServices: ["CRM Software", "ERP Systems", "Inventory Management"]
+    },
+    {
+      id: 2,
+      name: "Digital Products",
+      icon: <MdShoppingCart />,
+      description: "Online digital solutions",
+      subServices: ["E-books", "Online Courses", "Digital Templates"]
+    }
+  ];
 
-  const handleServicesMouseEnter = () => {
-    // Clear any existing timeout
+  // Digital Marketing data
+  const digitalMarketingData = [
+    {
+      id: 1,
+      name: "SEO Services",
+      icon: <MdSupport />,
+      description: "Search engine optimization",
+      subServices: ["On-Page SEO", "Off-Page SEO", "Technical SEO"]
+    },
+    {
+      id: 2,
+      name: "Social Media Marketing",
+      icon: <MdDesignServices />,
+      description: "Social media management",
+      subServices: ["Content Creation", "Community Management", "Paid Advertising"]
+    }
+  ];
+  // Digital Marketing data
+  const webHostingData = [
+    {
+      id: 1,
+      name: "SEO Services",
+      icon: <MdSupport />,
+      description: "Search engine optimization",
+      subServices: ["On-Page SEO", "Off-Page SEO", "Technical SEO"]
+    },
+    {
+      id: 2,
+      name: "Social Media Marketing",
+      icon: <MdDesignServices />,
+      description: "Social media management",
+      subServices: ["Content Creation", "Community Management", "Paid Advertising"]
+    }
+  ];
+
+  // Company data
+  const companyData = [
+    {
+      id: 1,
+      name: "About Us",
+      icon: <MdSupport />,
+      description: "Learn about our company",
+      subServices: ["Our Story", "Mission & Vision", "Team Members"]
+    },
+    {
+      id: 2,
+      name: "Careers",
+      icon: <MdDesignServices />,
+      description: "Join our team",
+      subServices: ["Open Positions", "Culture", "Benefits"]
+    }
+  ];
+
+  const handleMouseEnter = (dropdownName) => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
-    setShowServicesDropdown(true);
+    setActiveDropdown(dropdownName);
+    
+    // Check screen position and adjust dropdown
+    checkDropdownPosition(dropdownName);
+    
+    // Set default hovered item for this dropdown
+    const data = getDataForDropdown(dropdownName);
+    if (data && data.length > 0 && !hoveredItems[dropdownName]) {
+      setHoveredItems(prev => ({
+        ...prev,
+        [dropdownName]: data[0]
+      }));
+    }
   };
 
-  const handleServicesMouseLeave = () => {
-    // Set a delay before closing the dropdown
+  const checkDropdownPosition = (dropdownName) => {
+    const navItem = navItemRefs[dropdownName]?.current;
+    if (!navItem) return;
+
+    const rect = navItem.getBoundingClientRect();
+    const dropdownWidth = 800; // Same as CSS width
+    const screenWidth = window.innerWidth;
+    
+    // Check if dropdown will go outside right edge
+    if (rect.left + dropdownWidth > screenWidth - 20) {
+      setDropdownPosition('right');
+    } else {
+      setDropdownPosition('left');
+    }
+  };
+
+  const handleMouseLeave = (dropdownName) => {
     timeoutRef.current = setTimeout(() => {
-      if (dropdownRef.current && !dropdownRef.current.matches(':hover')) {
-        setShowServicesDropdown(false);
-        setHoveredService(null);
+      const isOverDropdown = dropdownRefs[dropdownName]?.current?.matches(':hover');
+      const isOverNavItem = navItemRefs[dropdownName]?.current?.matches(':hover');
+      
+      if (!isOverDropdown && !isOverNavItem) {
+        setActiveDropdown(null);
       }
-    }, 200); // 200ms delay
-  };
-
-  const handleDropdownMouseEnter = () => {
-    // Clear the closing timeout when mouse enters dropdown
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
-  };
-
-  const handleDropdownMouseLeave = () => {
-    // Close dropdown when mouse leaves
-    timeoutRef.current = setTimeout(() => {
-      setShowServicesDropdown(false);
-      setHoveredService(null);
     }, 200);
   };
 
-  const handleServiceHover = (service) => {
-    setHoveredService(service);
+  const handleDropdownMouseEnter = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
   };
 
+  const handleDropdownMouseLeave = (dropdownName) => {
+    timeoutRef.current = setTimeout(() => {
+      const isOverNavItem = navItemRefs[dropdownName]?.current?.matches(':hover');
+      
+      if (!isOverNavItem) {
+        setActiveDropdown(null);
+      }
+    }, 200);
+  };
+
+  const handleServiceHover = (dropdownName, item) => {
+    setHoveredItems(prev => ({
+      ...prev,
+      [dropdownName]: item
+    }));
+  };
+
+  const getDataForDropdown = (dropdownName) => {
+    switch (dropdownName) {
+      case 'services': return servicesData;
+      case 'products': return productsData;
+      case 'digitalMarketing': return digitalMarketingData;
+      case 'webHosting': return webHostingData;
+      case 'company': return companyData;
+      default: return [];
+    }
+  };
+
+  const handleLinkClick = (e) => {
+    e.preventDefault();
+  };
+
+  const renderDropdownCard = (dropdownName) => {
+    const data = getDataForDropdown(dropdownName);
+    const hoveredItem = hoveredItems[dropdownName] || data[0];
+
+    return (
+      <div 
+        ref={dropdownRefs[dropdownName]}
+        className={`services-dropdown-card ${dropdownPosition === 'right' ? 'dropdown-right' : ''}`}
+        onMouseEnter={() => handleDropdownMouseEnter(dropdownName)}
+        onMouseLeave={() => handleDropdownMouseLeave(dropdownName)}
+      >
+        <Card className="shadow-lg">
+          <Card.Body className="p-4">
+            <Row>
+              <Col md={4}>
+                <div className="main-services-list">
+                  {data.map((item) => (
+                    <div
+                      key={item.id}
+                      className={`service-item ${hoveredItem?.id === item.id ? 'active' : ''}`}
+                      onMouseEnter={() => handleServiceHover(dropdownName, item)}
+                    >
+                      <div className="service-header">
+                        <span className="service-icon">{item.icon}</span>
+                        <span className="service-name">{item.name}</span>
+                      </div>
+                      {hoveredItem?.id === item.id && (
+                        <div className="service-description">
+                          {item.description}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </Col>
+              <Col md={8}>
+                <Row>
+                  <Col md={6}>
+                    <div className="sub-services-column">
+                      {hoveredItem?.subServices.slice(0, Math.ceil(hoveredItem?.subServices.length / 2)).map((subService, index) => (
+                        <div key={index} className="sub-service-item">
+                          {subService}
+                        </div>
+                      ))}
+                    </div>
+                  </Col>
+                  <Col md={6}>
+                    <div className="sub-services-column">
+                      {hoveredItem?.subServices.slice(Math.ceil(hoveredItem?.subServices.length / 2)).map((subService, index) => (
+                        <div key={index} className="sub-service-item">
+                          {subService}
+                        </div>
+                      ))}
+                    </div>
+                  </Col>
+                </Row>
+              </Col>
+            </Row>
+          </Card.Body>
+        </Card>
+      </div>
+    );
+  };
   return (
     <main>
       <header className="headerBg" >
         {/* navbar */}
         <Navbar expand="lg" variant="light">
+      <Navbar.Brand href="#">
+        <img src={logo} alt="Logo" />
+      </Navbar.Brand>
 
-          {/* Left: Logo */}
-          <Navbar.Brand href="#">
-            <img src={logo} alt="Logo" />
-          </Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav" className="nav-parent">
+        <Nav className="nav-li">
+          <Nav.Link href="#" onClick={handleLinkClick}>
+            Home <MdKeyboardArrowDown />
+          </Nav.Link>
+          <span className="divider">/</span>
 
-          {/* Center: Nav Links */}
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse
-            id="basic-navbar-nav"
-            className="nav-parent"
+          {/* Services */}
+          <div 
+            ref={navItemRefs.services}
+            className={`services-dropdown-container ${activeDropdown === 'services' ? 'active' : ''}`}
+            onMouseEnter={() => handleMouseEnter('services')}
+            onMouseLeave={() => handleMouseLeave('services')}
           >
-            <Nav className="nav-li">
-              <Nav.Link href="#">
-                Home <MdKeyboardArrowDown />
-              </Nav.Link>
-              <span className="divider">/</span>
+            <Nav.Link href="#" onClick={handleLinkClick} className="services-link">
+              Services <MdKeyboardArrowDown />
+            </Nav.Link>
+            {activeDropdown === 'services' && renderDropdownCard('services')}
+          </div>
+          <span className="divider">/</span>
 
-              {/* Services Dropdown */}
-              {/* Services Dropdown */}
-              <div
-                className="services-dropdown-container"
-                onMouseEnter={handleServicesMouseEnter}
-                onMouseLeave={handleServicesMouseLeave}
-              >
-                <Nav.Link href="#" className="services-link">
-                  Services <MdKeyboardArrowDown />
-                </Nav.Link>
+          {/* Products */}
+          <div 
+            ref={navItemRefs.products}
+            className={`services-dropdown-container ${activeDropdown === 'products' ? 'active' : ''}`}
+            onMouseEnter={() => handleMouseEnter('products')}
+            onMouseLeave={() => handleMouseLeave('products')}
+          >
+            <Nav.Link href="#" onClick={handleLinkClick} className="services-link">
+              Products <MdKeyboardArrowDown />
+            </Nav.Link>
+            {activeDropdown === 'products' && renderDropdownCard('products')}
+          </div>
+          <span className="divider">/</span>
 
-                {showServicesDropdown && (
-                  <div
-                    ref={dropdownRef}
-                    className="services-dropdown-card"
-                    onMouseEnter={handleDropdownMouseEnter}
-                    onMouseLeave={handleDropdownMouseLeave}
-                  >
-                    <Card className="shadow-lg">
-                      <Card.Body className="p-4">
-                        <Row>
-                          {/* Column 1: Main Services with Icons */}
-                          <Col md={4}>
-                            <div className="main-services-list">
-                              {servicesData.map((service) => (
-                                <div
-                                  key={service.id}
-                                  className={`service-item ${hoveredService?.id === service.id ? 'active' : ''}`}
-                                  onMouseEnter={() => handleServiceHover(service)}
-                                >
-                                  <div className="service-header">
-                                    <span className="service-icon">{service.icon}</span>
-                                    <span className="service-name">{service.name}</span>
-                                  </div>
-                                  {hoveredService?.id === service.id && (
-                                    <div className="service-description">
-                                      {service.description}
-                                    </div>
-                                  )}
-                                </div>
-                              ))}
-                            </div>
-                          </Col>
+          {/* Digital Marketing */}
+          <div 
+            ref={navItemRefs.digitalMarketing}
+            className={`services-dropdown-container ${activeDropdown === 'digitalMarketing' ? 'active' : ''}`}
+            onMouseEnter={() => handleMouseEnter('digitalMarketing')}
+            onMouseLeave={() => handleMouseLeave('digitalMarketing')}
+          >
+            <Nav.Link href="#" onClick={handleLinkClick} className="services-link">
+              Digital Marketing <MdKeyboardArrowDown />
+            </Nav.Link>
+            {activeDropdown === 'digitalMarketing' && renderDropdownCard('digitalMarketing')}
+          </div>
+          <span className="divider">/</span>
 
-                          {/* Columns 2 & 3: Sub-services */}
-                          <Col md={8}>
-                            <Row>
-                              <Col md={6}>
-                                <div className="sub-services-column">
-                                  {hoveredService?.subServices.slice(0, Math.ceil(hoveredService?.subServices.length / 2)).map((subService, index) => (
-                                    <div key={index} className="sub-service-item">
-                                      {subService}
-                                    </div>
-                                  ))}
-                                </div>
-                              </Col>
-                              <Col md={6}>
-                                <div className="sub-services-column">
-                                  {hoveredService?.subServices.slice(Math.ceil(hoveredService?.subServices.length / 2)).map((subService, index) => (
-                                    <div key={index} className="sub-service-item">
-                                      {subService}
-                                    </div>
-                                  ))}
-                                </div>
-                              </Col>
-                            </Row>
-                          </Col>
-                        </Row>
-                      </Card.Body>
-                    </Card>
-                  </div>
-                )}
-              </div>
-              <span className="divider">/</span>
+          {/* Web Hosting */}
+          <div 
+            ref={navItemRefs.digitalMarketing}
+            className={`services-dropdown-container ${activeDropdown === 'webHosting' ? 'active' : ''}`}
+            onMouseEnter={() => handleMouseEnter('webHosting')}
+            onMouseLeave={() => handleMouseLeave('webHosting')}
+          >
+            <Nav.Link href="#" onClick={handleLinkClick} className="services-link">
+              Web Hosting <MdKeyboardArrowDown />
+            </Nav.Link>
+            {activeDropdown === 'webHosting' && renderDropdownCard('webHosting')}
+          </div>
+          <span className="divider">/</span>
 
-              <Nav.Link href="#">
-                Products <MdKeyboardArrowDown />
-              </Nav.Link>
-              <span className="divider">/</span>
+          {/* Company */}
+          <div 
+            ref={navItemRefs.company}
+            className={`services-dropdown-container ${activeDropdown === 'company' ? 'active' : ''}`}
+            onMouseEnter={() => handleMouseEnter('company')}
+            onMouseLeave={() => handleMouseLeave('company')}
+          >
+            <Nav.Link href="#" onClick={handleLinkClick} className="services-link">
+              Company <MdKeyboardArrowDown />
+            </Nav.Link>
+            {activeDropdown === 'company' && renderDropdownCard('company')}
+          </div>
+          <span className="divider">/</span>
+        </Nav>
+      </Navbar.Collapse>
 
-              <Nav.Link href="#">
-                Digital Marketing <MdKeyboardArrowDown />
-              </Nav.Link>
-              <span className="divider">/</span>
+      <Row className="account-div">
+        <Col xs="auto">
+          <Button variant="dark" className="accountBtn">
+            <PiSignIn /> My Account
+          </Button>
+        </Col>
+        <Col xs="auto">
+          <IoApps className="ioApps" />
+        </Col>
+      </Row>
+    </Navbar>
 
-              <Nav.Link href="#">
-                Web Hosting <MdKeyboardArrowDown />
-              </Nav.Link>
-              <span className="divider">/</span>
 
-              <Nav.Link href="#">
-                Company <MdKeyboardArrowDown />
-              </Nav.Link>
-              <span className="divider">/</span>
-            </Nav>
-          </Navbar.Collapse>
 
-          {/* Right: My Account + IoApps */}
-          <Row className="account-div">
-            <Col xs="auto">
-              <Button variant="dark" className="accountBtn">
-                <PiSignIn /> My Account
-              </Button>
-            </Col>
-            <Col xs="auto">
-              <IoApps className="ioApps" />
-            </Col>
-          </Row>
-
-        </Navbar>
         {/*banner section */}
         <section className="banner-section">
           {/* Background Floating Logos */}
