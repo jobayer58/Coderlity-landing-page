@@ -32,6 +32,7 @@ import { useEffect, useRef, useState } from "react"
 
 function App() {
 
+  // ioApps Dropdown card 
   const [showApps, setShowApps] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -39,7 +40,7 @@ function App() {
     setShowApps((prev) => !prev);
   };
 
-  // 👉 বাইরে ক্লিক করলে dropdown বন্ধ হবে
+  // 👉 bahire click korle dropdown close
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -67,7 +68,7 @@ function App() {
 
   ];
 
-
+  // navigation bar dropdown card function
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [dropdownPosition, setDropdownPosition] = useState('left');
   const [hoveredItems, setHoveredItems] = useState({
@@ -451,7 +452,7 @@ function App() {
           <Navbar.Collapse id="basic-navbar-nav" className="nav-parent">
             <Nav className="nav-li">
               <Nav.Link href="#" onClick={handleLinkClick}>
-                Home <MdKeyboardArrowDown />
+                Home 
               </Nav.Link>
               <span className="divider">/</span>
 
@@ -523,7 +524,7 @@ function App() {
                 </Nav.Link>
                 {activeDropdown === 'company' && renderDropdownCard('company')}
               </div>
-              <span className="divider">/</span>
+              
             </Nav>
           </Navbar.Collapse>
 
