@@ -2,7 +2,7 @@ import { MdDesignServices, MdDomain, MdKeyboardArrowDown, MdPhoneIphone, MdShopp
 import image1 from '../src/assets/iamges/image1.png'
 import image2 from '../src/assets/iamges/image2.png'
 import image3 from '../src/assets/iamges/image3.png'
-import { FaStar } from "react-icons/fa"
+import { FaEnvelope, FaGoogle, FaGoogleDrive, FaStar } from "react-icons/fa"
 import sponsored1 from '../src/assets/iamges/sponsored1.png'
 import sponsored2 from '../src/assets/iamges/sponsored2.png'
 import sponsored3 from '../src/assets/iamges/sponsored3.png'
@@ -13,7 +13,7 @@ import sponsored7 from '../src/assets/iamges/sponsored7.png'
 import { SiHostinger } from "react-icons/si"
 import { GrJs } from "react-icons/gr"
 import logo from '../src/assets/iamges/web logo1 1 1.svg'
-import { Button, ButtonGroup, ButtonToolbar, Card, Col, Container, InputGroup, Nav, Navbar, Row } from "react-bootstrap";
+import { Button, ButtonGroup, ButtonToolbar, Card, Col, Container, InputGroup, Nav, Navbar, Popover, Row } from "react-bootstrap";
 import { PiDotsThreeVerticalBold, PiSignIn } from "react-icons/pi"
 import { IoApps, IoCall } from "react-icons/io5"
 import banner1 from '../src/assets/iamges/banner1.png'
@@ -28,9 +28,46 @@ import logo5 from '../src/assets/iamges/logo5.png'
 import logo6 from '../src/assets/iamges/logo6.png'
 import logo7 from '../src/assets/iamges/logo7.png'
 import logo8 from '../src/assets/iamges/logo8.png'
-import {  useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 function App() {
+
+  const [showApps, setShowApps] = useState(false);
+  const dropdownRef = useRef(null);
+
+  const toggleAppsMenu = () => {
+    setShowApps((prev) => !prev);
+  };
+
+  // 👉 বাইরে ক্লিক করলে dropdown বন্ধ হবে
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setShowApps(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const appItems = [
+    { icon: <FaGoogleDrive className="app-item-icon" />, name: "Drive" },
+    { icon: <FaGoogleDrive className="app-item-icon" />, name: "Drive" },
+    { icon: <FaGoogleDrive className="app-item-icon" />, name: "Drive" },
+    { icon: <FaGoogleDrive className="app-item-icon" />, name: "Drive" },
+    { icon: <FaGoogleDrive className="app-item-icon" />, name: "Drive" },
+    { icon: <FaGoogleDrive className="app-item-icon" />, name: "Drive" },
+    { icon: <FaGoogleDrive className="app-item-icon" />, name: "Drive" },
+    { icon: <FaGoogleDrive className="app-item-icon" />, name: "Drive" },
+    { icon: <FaGoogleDrive className="app-item-icon" />, name: "Drive" },
+    { icon: <FaGoogleDrive className="app-item-icon" />, name: "Drive" },
+    { icon: <FaGoogleDrive className="app-item-icon" />, name: "Drive" },
+    { icon: <FaGoogleDrive className="app-item-icon" />, name: "Drive" },
+    { icon: <FaGoogleDrive className="app-item-icon" />, name: "Drive" },
+
+  ];
+
+
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [dropdownPosition, setDropdownPosition] = useState('left');
   const [hoveredItems, setHoveredItems] = useState({
@@ -259,10 +296,10 @@ function App() {
       clearTimeout(timeoutRef.current);
     }
     setActiveDropdown(dropdownName);
-    
+
     // Check screen position and adjust dropdown
     checkDropdownPosition(dropdownName);
-    
+
     // Set default hovered item for this dropdown
     const data = getDataForDropdown(dropdownName);
     if (data && data.length > 0 && !hoveredItems[dropdownName]) {
@@ -280,7 +317,7 @@ function App() {
     const rect = navItem.getBoundingClientRect();
     const dropdownWidth = 800; // Same as CSS width
     const screenWidth = window.innerWidth;
-    
+
     // Check if dropdown will go outside right edge
     if (rect.left + dropdownWidth > screenWidth - 20) {
       setDropdownPosition('right');
@@ -293,7 +330,7 @@ function App() {
     timeoutRef.current = setTimeout(() => {
       const isOverDropdown = dropdownRefs[dropdownName]?.current?.matches(':hover');
       const isOverNavItem = navItemRefs[dropdownName]?.current?.matches(':hover');
-      
+
       if (!isOverDropdown && !isOverNavItem) {
         setActiveDropdown(null);
       }
@@ -309,7 +346,7 @@ function App() {
   const handleDropdownMouseLeave = (dropdownName) => {
     timeoutRef.current = setTimeout(() => {
       const isOverNavItem = navItemRefs[dropdownName]?.current?.matches(':hover');
-      
+
       if (!isOverNavItem) {
         setActiveDropdown(null);
       }
@@ -343,7 +380,7 @@ function App() {
     const hoveredItem = hoveredItems[dropdownName] || data[0];
 
     return (
-      <div 
+      <div
         ref={dropdownRefs[dropdownName]}
         className={`services-dropdown-card ${dropdownPosition === 'right' ? 'dropdown-right' : ''}`}
         onMouseEnter={() => handleDropdownMouseEnter(dropdownName)}
@@ -406,101 +443,112 @@ function App() {
       <header className="headerBg" >
         {/* navbar */}
         <Navbar expand="lg" variant="light">
-      <Navbar.Brand href="#">
-        <img src={logo} alt="Logo" />
-      </Navbar.Brand>
+          <Navbar.Brand href="#">
+            <img src={logo} alt="Logo" />
+          </Navbar.Brand>
 
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav" className="nav-parent">
-        <Nav className="nav-li">
-          <Nav.Link href="#" onClick={handleLinkClick}>
-            Home <MdKeyboardArrowDown />
-          </Nav.Link>
-          <span className="divider">/</span>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav" className="nav-parent">
+            <Nav className="nav-li">
+              <Nav.Link href="#" onClick={handleLinkClick}>
+                Home <MdKeyboardArrowDown />
+              </Nav.Link>
+              <span className="divider">/</span>
 
-          {/* Services */}
-          <div 
-            ref={navItemRefs.services}
-            className={`services-dropdown-container ${activeDropdown === 'services' ? 'active' : ''}`}
-            onMouseEnter={() => handleMouseEnter('services')}
-            onMouseLeave={() => handleMouseLeave('services')}
-          >
-            <Nav.Link href="#" onClick={handleLinkClick} className="services-link">
-              Services <MdKeyboardArrowDown />
-            </Nav.Link>
-            {activeDropdown === 'services' && renderDropdownCard('services')}
-          </div>
-          <span className="divider">/</span>
+              {/* Services */}
+              <div
+                ref={navItemRefs.services}
+                className={`services-dropdown-container ${activeDropdown === 'services' ? 'active' : ''}`}
+                onMouseEnter={() => handleMouseEnter('services')}
+                onMouseLeave={() => handleMouseLeave('services')}
+              >
+                <Nav.Link href="#" onClick={handleLinkClick} className="services-link">
+                  Services <MdKeyboardArrowDown />
+                </Nav.Link>
+                {activeDropdown === 'services' && renderDropdownCard('services')}
+              </div>
+              <span className="divider">/</span>
 
-          {/* Products */}
-          <div 
-            ref={navItemRefs.products}
-            className={`services-dropdown-container ${activeDropdown === 'products' ? 'active' : ''}`}
-            onMouseEnter={() => handleMouseEnter('products')}
-            onMouseLeave={() => handleMouseLeave('products')}
-          >
-            <Nav.Link href="#" onClick={handleLinkClick} className="services-link">
-              Products <MdKeyboardArrowDown />
-            </Nav.Link>
-            {activeDropdown === 'products' && renderDropdownCard('products')}
-          </div>
-          <span className="divider">/</span>
+              {/* Products */}
+              <div
+                ref={navItemRefs.products}
+                className={`services-dropdown-container ${activeDropdown === 'products' ? 'active' : ''}`}
+                onMouseEnter={() => handleMouseEnter('products')}
+                onMouseLeave={() => handleMouseLeave('products')}
+              >
+                <Nav.Link href="#" onClick={handleLinkClick} className="services-link">
+                  Products <MdKeyboardArrowDown />
+                </Nav.Link>
+                {activeDropdown === 'products' && renderDropdownCard('products')}
+              </div>
+              <span className="divider">/</span>
 
-          {/* Digital Marketing */}
-          <div 
-            ref={navItemRefs.digitalMarketing}
-            className={`services-dropdown-container ${activeDropdown === 'digitalMarketing' ? 'active' : ''}`}
-            onMouseEnter={() => handleMouseEnter('digitalMarketing')}
-            onMouseLeave={() => handleMouseLeave('digitalMarketing')}
-          >
-            <Nav.Link href="#" onClick={handleLinkClick} className="services-link">
-              Digital Marketing <MdKeyboardArrowDown />
-            </Nav.Link>
-            {activeDropdown === 'digitalMarketing' && renderDropdownCard('digitalMarketing')}
-          </div>
-          <span className="divider">/</span>
+              {/* Digital Marketing */}
+              <div
+                ref={navItemRefs.digitalMarketing}
+                className={`services-dropdown-container ${activeDropdown === 'digitalMarketing' ? 'active' : ''}`}
+                onMouseEnter={() => handleMouseEnter('digitalMarketing')}
+                onMouseLeave={() => handleMouseLeave('digitalMarketing')}
+              >
+                <Nav.Link href="#" onClick={handleLinkClick} className="services-link">
+                  Digital Marketing <MdKeyboardArrowDown />
+                </Nav.Link>
+                {activeDropdown === 'digitalMarketing' && renderDropdownCard('digitalMarketing')}
+              </div>
+              <span className="divider">/</span>
 
-          {/* Web Hosting */}
-          <div 
-            ref={navItemRefs.digitalMarketing}
-            className={`services-dropdown-container ${activeDropdown === 'webHosting' ? 'active' : ''}`}
-            onMouseEnter={() => handleMouseEnter('webHosting')}
-            onMouseLeave={() => handleMouseLeave('webHosting')}
-          >
-            <Nav.Link href="#" onClick={handleLinkClick} className="services-link">
-              Web Hosting <MdKeyboardArrowDown />
-            </Nav.Link>
-            {activeDropdown === 'webHosting' && renderDropdownCard('webHosting')}
-          </div>
-          <span className="divider">/</span>
+              {/* Web Hosting */}
+              <div
+                ref={navItemRefs.digitalMarketing}
+                className={`services-dropdown-container ${activeDropdown === 'webHosting' ? 'active' : ''}`}
+                onMouseEnter={() => handleMouseEnter('webHosting')}
+                onMouseLeave={() => handleMouseLeave('webHosting')}
+              >
+                <Nav.Link href="#" onClick={handleLinkClick} className="services-link">
+                  Web Hosting <MdKeyboardArrowDown />
+                </Nav.Link>
+                {activeDropdown === 'webHosting' && renderDropdownCard('webHosting')}
+              </div>
+              <span className="divider">/</span>
 
-          {/* Company */}
-          <div 
-            ref={navItemRefs.company}
-            className={`services-dropdown-container ${activeDropdown === 'company' ? 'active' : ''}`}
-            onMouseEnter={() => handleMouseEnter('company')}
-            onMouseLeave={() => handleMouseLeave('company')}
-          >
-            <Nav.Link href="#" onClick={handleLinkClick} className="services-link">
-              Company <MdKeyboardArrowDown />
-            </Nav.Link>
-            {activeDropdown === 'company' && renderDropdownCard('company')}
-          </div>
-          <span className="divider">/</span>
-        </Nav>
-      </Navbar.Collapse>
+              {/* Company */}
+              <div
+                ref={navItemRefs.company}
+                className={`services-dropdown-container ${activeDropdown === 'company' ? 'active' : ''}`}
+                onMouseEnter={() => handleMouseEnter('company')}
+                onMouseLeave={() => handleMouseLeave('company')}
+              >
+                <Nav.Link href="#" onClick={handleLinkClick} className="services-link">
+                  Company <MdKeyboardArrowDown />
+                </Nav.Link>
+                {activeDropdown === 'company' && renderDropdownCard('company')}
+              </div>
+              <span className="divider">/</span>
+            </Nav>
+          </Navbar.Collapse>
 
-      <Row className="account-div">
-        <Col xs="auto">
-          <Button variant="dark" className="accountBtn">
-            <PiSignIn /> My Account
-          </Button>
-        </Col>
-        <Col xs="auto">
-          <IoApps className="ioApps" />
-        </Col>
-      </Row>
-    </Navbar>
+          <Row className="account-div">
+            <Col xs="auto">
+              <Button variant="dark" className="accountBtn">
+                <PiSignIn /> My Account
+              </Button>
+            </Col>
+            {/* Apps Dropdown */}
+            <Col xs="auto" className="apps-menu-wrapper" ref={dropdownRef}>
+              <IoApps className="ioApps" onClick={toggleAppsMenu} />
+              {showApps && (
+                <div className="apps-dropdown">
+                  {appItems.map((app) => (
+                    <div key={app.name} className="app-item">
+                      <p className="app-item-icon">{app.icon} </p>
+                      <p>{app.name}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </Col>
+          </Row>
+        </Navbar>
 
 
 

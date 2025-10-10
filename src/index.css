@@ -226,6 +226,78 @@ body {
   }
 }
 
+
+/* Apps Dropdown */
+.apps-menu-wrapper {
+  position: relative;
+}
+
+.ioApps {
+  font-size: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.ioApps:hover {
+  transform: rotate(10deg);
+}
+
+/* Chrome-style Dropdown */
+.apps-dropdown {
+  position: absolute;
+  right: 0;
+  top: 60px;
+  width: 300px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  z-index: 999;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* Scrollbar styling */
+.apps-dropdown::-webkit-scrollbar {
+  width: 6px;
+}
+
+.apps-dropdown::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+.apps-dropdown::-webkit-scrollbar-thumb:hover {
+  background-color: #999;
+}
+
+.app-item {
+  text-align: center;
+  padding: 10px 5px;
+  border-radius: 10px;
+}
+
+.app-item:hover {
+  background: #f1f3f4;
+}
+
+.app-item-icon {
+  font-size: 28px;
+  color: #007bff;
+}
+
+.app-item p {
+  font-size: 13px;
+  margin: 0;
+  color: #333;
+}
+
+
+
 /* banner section */
 .banner-section {
     padding: 3rem 0rem;
