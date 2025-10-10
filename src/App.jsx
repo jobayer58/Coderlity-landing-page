@@ -212,7 +212,7 @@ function App() {
     },
     {
       id: 2,
-      name: "Social Media Marketing",
+      name: "Social Media ",
       icon: <MdDesignServices />,
       description: "Social media management",
       subServices: ["Content Creation", "Community Management", "Paid Advertising"]
@@ -229,7 +229,7 @@ function App() {
     },
     {
       id: 2,
-      name: "Social Media Marketing",
+      name: "Social Media ",
       icon: <MdDesignServices />,
       description: "Social media management",
       subServices: ["Content Creation", "Community Management", "Paid Advertising"]
