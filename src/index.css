@@ -66,7 +66,137 @@ body {
     font-size: 28px;
 }
 
-/* banner */
+/*  */
+/* Services Dropdown Styles */
+.services-dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.services-dropdown-card {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 800px;
+  z-index: 1000;
+  margin-top: 0; /* Remove margin to eliminate gap */
+  padding-top: 10px; /* Add padding instead of margin */
+}
+
+.services-dropdown-card::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: transparent;
+}
+
+.services-dropdown-card .card {
+  border-radius: 12px;
+  border: none;
+}
+
+/* Main Services List */
+.main-services-list {
+  border-right: 1px solid #e9ecef;
+  padding-right: 20px;
+}
+
+.service-item {
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.service-item:hover,
+.service-item.active {
+  background-color: #007CE8; /* Blue background */
+}
+
+.service-item:hover .service-name ,
+.service-item.active .service-name {
+  color: white; /* White text */
+}
+
+.service-item:hover .service-icon,
+.service-item.active .service-icon {
+  color: white; /* White icon */
+}
+
+.service-item:hover .service-description,
+.service-item.active .service-description {
+  color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+}
+
+.service-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.service-icon {
+  font-size: 20px;
+  color: #007bff;
+  min-width: 24px;
+}
+
+.service-name {
+  font-weight: 600;
+  font-size: 15px;
+  color: #333;
+  flex: 1;
+}
+
+.service-description {
+  font-size: 13px;
+  color: #666;
+  margin-top: 8px;
+  padding-left: 0px; /* 34px dile title and esc center hoy */
+  line-height: 1.4;
+}
+
+/* Sub Services */
+.sub-services-column {
+  padding-left: 20px;
+}
+
+.sub-service-item {
+  padding: 10px 15px;
+  margin-bottom: 6px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #555;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.sub-service-item:hover {
+  background-color: #e9ecef;
+  color: #007bff;
+}
+
+/* Ensure the dropdown appears above other content */
+.nav-parent {
+  position: relative;
+}
+
+/* Adjust hover behavior for the services link */
+.services-link:hover {
+  color: #007bff !important;
+}
+
+/* Make sure the dropdown doesn't cause layout shifts */
+.nav-li {
+  position: static;
+}
+
+
+/* banner section */
 .banner-section {
     padding: 3rem 0rem;
     border: #000;

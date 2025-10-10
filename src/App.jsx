@@ -1,4 +1,4 @@
-import { MdDomain, MdKeyboardArrowDown } from "react-icons/md"
+import { MdDesignServices, MdDomain, MdKeyboardArrowDown, MdPhoneIphone, MdShoppingCart, MdSupport, MdWeb } from "react-icons/md"
 import image1 from '../src/assets/iamges/image1.png'
 import image2 from '../src/assets/iamges/image2.png'
 import image3 from '../src/assets/iamges/image3.png'
@@ -13,7 +13,6 @@ import sponsored7 from '../src/assets/iamges/sponsored7.png'
 import { SiHostinger } from "react-icons/si"
 import { GrJs } from "react-icons/gr"
 import logo from '../src/assets/iamges/web logo1 1 1.svg'
-// import { Navbar } from "react-bootstrap"
 import { Button, ButtonGroup, ButtonToolbar, Card, Col, Container, InputGroup, Nav, Navbar, Row } from "react-bootstrap";
 import { PiDotsThreeVerticalBold, PiSignIn } from "react-icons/pi"
 import { IoApps, IoCall } from "react-icons/io5"
@@ -29,8 +28,180 @@ import logo5 from '../src/assets/iamges/logo5.png'
 import logo6 from '../src/assets/iamges/logo6.png'
 import logo7 from '../src/assets/iamges/logo7.png'
 import logo8 from '../src/assets/iamges/logo8.png'
+import { useEffect, useRef, useState } from "react"
 
 function App() {
+  const [showServicesDropdown, setShowServicesDropdown] = useState(false);
+  const [hoveredService, setHoveredService] = useState(null);
+  const dropdownRef = useRef(null);
+  const timeoutRef = useRef(null);
+  const servicesData = [
+    {
+      id: 1,
+      name: "Web Development",
+      icon: <MdWeb />,
+      description: "Modern, fast, and responsive web solutions",
+      subServices: [
+        "Frontend Development",
+        "Backend Development",
+        "Full Stack Development",
+        "CMS Development",
+        "Responsive Development",
+        "Custom Development",
+        "Frontend Development",
+        "Backend Development",
+        "Full Stack Development",
+        "CMS Development",
+        "Responsive Development",
+        "Custom Development",
+      ]
+    },
+    {
+      id: 2,
+      name: "Mobile Application",
+      icon: <MdPhoneIphone />,
+      description: "ERP Solutions",
+      subServices: [
+        "iOS App Development",
+        "Android App Development",
+        "Cross-Platform Apps",
+        "UI/UX Design",
+        "App Maintenance",
+        "App Store Optimization",
+        "iOS App Development",
+        "Android App Development",
+        "Cross-Platform Apps",
+        "UI/UX Design",
+        "App Maintenance",
+        "App Store Optimization",
+      ]
+    },
+    {
+      id: 3,
+      name: "UI/UX",
+      icon: <MdDesignServices />,
+      description: "Digital marketing",
+      subServices: [
+        "User Research",
+        "Wireframing",
+        "Prototyping",
+        "Visual Design",
+        "Usability Testing",
+        "Design Systems",
+        "User Research",
+        "Wireframing",
+        "Prototyping",
+        "Visual Design",
+        "Usability Testing",
+        "Design Systems"
+      ]
+    },
+    {
+      id: 4,
+      name: "Tech Consultation",
+      icon: <MdSupport />,
+      description: "Expert technology guidance",
+      subServices: [
+        "IT Strategy",
+        "System Architecture",
+        "Technology Stack",
+        "Digital Transformation",
+        "Cloud Solutions",
+        "Security Audit",
+        "IT Strategy",
+        "System Architecture",
+        "Technology Stack",
+        "Digital Transformation",
+        "Cloud Solutions",
+        "Security Audit",
+      ]
+    },
+    {
+      id: 5,
+      name: "Digital Marketing",
+      icon: <MdShoppingCart />,
+      description: "Custom, secure, and high-converting online stores",
+      subServices: [
+        "Online Store Setup",
+        "Payment Integration",
+        "Inventory Management",
+        "SEO Optimization",
+        "Performance Tuning",
+        "Security Implementation",
+        "Online Store Setup",
+        "Payment Integration",
+        "Inventory Management",
+        "SEO Optimization",
+        "Performance Tuning",
+        "Security Implementation",
+      ]
+    },
+    {
+      id: 6,
+      name: "ERP Solution",
+      icon: <MdShoppingCart />,
+      description: "Custom, secure, and high-converting online stores",
+      subServices: [
+        "IT Strategy",
+        "System Architecture",
+        "Technology Stack",
+        "Digital Transformation",
+        "Cloud Solutions",
+        "Security Audit",
+        "IT Strategy",
+        "System Architecture",
+        "Technology Stack",
+        "Digital Transformation",
+        "Cloud Solutions",
+        "Security Audit",
+      ]
+    }
+  ];
+
+  // Fixed useEffect - removed servicesData from dependencies
+  useEffect(() => {
+  if (showServicesDropdown && !hoveredService) {
+    setHoveredService(servicesData[0]);
+  }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+}, [showServicesDropdown, hoveredService]);
+
+  const handleServicesMouseEnter = () => {
+    // Clear any existing timeout
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    setShowServicesDropdown(true);
+  };
+
+  const handleServicesMouseLeave = () => {
+    // Set a delay before closing the dropdown
+    timeoutRef.current = setTimeout(() => {
+      if (dropdownRef.current && !dropdownRef.current.matches(':hover')) {
+        setShowServicesDropdown(false);
+        setHoveredService(null);
+      }
+    }, 200); // 200ms delay
+  };
+
+  const handleDropdownMouseEnter = () => {
+    // Clear the closing timeout when mouse enters dropdown
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+  };
+
+  const handleDropdownMouseLeave = () => {
+    // Close dropdown when mouse leaves
+    timeoutRef.current = setTimeout(() => {
+      setShowServicesDropdown(false);
+      setHoveredService(null);
+    }, 200);
+  };
+
+  const handleServiceHover = (service) => {
+    setHoveredService(service);
+  };
 
   return (
     <main>
@@ -49,15 +220,85 @@ function App() {
             id="basic-navbar-nav"
             className="nav-parent"
           >
-            <Nav className=" nav-li">
+            <Nav className="nav-li">
               <Nav.Link href="#">
                 Home <MdKeyboardArrowDown />
               </Nav.Link>
               <span className="divider">/</span>
 
-              <Nav.Link href="#">
-                Services <MdKeyboardArrowDown />
-              </Nav.Link>
+              {/* Services Dropdown */}
+              {/* Services Dropdown */}
+              <div
+                className="services-dropdown-container"
+                onMouseEnter={handleServicesMouseEnter}
+                onMouseLeave={handleServicesMouseLeave}
+              >
+                <Nav.Link href="#" className="services-link">
+                  Services <MdKeyboardArrowDown />
+                </Nav.Link>
+
+                {showServicesDropdown && (
+                  <div
+                    ref={dropdownRef}
+                    className="services-dropdown-card"
+                    onMouseEnter={handleDropdownMouseEnter}
+                    onMouseLeave={handleDropdownMouseLeave}
+                  >
+                    <Card className="shadow-lg">
+                      <Card.Body className="p-4">
+                        <Row>
+                          {/* Column 1: Main Services with Icons */}
+                          <Col md={4}>
+                            <div className="main-services-list">
+                              {servicesData.map((service) => (
+                                <div
+                                  key={service.id}
+                                  className={`service-item ${hoveredService?.id === service.id ? 'active' : ''}`}
+                                  onMouseEnter={() => handleServiceHover(service)}
+                                >
+                                  <div className="service-header">
+                                    <span className="service-icon">{service.icon}</span>
+                                    <span className="service-name">{service.name}</span>
+                                  </div>
+                                  {hoveredService?.id === service.id && (
+                                    <div className="service-description">
+                                      {service.description}
+                                    </div>
+                                  )}
+                                </div>
+                              ))}
+                            </div>
+                          </Col>
+
+                          {/* Columns 2 & 3: Sub-services */}
+                          <Col md={8}>
+                            <Row>
+                              <Col md={6}>
+                                <div className="sub-services-column">
+                                  {hoveredService?.subServices.slice(0, Math.ceil(hoveredService?.subServices.length / 2)).map((subService, index) => (
+                                    <div key={index} className="sub-service-item">
+                                      {subService}
+                                    </div>
+                                  ))}
+                                </div>
+                              </Col>
+                              <Col md={6}>
+                                <div className="sub-services-column">
+                                  {hoveredService?.subServices.slice(Math.ceil(hoveredService?.subServices.length / 2)).map((subService, index) => (
+                                    <div key={index} className="sub-service-item">
+                                      {subService}
+                                    </div>
+                                  ))}
+                                </div>
+                              </Col>
+                            </Row>
+                          </Col>
+                        </Row>
+                      </Card.Body>
+                    </Card>
+                  </div>
+                )}
+              </div>
               <span className="divider">/</span>
 
               <Nav.Link href="#">
@@ -71,6 +312,11 @@ function App() {
               <span className="divider">/</span>
 
               <Nav.Link href="#">
+                Web Hosting <MdKeyboardArrowDown />
+              </Nav.Link>
+              <span className="divider">/</span>
+
+              <Nav.Link href="#">
                 Company <MdKeyboardArrowDown />
               </Nav.Link>
               <span className="divider">/</span>
@@ -78,7 +324,6 @@ function App() {
           </Navbar.Collapse>
 
           {/* Right: My Account + IoApps */}
-
           <Row className="account-div">
             <Col xs="auto">
               <Button variant="dark" className="accountBtn">
@@ -91,7 +336,6 @@ function App() {
           </Row>
 
         </Navbar>
-
         {/*banner section */}
         <section className="banner-section">
           {/* Background Floating Logos */}
@@ -356,32 +600,32 @@ function App() {
 
       {/* sponsored section */}
       <section className="sponsored-section">
-      <Container fluid className=" sponsored-container">
-        <Row className="sponsored-row">
-          <Col xs={4} sm={3} md={2} lg="auto" className="text-center">
-            <img src={sponsored1} alt="sponsor" className="img-fluid" />
-          </Col>
-          <Col xs={4} sm={3} md={2} lg="auto" className="text-center">
-            <img src={sponsored2} alt="sponsor" className="img-fluid" />
-          </Col>
-          <Col xs={4} sm={3} md={2} lg="auto" className="text-center">
-            <img src={sponsored3} alt="sponsor" className="img-fluid" />
-          </Col>
-          <Col xs={4} sm={3} md={2} lg="auto" className="text-center">
-            <img src={sponsored4} alt="sponsor" className="img-fluid" />
-          </Col>
-          <Col xs={4} sm={3} md={2} lg="auto" className="text-center">
-            <img src={sponsored5} alt="sponsor" className="img-fluid" />
-          </Col>
-          <Col xs={4} sm={3} md={2} lg="auto" className="text-center">
-            <img src={sponsored6} alt="sponsor" className="img-fluid" />
-          </Col>
-          <Col xs={4} sm={3} md={2} lg="auto" className="text-center">
-            <img src={sponsored7} alt="sponsor" className="img-fluid" />
-          </Col>
-        </Row>
-      </Container>
-    </section>
+        <Container fluid className=" sponsored-container">
+          <Row className="sponsored-row">
+            <Col xs={4} sm={3} md={2} lg="auto" className="text-center">
+              <img src={sponsored1} alt="sponsor" className="img-fluid" />
+            </Col>
+            <Col xs={4} sm={3} md={2} lg="auto" className="text-center">
+              <img src={sponsored2} alt="sponsor" className="img-fluid" />
+            </Col>
+            <Col xs={4} sm={3} md={2} lg="auto" className="text-center">
+              <img src={sponsored3} alt="sponsor" className="img-fluid" />
+            </Col>
+            <Col xs={4} sm={3} md={2} lg="auto" className="text-center">
+              <img src={sponsored4} alt="sponsor" className="img-fluid" />
+            </Col>
+            <Col xs={4} sm={3} md={2} lg="auto" className="text-center">
+              <img src={sponsored5} alt="sponsor" className="img-fluid" />
+            </Col>
+            <Col xs={4} sm={3} md={2} lg="auto" className="text-center">
+              <img src={sponsored6} alt="sponsor" className="img-fluid" />
+            </Col>
+            <Col xs={4} sm={3} md={2} lg="auto" className="text-center">
+              <img src={sponsored7} alt="sponsor" className="img-fluid" />
+            </Col>
+          </Row>
+        </Container>
+      </section>
 
     </main>
   )
