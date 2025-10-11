@@ -236,7 +236,7 @@ body {
   top: 60px;
   width: 300px;
   background: #fff;
-  border: 1px solid #ddd;
+  border: 8px solid #D3EAFF40;
   border-radius: 10px;
   padding: 10px;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
@@ -283,6 +283,8 @@ body {
 }
 
 /* ========== RESPONSIVE NAVBAR STYLES ONLY ========== */
+
+
 
 /* Tablet Devices (768px - 991px) */
 @media (max-width: 991.98px) {
@@ -406,9 +408,9 @@ body {
   }
 
   .account-div {
-    flex-direction: column;
+    justify-content: space-between;
     gap: 10px;
-    align-items: flex-start;
+    align-items: center;
     width: 100%;
   }
 
@@ -418,10 +420,6 @@ body {
   }
 
   /* Mobile: Apps inside navigation */
-  .apps-menu-wrapper {
-    align-self: flex-end;
-    margin-top: 10px;
-  }
 
   .apps-dropdown {
     right: -10px;
@@ -473,7 +471,7 @@ body {
 @media (max-width: 991.98px) {
   .nav-li .nav-link {
     padding: 10px 0;
-    border-bottom: 1px solid #f8f9fa;
+    border-bottom: 1px solid rgb(232, 231, 231);
   }
 
   .services-dropdown-container .nav-link {
@@ -897,7 +895,7 @@ body {
 }
 
 /* 💻 Laptop (993px - 1200px) */
-@media (min-width: 993px) and (max-width: 1200px) {
+@media (min-width: 993px) and (max-width: 1224px) {
   .cards-container {
     gap: 16px;
   }
@@ -905,6 +903,25 @@ body {
   .card-wrapper {
     width: calc(33.333% - 11px);
     /* 3 cards with gap */
+  }
+  .navbar{
+    padding: 10px 15px ;
+  }
+  .nav-link{
+    font-size: 13px;
+  }
+  .accountBtn{
+    padding: 6px 8px;
+    font-size: 10px;
+  }
+  .ioApps{
+    font-size: 20px;
+  }
+  .logoImg{
+    height: 35px;
+  }
+  .nav-li{
+    gap: 2px;
   }
 }
 

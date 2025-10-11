@@ -449,7 +449,7 @@ function App() {
         {/* navbar */}
         <Navbar expand="lg" variant="light">
   <Navbar.Brand href="#">
-    <img src={logo} alt="Logo" />
+    <img className="logoImg" src={logo} alt="Logo" />
   </Navbar.Brand>
 
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -531,10 +531,10 @@ function App() {
     </Nav>
 
     {/* ✅ Account + Apps visible only in mobile/tablet */}
-    <div className="d-lg-none mt-3 w-100">
+    <div className="d-lg-none">
       <Row className="account-div">
         <Col xs="auto">
-          <Button variant="dark" className="accountBtn w-100">
+          <Button variant="dark" className="accountBtn ">
             <PiSignIn /> My Account
           </Button>
         </Col>
