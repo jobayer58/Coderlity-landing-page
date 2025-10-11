@@ -29,6 +29,7 @@ import logo6 from '../src/assets/iamges/logo6.png'
 import logo7 from '../src/assets/iamges/logo7.png'
 import logo8 from '../src/assets/iamges/logo8.png'
 import { useEffect, useRef, useState } from "react"
+import iconSearch from '../src/assets/iamges/icon serch.png'
 
 function App() {
 
@@ -740,8 +741,78 @@ function App() {
             <p>Discover, buy, and register your unique web address using our <br /> powerful search or get creative with our AI Generator.</p>
           </div>
           {/* search */}
-          <div className="domain-search">
-            <input type="text" placeholder="Type the domain name or a descriptive phrase..." />
+          <div className="search-div">
+            <div className="domain-search">
+              <input type="text" className="input-text" placeholder="Type the domain name or a descriptive phrase..." />
+              <button className="search-btn">Search Domain</button>
+            </div>
+            <div className="search-left-text">
+              <img src={iconSearch} alt="" />
+              <p>Generate with AI</p>
+            </div>
+          </div>
+          {/* domain card */}
+          <div className="domain-card-parent">
+            {/* 1 */}
+            <div className="domain-card">
+              <div className="domain-div">
+                <h1 className="domain-extension">.com</h1>
+                <p className="original-price">USD $17.99/yr</p>
+              </div>
+              <div className="domain-pricing">
+                <div className="discount-price">USD <span>$2.99/yr</span></div>
+              </div>
+            </div>
+            {/* 2 */}
+            <div className="domain-card">
+              <div className="domain-div">
+                <h1 className="domain-extension">.com</h1>
+                <p className="original-price">USD $17.99/yr</p>
+              </div>
+              <div className="domain-pricing">
+                <div className="discount-price">USD <span>$2.99/yr</span></div>
+              </div>
+            </div>
+            {/* 3 */}
+            <div className="domain-card">
+              <div className="domain-div">
+                <h1 className="domain-extension">.com</h1>
+                <p className="original-price">USD $17.99/yr</p>
+              </div>
+              <div className="domain-pricing">
+                <div className="discount-price">USD <span>$2.99/yr</span></div>
+              </div>
+            </div>
+            {/* 4 */}
+            <div className="domain-card">
+              <div className="domain-div">
+                <h1 className="domain-extension">.com</h1>
+                <p className="original-price">USD $17.99/yr</p>
+              </div>
+              <div className="domain-pricing">
+                <div className="discount-price">USD <span>$2.99/yr</span></div>
+              </div>
+            </div>
+            {/* 5 */}
+            <div className="domain-card">
+              <div className="domain-div">
+                <h1 className="domain-extension">.com</h1>
+                <p className="original-price">USD $17.99/yr</p>
+              </div>
+              <div className="domain-pricing">
+                <div className="discount-price">USD <span>$2.99/yr</span></div>
+              </div>
+            </div>
+            {/* 6 */}
+            <div className="domain-card">
+              <div className="domain-div">
+                <h1 className="domain-extension">.com</h1>
+                <p className="original-price">USD $17.99/yr</p>
+              </div>
+              <div className="domain-pricing">
+                <div className="discount-price">USD <span>$2.99/yr</span></div>
+              </div>
+            </div>
           </div>
         </div>
 
