@@ -443,9 +443,9 @@ function App() {
       </div>
     );
   };
-  
-  
-  
+
+
+
   return (
     <main>
       <header className="headerBg" >
@@ -600,7 +600,7 @@ function App() {
             <img src={logo8} alt="" className="floating-logo logo-8" />
           </div>
           <div>
-            <h5 className="text">Looking for Your One Stop Solution? </h5>
+            <h5 className="text-banner">Looking for Your One Stop Solution? </h5>
             <h1 className="text-description">Complete Digital Solutions <br />
               for Your Business</h1>
           </div>
@@ -618,7 +618,7 @@ function App() {
             <img src={banner1} alt="" />
           </InputGroup>
 
-          <Row className="align-items-center input-Nav">
+          <Row className="input-Nav">
             <Col xs="auto">
               <img src={spinning} alt="" />
             </Col>
@@ -649,89 +649,103 @@ function App() {
             </Col>
           </Row>
 
+          <div className="banner-text-gradient">
+            <h1>Our Services</h1>
+          </div>
+
         </section>
 
       </header>
 
 
       {/* domain purchase section */}
-      <section>
-        <div className="" style={{
-          background: 'linear-gradient(90deg, #D5EBFF, #E4F2FF, #D5EBFF)',
-          minHeight: '300px', marginTop: '200px',
-        }}>
+      <section className="domain-section">
+        {/* icon */}
+        <div className="domain-banner">
           {/* icon parent */}
-          <div>
-
+          <div className="icon-parent">
             {/* 1st icon */}
-            <div className="">
+            <div className="icon-content">
               <div className=" icon-div " >
                 <MdDomain className=" icon" />
               </div>
-              <p className="fw-medium">Domain</p>
+              <p className="icon-text">Domain</p>
 
             </div>
             {/* 2 icon */}
-            <div className="">
+            <div className="icon-content">
               <div className=" icon-div " >
                 <SiHostinger className="icon" />
               </div>
-              <p className="fw-medium">Hosting</p>
+              <p className="icon-text">Hosting</p>
 
             </div>
             {/* 3 icon */}
-            <div className="">
+            <div className="icon-content">
               <div className=" icon-div " >
-                <GrJs className="icon" />
+                <SiHostinger className="icon" />
               </div>
-              <p className="fw-medium ">Web Application</p>
+              <p className="icon-text ">Web Application</p>
 
             </div>
             {/* 4 icon */}
-            <div className="">
+            <div className="icon-content">
               <div className=" icon-div " >
                 <MdDomain className=" icon" />
               </div>
-              <p className="fw-medium">Mobile Application</p>
+              <p className="icon-text">Mobile Application</p>
 
             </div>
             {/* 4 icon */}
-            <div className="">
+            <div className="icon-content">
               <div className=" icon-div " >
                 <MdDomain className=" icon" />
               </div>
-              <p className="fw-medium">ERP Solution</p>
+              <p className="icon-text">ERP Solution</p>
 
             </div>
             {/* 5 icon */}
-            <div className="">
+            <div className="icon-content">
               <div className=" icon-div " >
                 <MdDomain className=" icon" />
               </div>
-              <p className="fw-medium">Digital Marketing</p>
+              <p className="icon-text">Digital Marketing</p>
 
             </div>
 
             {/* 6 icon */}
-            <div className="">
+            <div className="icon-content">
               <div className=" icon-div " >
                 <MdDomain className=" icon" />
               </div>
-              <p className="fw-medium">UI/UX</p>
+              <p className="icon-text">UI/UX</p>
 
             </div>
             {/* 7 icon */}
-            <div className="">
+            <div className="icon-content">
               <div className=" icon-div " >
                 <MdDomain className=" icon" />
               </div>
-              <p className="fw-medium">Tech Consultency</p>
+              <p className="icon-text">Tech Consultency</p>
 
             </div>
 
 
           </div>
         </div>
+        {/* content */}
+        <div className="domain-content">
+          <div className="domain-content-text">
+            <h1>Find your Perfect Domain</h1>
+            <p>Discover, buy, and register your unique web address using our <br /> powerful search or get creative with our AI Generator.</p>
+          </div>
+          {/* search */}
+          <div className="domain-search">
+            <input type="text" placeholder="Type the domain name or a descriptive phrase..." />
+          </div>
+        </div>
+
+
       </section>
 
       {/* top products */}
