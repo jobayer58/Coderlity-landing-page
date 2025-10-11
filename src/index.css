@@ -17,8 +17,9 @@ body {
 
 }
 
-/* navbar */
+/* ========== LARGE DEVICE STYLES (NO CHANGES) ========== */
 
+/* navbar section */
 .container {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -26,7 +27,6 @@ body {
 
 .navbar {
   padding: 20px 80px;
-
 }
 
 .nav-parent {
@@ -40,18 +40,16 @@ body {
 }
 
 .navbar-nav .nav-link {
-  color: #000
+  color: #000;
 }
 
 .navbar-nav .nav-link:hover {
-  color: blue
+  color: blue;
 }
-
 
 .account-div {
   align-items: center;
   justify-content: center;
-
 }
 
 .accountBtn {
@@ -66,7 +64,6 @@ body {
   font-size: 28px;
 }
 
-/*  */
 /* Navigation Item Styles */
 .services-dropdown-container {
   position: relative;
@@ -93,7 +90,6 @@ body {
   transition: all 0.3s ease;
 }
 
-/* Right positioned dropdown */
 .services-dropdown-card.dropdown-right {
   left: auto;
   right: 0;
@@ -180,7 +176,6 @@ body {
   color: #666;
   margin-top: 8px;
   padding-left: 34px;
-  /* 34px dile title er sathe center hoy */
   line-height: 1.4;
 }
 
@@ -204,29 +199,13 @@ body {
   color: #007bff;
 }
 
-/* Ensure the dropdown appears above other content */
 .nav-parent {
   position: relative;
 }
 
-/* Make sure the dropdown doesn't cause layout shifts */
 .nav-li {
   position: static;
 }
-
-/* Responsive adjustments */
-@media (max-width: 1200px) {
-  .services-dropdown-card {
-    width: 700px;
-  }
-}
-
-@media (max-width: 992px) {
-  .services-dropdown-card {
-    width: 600px;
-  }
-}
-
 
 /* Apps Dropdown */
 .apps-menu-wrapper {
@@ -243,7 +222,6 @@ body {
   transform: rotate(10deg);
 }
 
-/* Chrome-style Dropdown */
 .apps-dropdown {
   position: absolute;
   right: 0;
@@ -262,7 +240,6 @@ body {
   overflow-y: auto;
 }
 
-/* Scrollbar styling */
 .apps-dropdown::-webkit-scrollbar {
   width: 6px;
 }
@@ -296,6 +273,212 @@ body {
   margin: 0;
   color: #333;
 }
+
+/* ========== RESPONSIVE STYLES ONLY ========== */
+
+/* Tablet Devices (768px - 991px) */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: #ffffff !important; 
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    padding: 20px;
+    border: 1px solid #e9ecef;
+  }
+  .navbar {
+    padding: 15px 30px;
+  }
+  
+  .nav-parent {
+    justify-content: flex-start;
+    margin-top: 15px;
+    background-color: white;
+  }
+  
+  .nav-li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    width: 100%;
+    background: white;
+  }
+
+  
+  .divider {
+    display: none;
+  }
+  
+  .services-dropdown-container {
+    width: 100%;
+     background: #ffffff !important;
+  }
+  
+  .services-dropdown-card {
+    position: static;
+    width: 100%;
+    margin-top: 15px;
+    padding-top: 0;
+    background: #ffffff !important;
+    background-color: white;
+  }
+  
+  .services-dropdown-card::before {
+    display: none;
+  }
+  
+  .account-div {
+    justify-content: flex-end;
+    margin-top: 15px;
+  }
+  
+  /* Tablet: Apps stays outside navigation */
+  .apps-menu-wrapper {
+    position: relative;
+  }
+  
+  .apps-dropdown {
+    right: -20px;
+    top: 50px;
+  }
+}
+
+/* Mobile Devices (576px - 767px) */
+@media (max-width: 767.98px) {
+  .navbar {
+    padding: 12px 20px;
+  }
+  
+  .nav-parent {
+    margin-top: 10px;
+    background-color: white;
+  }
+  
+  .navbar-nav .nav-link {
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+    width: 100%;
+  }
+  
+  .services-dropdown-card {
+    margin-top: 10px;
+  }
+  
+  .main-services-list {
+    border-right: none;
+    border-bottom: 1px solid #e9ecef;
+    padding-right: 0;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .account-div {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .accountBtn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  /* Mobile: Apps inside navigation */
+  .apps-menu-wrapper {
+    align-self: flex-end;
+    margin-top: 10px;
+  }
+  
+  .apps-dropdown {
+    right: -10px;
+    width: 280px;
+  }
+}
+
+/* Small Mobile Devices (Below 576px) */
+@media (max-width: 575.98px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+  
+  .services-dropdown-card {
+    width: 100%;
+  }
+  
+  .apps-dropdown {
+    width: 260px;
+    right: 0;
+  }
+  
+  .app-item {
+    padding: 8px 4px;
+  }
+  
+  .app-item-icon {
+    font-size: 24px;
+  }
+  
+  .app-item p {
+    font-size: 12px;
+  }
+}
+
+/* Mobile Menu Toggle Button */
+@media (max-width: 991.98px) {
+  .navbar-toggler {
+    border: none;
+    padding: 4px 0px;
+  }
+  
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+}
+
+/* Navigation items for mobile */
+@media (max-width: 991.98px) {
+  .nav-li .nav-link {
+    padding: 10px 0;
+    border-bottom: 1px solid #f8f9fa;
+  }
+  
+  .services-dropdown-container .nav-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 375px) {
+  .apps-dropdown {
+    width: 240px;
+  }
+  
+  .app-item {
+    padding: 6px 2px;
+  }
+  
+  .app-item p {
+    font-size: 11px;
+  }
+}
+
+/* Large Mobile Landscape (576px - 767px) */
+@media (max-width: 767.98px) and (orientation: landscape) {
+  .nav-parent {
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+  
+  .services-dropdown-card {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+}
+
+
 
 
 
