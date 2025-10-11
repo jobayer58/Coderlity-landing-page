@@ -293,9 +293,12 @@ body {
   .navbar-collapse {
     position: absolute !important;
     top: 100%;
-    left: 10px;        /* screen left থেকে gap */
-    right: 10px;       /* screen right থেকে gap */
-    width: auto;       /* left/right অনুযায়ী adjust হবে */
+    left: 10px;
+    /* screen left থেকে gap */
+    right: 10px;
+    /* screen right থেকে gap */
+    width: auto;
+    /* left/right অনুযায়ী adjust হবে */
     background-color: #ffffff !important;
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -573,6 +576,7 @@ body {
 }
 
 .banner-btn-parent {
+  padding: 0px 150px;
   gap: 1rem;
   justify-content: center;
 
@@ -600,6 +604,7 @@ body {
 .message-parent {
   align-items: center;
 
+
 }
 
 .message-div {
@@ -611,6 +616,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: white;
+  box-shadow: 0 0 15px 4px rgba(151, 200, 243, 0.8);
 
 }
 
@@ -820,6 +826,7 @@ body {
   display: block;
 }
 
+
 .version-badge {
   position: absolute;
   top: 0px;
@@ -904,23 +911,29 @@ body {
     width: calc(33.333% - 11px);
     /* 3 cards with gap */
   }
-  .navbar{
-    padding: 10px 15px ;
+
+  .navbar {
+    padding: 10px 15px;
   }
-  .nav-link{
+
+  .nav-link {
     font-size: 13px;
   }
-  .accountBtn{
+
+  .accountBtn {
     padding: 6px 8px;
     font-size: 10px;
   }
-  .ioApps{
+
+  .ioApps {
     font-size: 20px;
   }
-  .logoImg{
+
+  .logoImg {
     height: 35px;
   }
-  .nav-li{
+
+  .nav-li {
     gap: 2px;
   }
 }

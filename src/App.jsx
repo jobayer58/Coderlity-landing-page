@@ -31,7 +31,7 @@ import logo8 from '../src/assets/iamges/logo8.png'
 import { useEffect, useRef, useState } from "react"
 
 function App() {
-  
+
 
   // ioApps Dropdown card 
   const [showApps, setShowApps] = useState(false);
@@ -41,7 +41,7 @@ function App() {
     setShowApps((prev) => !prev);
   };
 
-  // 👉 bahire click korle dropdown close
+  // 👉 bahire click korle dropdown close ioApps
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -443,144 +443,147 @@ function App() {
       </div>
     );
   };
+  
+  
+  
   return (
     <main>
       <header className="headerBg" >
         {/* navbar */}
         <Navbar expand="lg" variant="light">
-  <Navbar.Brand href="#">
-    <img className="logoImg" src={logo} alt="Logo" />
-  </Navbar.Brand>
+          <Navbar.Brand href="#">
+            <img className="logoImg" src={logo} alt="Logo" />
+          </Navbar.Brand>
 
-  <Navbar.Toggle aria-controls="basic-navbar-nav" />
-  <Navbar.Collapse id="basic-navbar-nav" className="nav-parent">
-    <Nav className="nav-li">
-      <Nav.Link href="#" onClick={handleLinkClick}>
-        Home
-      </Nav.Link>
-      <span className="divider">/</span>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav" className="nav-parent">
+            <Nav className="nav-li">
+              <Nav.Link href="#" onClick={handleLinkClick}>
+                Home
+              </Nav.Link>
+              <span className="divider">/</span>
 
-      {/* Services */}
-      <div
-        ref={navItemRefs.services}
-        className={`services-dropdown-container ${activeDropdown === 'services' ? 'active' : ''}`}
-        onMouseEnter={() => handleMouseEnter('services')}
-        onMouseLeave={() => handleMouseLeave('services')}
-      >
-        <Nav.Link href="#" onClick={handleLinkClick} className="services-link">
-          Services <MdKeyboardArrowDown />
-        </Nav.Link>
-        {activeDropdown === 'services' && renderDropdownCard('services')}
-      </div>
-      <span className="divider">/</span>
-
-      {/* Products */}
-      <div
-        ref={navItemRefs.products}
-        className={`services-dropdown-container ${activeDropdown === 'products' ? 'active' : ''}`}
-        onMouseEnter={() => handleMouseEnter('products')}
-        onMouseLeave={() => handleMouseLeave('products')}
-      >
-        <Nav.Link href="#" onClick={handleLinkClick} className="services-link">
-          Products <MdKeyboardArrowDown />
-        </Nav.Link>
-        {activeDropdown === 'products' && renderDropdownCard('products')}
-      </div>
-      <span className="divider">/</span>
-
-      {/* Digital Marketing */}
-      <div
-        ref={navItemRefs.digitalMarketing}
-        className={`services-dropdown-container ${activeDropdown === 'digitalMarketing' ? 'active' : ''}`}
-        onMouseEnter={() => handleMouseEnter('digitalMarketing')}
-        onMouseLeave={() => handleMouseLeave('digitalMarketing')}
-      >
-        <Nav.Link href="#" onClick={handleLinkClick} className="services-link">
-          Digital Marketing <MdKeyboardArrowDown />
-        </Nav.Link>
-        {activeDropdown === 'digitalMarketing' && renderDropdownCard('digitalMarketing')}
-      </div>
-      <span className="divider">/</span>
-
-      {/* Web Hosting */}
-      <div
-        ref={navItemRefs.webHosting}
-        className={`services-dropdown-container ${activeDropdown === 'webHosting' ? 'active' : ''}`}
-        onMouseEnter={() => handleMouseEnter('webHosting')}
-        onMouseLeave={() => handleMouseLeave('webHosting')}
-      >
-        <Nav.Link href="#" onClick={handleLinkClick} className="services-link">
-          Web Hosting <MdKeyboardArrowDown />
-        </Nav.Link>
-        {activeDropdown === 'webHosting' && renderDropdownCard('webHosting')}
-      </div>
-      <span className="divider">/</span>
-
-      {/* Company */}
-      <div
-        ref={navItemRefs.company}
-        className={`services-dropdown-container ${activeDropdown === 'company' ? 'active' : ''}`}
-        onMouseEnter={() => handleMouseEnter('company')}
-        onMouseLeave={() => handleMouseLeave('company')}
-      >
-        <Nav.Link href="#" onClick={handleLinkClick} className="services-link">
-          Company <MdKeyboardArrowDown />
-        </Nav.Link>
-        {activeDropdown === 'company' && renderDropdownCard('company')}
-      </div>
-    </Nav>
-
-    {/* ✅ Account + Apps visible only in mobile/tablet */}
-    <div className="d-lg-none">
-      <Row className="account-div">
-        <Col xs="auto">
-          <Button variant="dark" className="accountBtn ">
-            <PiSignIn /> My Account
-          </Button>
-        </Col>
-        <Col xs="auto" className="apps-menu-wrapper" ref={dropdownRef}>
-          <IoApps className="ioApps" onClick={toggleAppsMenu} />
-          {showApps && (
-            <div className="apps-dropdown">
-              {appItems.map((app) => (
-                <div key={app.name} className="app-item">
-                  <p className="app-item-icon">{app.icon}</p>
-                  <p>{app.name}</p>
-                </div>
-              ))}
-            </div>
-          )}
-        </Col>
-      </Row>
-    </div>
-  </Navbar.Collapse>
-
-  {/* ✅ Account + Apps visible only on large screens */}
-  <div className="d-none d-lg-flex">
-    <Row className="account-div">
-      <Col xs="auto">
-        <Button variant="dark" className="accountBtn">
-          <PiSignIn /> My Account
-        </Button>
-      </Col>
-      <Col xs="auto" className="apps-menu-wrapper" ref={dropdownRef}>
-        <IoApps className="ioApps" onClick={toggleAppsMenu} />
-        {showApps && (
-          <div className="apps-dropdown">
-            {appItems.map((app) => (
-              <div key={app.name} className="app-item">
-                <p className="app-item-icon">{app.icon}</p>
-                <p>{app.name}</p>
+              {/* Services */}
+              <div
+                ref={navItemRefs.services}
+                className={`services-dropdown-container ${activeDropdown === 'services' ? 'active' : ''}`}
+                onMouseEnter={() => handleMouseEnter('services')}
+                onMouseLeave={() => handleMouseLeave('services')}
+              >
+                <Nav.Link href="#" onClick={handleLinkClick} className="services-link">
+                  Services <MdKeyboardArrowDown />
+                </Nav.Link>
+                {activeDropdown === 'services' && renderDropdownCard('services')}
               </div>
-            ))}
-          </div>
-        )}
-      </Col>
-    </Row>
-  </div>
-</Navbar>
+              <span className="divider">/</span>
 
-              
+              {/* Products */}
+              <div
+                ref={navItemRefs.products}
+                className={`services-dropdown-container ${activeDropdown === 'products' ? 'active' : ''}`}
+                onMouseEnter={() => handleMouseEnter('products')}
+                onMouseLeave={() => handleMouseLeave('products')}
+              >
+                <Nav.Link href="#" onClick={handleLinkClick} className="services-link">
+                  Products <MdKeyboardArrowDown />
+                </Nav.Link>
+                {activeDropdown === 'products' && renderDropdownCard('products')}
+              </div>
+              <span className="divider">/</span>
+
+              {/* Digital Marketing */}
+              <div
+                ref={navItemRefs.digitalMarketing}
+                className={`services-dropdown-container ${activeDropdown === 'digitalMarketing' ? 'active' : ''}`}
+                onMouseEnter={() => handleMouseEnter('digitalMarketing')}
+                onMouseLeave={() => handleMouseLeave('digitalMarketing')}
+              >
+                <Nav.Link href="#" onClick={handleLinkClick} className="services-link">
+                  Digital Marketing <MdKeyboardArrowDown />
+                </Nav.Link>
+                {activeDropdown === 'digitalMarketing' && renderDropdownCard('digitalMarketing')}
+              </div>
+              <span className="divider">/</span>
+
+              {/* Web Hosting */}
+              <div
+                ref={navItemRefs.webHosting}
+                className={`services-dropdown-container ${activeDropdown === 'webHosting' ? 'active' : ''}`}
+                onMouseEnter={() => handleMouseEnter('webHosting')}
+                onMouseLeave={() => handleMouseLeave('webHosting')}
+              >
+                <Nav.Link href="#" onClick={handleLinkClick} className="services-link">
+                  Web Hosting <MdKeyboardArrowDown />
+                </Nav.Link>
+                {activeDropdown === 'webHosting' && renderDropdownCard('webHosting')}
+              </div>
+              <span className="divider">/</span>
+
+              {/* Company */}
+              <div
+                ref={navItemRefs.company}
+                className={`services-dropdown-container ${activeDropdown === 'company' ? 'active' : ''}`}
+                onMouseEnter={() => handleMouseEnter('company')}
+                onMouseLeave={() => handleMouseLeave('company')}
+              >
+                <Nav.Link href="#" onClick={handleLinkClick} className="services-link">
+                  Company <MdKeyboardArrowDown />
+                </Nav.Link>
+                {activeDropdown === 'company' && renderDropdownCard('company')}
+              </div>
+            </Nav>
+
+            {/* ✅ Account + Apps visible only in mobile/tablet */}
+            <div className="d-lg-none">
+              <Row className="account-div">
+                <Col xs="auto">
+                  <Button variant="dark" className="accountBtn ">
+                    <PiSignIn /> My Account
+                  </Button>
+                </Col>
+                <Col xs="auto" className="apps-menu-wrapper" ref={dropdownRef}>
+                  <IoApps className="ioApps" onClick={toggleAppsMenu} />
+                  {showApps && (
+                    <div className="apps-dropdown">
+                      {appItems.map((app) => (
+                        <div key={app.name} className="app-item">
+                          <p className="app-item-icon">{app.icon}</p>
+                          <p>{app.name}</p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </Col>
+              </Row>
+            </div>
+          </Navbar.Collapse>
+
+          {/* ✅ Account + Apps visible only on large screens */}
+          <div className="d-none d-lg-flex">
+            <Row className="account-div">
+              <Col xs="auto">
+                <Button variant="dark" className="accountBtn">
+                  <PiSignIn /> My Account
+                </Button>
+              </Col>
+              <Col xs="auto" className="apps-menu-wrapper" ref={dropdownRef}>
+                <IoApps className="ioApps" onClick={toggleAppsMenu} />
+                {showApps && (
+                  <div className="apps-dropdown">
+                    {appItems.map((app) => (
+                      <div key={app.name} className="app-item">
+                        <p className="app-item-icon">{app.icon}</p>
+                        <p>{app.name}</p>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </Col>
+            </Row>
+          </div>
+        </Navbar>
+
+
 
 
         {/*banner section */}
@@ -624,9 +627,10 @@ function App() {
               <Nav className="banner-btn-parent ">
                 <Nav.Link className="banner-btn">Web Application</Nav.Link>
                 <Nav.Link className="banner-btn">Mobile Application</Nav.Link>
-                <Nav.Link className="banner-btn">Zacta E-Invoicing</Nav.Link>
-                <Nav.Link className="banner-btn">Digital Marketing</Nav.Link>
+                <Nav.Link className="banner-btn">ERP Solution</Nav.Link>
+                <Nav.Link className="banner-btn">CMS Solution</Nav.Link>
                 <Nav.Link className="banner-btn">UI/UX</Nav.Link>
+                <Nav.Link className="banner-btn">Digital Marketing</Nav.Link>
                 <Nav.Link className="banner-btn">Tech Consultency</Nav.Link>
               </Nav>
             </Col>
