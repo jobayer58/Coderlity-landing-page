@@ -82,8 +82,8 @@ const Domain = () => {
                 {/* content */}
                 <div className="domain-content">
                     <div className="domain-content-text">
-                        <h1>Find your Perfect Domain</h1>
-                        <p>Discover, buy, and register your unique web address using our <br /> powerful search or get creative with our AI Generator.</p>
+                        <h1>Find Your Perfect Domain</h1>
+                        <p>Discover, buy, and register your unique web address using our <br className='domain-text-br' /> powerful search or get creative with our AI Generator.</p>
                     </div>
                     {/* search */}
                     <div className="search-div">
@@ -111,7 +111,7 @@ const Domain = () => {
                         {/* 2 */}
                         <div className="domain-card">
                             <div className="domain-div">
-                                <h1 className="domain-extension">.com</h1>
+                                <h1 className="domain-extension">.online</h1>
                                 <p className="original-price">USD $17.99/yr</p>
                             </div>
                             <div className="domain-pricing">
@@ -121,7 +121,7 @@ const Domain = () => {
                         {/* 3 */}
                         <div className="domain-card">
                             <div className="domain-div">
-                                <h1 className="domain-extension">.com</h1>
+                                <h1 className="domain-extension">.shop</h1>
                                 <p className="original-price">USD $17.99/yr</p>
                             </div>
                             <div className="domain-pricing">
@@ -131,7 +131,7 @@ const Domain = () => {
                         {/* 4 */}
                         <div className="domain-card">
                             <div className="domain-div">
-                                <h1 className="domain-extension">.com</h1>
+                                <h1 className="domain-extension">.pro</h1>
                                 <p className="original-price">USD $17.99/yr</p>
                             </div>
                             <div className="domain-pricing">
@@ -141,7 +141,7 @@ const Domain = () => {
                         {/* 5 */}
                         <div className="domain-card">
                             <div className="domain-div">
-                                <h1 className="domain-extension">.com</h1>
+                                <h1 className="domain-extension">.net</h1>
                                 <p className="original-price">USD $17.99/yr</p>
                             </div>
                             <div className="domain-pricing">

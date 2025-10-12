@@ -423,56 +423,56 @@
 
 /* Different positions with original sizes */
 .logo-1 {
-  top: 20%;
+  top: 5%;
   left: 15%;
   animation-delay: 0s;
   max-width: 100px;
 }
 
 .logo-2 {
-  top: 22%;
-  right: 18%;
+  top: 8%;
+  right: 15%;
   animation-delay: 1s;
   max-width: 110px;
 }
 
 .logo-3 {
-  top: 45%;
+  top: 25%;
   left: 25%;
   animation-delay: 2s;
   max-width: 90px;
 }
 
 .logo-4 {
-  top: 35%;
+  top: 19%;
   right: 6%;
   animation-delay: 3s;
   max-width: 105px;
 }
 
 .logo-5 {
-  bottom: 30%;
+  top: 37%;
   right: 11%;
   animation-delay: 4s;
   max-width: 120px;
 }
 
 .logo-6 {
-  top: 55%;
+  top: 32%;
   left: 11%;
   animation-delay: 5s;
   max-width: 95px;
 }
 
 .logo-7 {
-  bottom: 45%;
+  top: 25%;
   right: 22%;
   animation-delay: 1.5s;
   max-width: 85px;
 }
 
 .logo-8 {
-  top: 35%;
+  top: 15%;
   left: 4%;
   animation-delay: 2.5s;
   max-width: 80px;
@@ -512,7 +512,7 @@
   /* NAVBAR */
   .navbar-collapse {
     position: absolute !important;
-    top: 100%;
+    top: 80%;
     left: 10px;
     right: 10px;
     width: auto;
