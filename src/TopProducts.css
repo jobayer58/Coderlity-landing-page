@@ -118,7 +118,14 @@
 /* ========== RESPONSIVE  ========== */
 
 /* 📱 Mobile Devices (0px - 576px) */
+
 @media (max-width: 576px) {
+  .product-description-br{
+    display: none;
+  }
+  .top-products{
+    margin-top: 720px;
+  }
   .cards-container {
     gap: 12px;
     padding: 0 8px;
@@ -134,6 +141,9 @@
 
 /* 📱 Mobile Large (577px - 768px) */
 @media (min-width: 577px) and (max-width: 768px) {
+  .product-description-br{
+    display: none;
+  }
   .cards-container {
     gap: 14px;
     padding: 0 12px;
@@ -145,7 +155,13 @@
 }
 
 /* 💻 Tablet (769px - 992px) */
-@media (min-width: 769px) and (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 992px) {
+  .product-description-br{
+    display: none;
+  }
+  .top-products{
+    margin-top: 700px;
+  }
   .cards-container {
     gap: 16px;
   }

@@ -16,7 +16,7 @@ const TopProducts = () => {
                         <h1>Our Top Products</h1>
                         <p className="product-description">
                             We offer a range of high-quality digital products, including PHP
-                            Laravel frameworks, HTML React JS <br className="d-none d-md-block" />
+                            Laravel frameworks, HTML React JS <br className="product-description-br" />
                             front-end templates, and MERN projects, designed to meet the needs
                             of modern web development.
                         </p>

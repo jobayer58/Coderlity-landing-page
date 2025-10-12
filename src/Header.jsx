@@ -604,7 +604,7 @@ const Header = () => {
 
                 <Row className="input-Nav">
                     <Col xs="auto">
-                        <img src={spinning} alt="" />
+                        <img src={spinning} className='spinning' alt="" />
                     </Col>
 
                     <Col>
