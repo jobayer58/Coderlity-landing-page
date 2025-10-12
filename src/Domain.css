@@ -2,9 +2,7 @@
 .domain-section {
   padding: 0px 0px;
   margin: 0px 50px;
-  /* border-radius: 20px; */
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 10px;
   background-color: rgb(252, 236, 249);
   /* another option */
   position: absolute;
@@ -94,7 +92,8 @@
 
 .domain-content {
   text-align: center;
-  padding: 45px 0px;
+  padding: 70px 0px;
+  height: 650px;
 }
 
 .domain-content-text h1 {
@@ -251,6 +250,10 @@
   .domain-content-text h1 {
     font-size: 36px;
   }
+  .domain-content {
+  
+  height: auto;
+}
 
   .domain-search {
     width: 450px;
