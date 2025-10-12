@@ -47,6 +47,7 @@ const plans = [
 const Hosting = () => {
     return (
         <section className="domain-section">
+            
             {/* content */}
             <div className="domain-content">
                 <div className="domain-content-text">

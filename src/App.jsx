@@ -4,6 +4,7 @@ import Domain from "./Domain"
 import TopProducts from "./TopProducts"
 import Sponsored from "./Sponsored"
 import Hosting from "./Hosting"
+import WebApplication from "./WebApplication"
 
 function App() {
 
@@ -11,7 +12,8 @@ function App() {
     <main>
       <Header></Header>
       {/* <Domain></Domain> */}
-      <Hosting></Hosting>
+      {/* <Hosting></Hosting> */}
+      <WebApplication></WebApplication>
       <TopProducts></TopProducts>
       <Sponsored></Sponsored>
     </main>
