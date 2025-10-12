@@ -1,0 +1,196 @@
+/* top products */
+.top-products {
+  padding: 60px 0;
+  background-color: #F3F4F6;
+  margin-top: 420px;
+  /* margin: 0px; */
+}
+
+.text-div {
+  text-align: center;
+  padding: 20px 0px;
+}
+
+.product-description {
+  color: #555555;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+/* Cards Container - Base */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.card-wrapper {
+  flex: 0 0 auto;
+  max-width: 366px;
+}
+
+.product-card {
+  border: none;
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card-title {
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 140%;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.stars {
+  display: flex;
+  color: #FFAE00;
+}
+
+.span-tag {
+  font-weight: 700;
+}
+
+.price-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ff946a;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+
+.dollarSize {
+  font-size: 28px;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.card-image-container {
+  position: relative;
+  display: block;
+}
+
+
+.version-badge {
+  position: absolute;
+  top: 0px;
+  right: 8px;
+  background: blue;
+  color: white;
+  width: 50px;
+  height: 55px;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.version-bg-color1 {
+  background-color: chocolate;
+}
+
+.version-bg-color2 {
+  background-color: green;
+}
+
+.version-bg-color3 {
+  background-color: cadetblue;
+}
+
+.span-badge-text {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* ========== RESPONSIVE  ========== */
+
+/* 📱 Mobile Devices (0px - 576px) */
+@media (max-width: 576px) {
+  .cards-container {
+    gap: 12px;
+    padding: 0 8px;
+  }
+  .card-wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+  .product-card {
+    margin: 0 auto;
+  }
+}
+
+/* 📱 Mobile Large (577px - 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .cards-container {
+    gap: 14px;
+    padding: 0 12px;
+  }
+  .card-wrapper {
+    width: calc(50% - 7px);
+    /* 2 cards with gap */
+  }
+}
+
+/* 💻 Tablet (769px - 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+  .cards-container {
+    gap: 16px;
+  }
+  .card-wrapper {
+    width: calc(50% - 8px);
+    /* 2 cards with gap */
+  }
+}
+/* 💻 Laptop (993px - 1200px) */
+@media (min-width: 993px) and (max-width: 1224px) {
+  .cards-container {
+    gap: 16px;
+  }
+
+  .card-wrapper {
+    width: calc(33.333% - 11px);
+    /* 3 cards with gap */
+  }
+
+}
+
+/* 🖥️ Large Desktop (1201px and above) */
+@media (min-width: 1201px) {
+  .cards-container {
+    gap: 16px;
+  }
+
+  .card-wrapper {
+    width: calc(33.333% - 11px);
+    /* 3 cards with gap */
+  }
+}
+
+/* Extra Small Devices Safety */
+@media (max-width: 400px) {
+  .cards-container {
+    gap: 10px;
+    padding: 0 4px;
+  }
+
+  .card-wrapper {
+    width: 100%;
+  }
+
+  .dollarSize {
+    font-size: 24px;
+  }
+}

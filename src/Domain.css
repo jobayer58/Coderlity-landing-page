@@ -1,0 +1,234 @@
+/* domain section */
+.domain-section {
+  padding: 0px 0px;
+  margin: 0px 50px;
+  /* border-radius: 20px; */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: rgb(252, 236, 249);
+  /* another option */
+  position: absolute;
+  top: 966px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  /* anther option */
+  /* position: relative;
+  top: -186px; */
+
+}
+
+.domain-banner {
+  border-bottom: 1px solid #E9EBF1;
+
+
+}
+
+.icon-parent {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 0px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.icon-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  position: relative;
+  gap: 10px;
+}
+
+.icon-content:hover::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+
+  width: 130%;
+  height: 1.5px;
+  background-color: #007bff;
+}
+
+.icon-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: #EAEAEA;
+  border-radius: 50%;
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
+}
+
+.icon {
+  font-size: 24px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.icon-text {
+  margin: 0;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  position: relative;
+  font-weight: 500;
+
+}
+
+/* Optional: Add hover effects to icon too */
+.icon-content:hover .icon-div {
+  background-color: #007bff;
+  transform: scale(1.1);
+  color: white;
+}
+
+.icon-content:hover .icon {
+  color: white;
+}
+
+.domain-content {
+  text-align: center;
+  padding: 25px 0px;
+}
+
+.domain-content-text h1 {
+  font-size: 46px;
+  font-weight: 700;
+}
+
+.domain-content-text p {
+  color: #555555;
+  font-weight: 400;
+}
+/*  */
+
+/* .domain-search input {
+  width: 652px;
+  height: 66px;
+  border-radius: 16px;
+  background-color: white;
+  border: none;
+} */
+
+.search-div {
+  display: flex;
+  /* justify-items: center; */
+  /* align-items: center; */
+  justify-content: center;
+  align-content: center;
+  gap: 5px;
+  padding: 20px 0px;
+
+}
+
+.search-left-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+}
+
+
+.search-left-text p {
+  margin: 0;
+  font-weight: 600;
+}
+
+.domain-search {
+  display: flex;
+  align-items: center;
+  width: 652px;
+  height: 66px;
+  border-radius: 16px;
+  border: none;
+  padding: 5px;
+  background: white;
+}
+
+.input-text {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding-left: 5px;
+  font-size: 16px;
+  color: #9D9D9D;
+}
+
+.search-btn {
+  background: #007bff;
+  color: white;
+  font-weight: 600;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background: #0056b3;
+}
+
+/* domain card */
+
+.domain-card-parent{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.domain-card {
+  background: white;
+  border-radius: 16px;
+  padding: 10px 0px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid #B0DAFF;
+  min-width: 150px;
+}
+
+.domain-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.domain-extension {
+  font-size: 22px;
+  font-weight: 500;
+  color: #515F8B;
+  
+}
+
+.domain-pricing {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.discount-price span{
+  
+  font-weight: bold;
+  
+}
+
+.original-price {
+  font-size: 14px;
+  color: #666;
+  text-decoration: line-through;
+}
+
+.domain-description{
+  text-align: center;
+  padding: 30px 0px;
+  color: #555555;
+  font-size: 14px;
+}

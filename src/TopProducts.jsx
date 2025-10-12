@@ -1,0 +1,129 @@
+import React from 'react';
+import './TopProducts.css'
+import { Card, Container } from 'react-bootstrap';
+import { FaStar } from 'react-icons/fa';
+import image1 from '../src/assets/iamges/image1.png'
+import image2 from '../src/assets/iamges/image2.png'
+import image3 from '../src/assets/iamges/image3.png'
+
+const TopProducts = () => {
+    return (
+        <div>
+            <section className="top-products">
+                <Container>
+                    {/* text section */}
+                    <div className="text-div">
+                        <h1>Our Top Products</h1>
+                        <p className="product-description">
+                            We offer a range of high-quality digital products, including PHP
+                            Laravel frameworks, HTML React JS <br className="d-none d-md-block" />
+                            front-end templates, and MERN projects, designed to meet the needs
+                            of modern web development.
+                        </p>
+                    </div>
+
+                    {/* cards section */}
+                    <div className="cards-container">
+                        {/* Card 1 */}
+                        <div className="card-wrapper">
+                            <Card className="product-card">
+                                <div className="card-image-container">
+                                    <Card.Img variant="top" src={image1} />
+                                    <div className="version-badge version-bg-color1">Version <span className="span-badge-text">3.2</span></div>
+                                </div>
+                                <Card.Body>
+                                    <Card.Title className="card-title">
+                                        SignalLab - Forex And Crypto <br /> Trading Signal Platform
+                                    </Card.Title>
+                                    <div className="rating">
+                                        Ratting: <span className="span-tag">5/5</span>
+                                        <div className="stars">
+                                            <FaStar />
+                                            <FaStar />
+                                            <FaStar />
+                                            <FaStar />
+                                            <FaStar />
+                                        </div>
+                                    </div>
+                                    <p>
+                                        Category: <span className="span-tag">Laravel</span>
+                                    </p>
+                                    <hr />
+                                    <p className="price-line">
+                                        Live Preview: <span className="dollarSize">$49</span>
+                                    </p>
+                                </Card.Body>
+                            </Card>
+                        </div>
+
+                        {/* Card 2 */}
+                        <div className="card-wrapper">
+                            <Card className="product-card">
+                                <div className="card-image-container">
+                                    <Card.Img variant="top" src={image2} />
+                                    <div className="version-badge version-bg-color2">Version <span className="span-badge-text">3.1</span></div>
+                                </div>
+                                <Card.Body>
+                                    <Card.Title className="card-title">
+                                        Xcash - Ultimate Wallet <br /> Solution
+                                    </Card.Title>
+                                    <div className="rating">
+                                        Ratting: <span className="span-tag">5/5</span>
+                                        <div className="stars">
+                                            <FaStar />
+                                            <FaStar />
+                                            <FaStar />
+                                            <FaStar />
+                                            <FaStar />
+                                        </div>
+                                    </div>
+                                    <p>
+                                        Category: <span className="span-tag">Laravel</span>
+                                    </p>
+                                    <hr />
+                                    <p className="price-line">
+                                        Live Preview: <span className="dollarSize">$149</span>
+                                    </p>
+                                </Card.Body>
+                            </Card>
+                        </div>
+
+                        {/* Card 3 */}
+                        <div className="card-wrapper">
+                            <Card className="product-card">
+                                <div className="card-image-container">
+                                    <Card.Img variant="top" src={image3} />
+                                    <div className="version-badge version-bg-color3">Version <span className="span-badge-text">5.6</span></div>
+                                </div>
+                                <Card.Body>
+                                    <Card.Title className="card-title">
+                                        HYIPLAB - Complete HYIP <br /> Investment System
+                                    </Card.Title>
+                                    <div className="rating">
+                                        Ratting: <span className="span-tag">5/5</span>
+                                        <div className="stars">
+                                            <FaStar />
+                                            <FaStar />
+                                            <FaStar />
+                                            <FaStar />
+                                            <FaStar />
+                                        </div>
+                                    </div>
+                                    <p>
+                                        Category: <span className="span-tag">Laravel</span>
+                                    </p>
+                                    <hr />
+                                    <p className="price-line">
+                                        Live Preview: <span className="dollarSize">$199</span>
+                                    </p>
+                                </Card.Body>
+                            </Card>
+                        </div>
+                    </div>
+                </Container>
+            </section>
+        </div>
+    );
+};
+
+export default TopProducts;
