@@ -15,7 +15,7 @@ const WebApplication = () => {
                 {/* web Application Content */}
                 <section className="webapp-section">
                     <Container>
-                        <Row className="align-items-center">
+                        <Row className="webapp-parent-row">
                             {/* Left Image */}
                             <Col md={6} className="webapp-image-col">
                                 <img src={webAppImage} alt="Web Application" className="webapp-image" />
