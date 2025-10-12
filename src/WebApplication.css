@@ -82,6 +82,15 @@
     text-decoration: underline;
 }
 
+.webapp-features p {
+    text-align: left ;
+    font-size: 14px;
+    color: #222;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
 /* ✅ Responsive */
 @media (max-width: 991px) {
     .webapp-title {
@@ -117,29 +126,32 @@
 /* 📲 Tablet (601px - 991px) */
 @media (min-width: 601px) and (max-width: 991px) {
     .webapp-parent-row {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-  }
-  .webapp-content{
-    padding: 0px;
-  }
-  .webapp-title{
-    text-align: center;
-    padding: 0px;
-    
-  }
-  .webapp-description{
-    text-align: center;
-    padding: 0px;
-   
-  }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-  .webapp-features{
-    text-align: start;
-    font-size: 8px;
-  }
+    }
+
+    .webapp-content {
+        padding: 0px;
+    }
+
+    .webapp-title {
+        text-align: center;
+        padding: 0px;
+
+    }
+
+    .webapp-description {
+        text-align: center;
+        padding: 0px;
+
+    }
+
+    .webapp-features {
+        text-align: start;
+        font-size: 8px;
+    }
 
 }
 
@@ -155,15 +167,18 @@
         font-size: 24px;
 
     }
+
     .webapp-description {
         font-size: 14px;
 
     }
+
     .webapp-features {
         display: flex;
         text-align: start;
         font-size: 10px;
     }
+
     .start-btn {
         padding: 6px 10px;
     }
