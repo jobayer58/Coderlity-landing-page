@@ -746,7 +746,7 @@
 /* 💻 Laptop (993px - 1200px) */
 @media (min-width: 993px) and (max-width: 1224px) {
   .navbar {
-    padding: 10px 15px;
+    padding: 10px 40px;
   }
 
   .nav-link {

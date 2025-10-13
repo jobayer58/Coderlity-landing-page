@@ -429,7 +429,7 @@
 @media (min-width: 992px) and (max-width: 1280px) {
   .domain-section {
     top: 816px;
-
+    margin: 0px 40px;
   }
 
   .icon-div {
