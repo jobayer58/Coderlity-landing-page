@@ -4,80 +4,9 @@ import { SiHostinger } from 'react-icons/si';
 import iconSearch from '../src/assets/iamges/icon serch.png'
 import './Domain.css'
 const Domain = () => {
+    
     return (
-        <section className="domain-section">
-            {/* icon */}
-            <div className="domain-banner">
-                {/* icon parent */}
-                <div className="icon-parent">
-                    {/* 1st icon */}
-                    <div className="icon-content">
-                        <div className=" icon-div " >
-                            <MdDomain className=" icon" />
-                        </div>
-                        <p className="icon-text">Domain</p>
-                    </div>
-                    {/* 2 icon */}
-                    <div className="icon-content">
-                        <div className=" icon-div " >
-                            <SiHostinger className="icon" />
-                        </div>
-                        <p className="icon-text">Hosting</p>
-
-                    </div>
-                    {/* 3 icon */}
-                    <div className="icon-content">
-                        <div className=" icon-div " >
-                            <SiHostinger className="icon" />
-                        </div>
-                        <p className="icon-text ">Web Application</p>
-
-                    </div>
-                    {/* 4 icon */}
-                    <div className="icon-content">
-                        <div className=" icon-div " >
-                            <MdDomain className=" icon" />
-                        </div>
-                        <p className="icon-text">Mobile Application</p>
-
-                    </div>
-                    {/* 4 icon */}
-                    <div className="icon-content">
-                        <div className=" icon-div " >
-                            <MdDomain className=" icon" />
-                        </div>
-                        <p className="icon-text">ERP Solution</p>
-
-                    </div>
-                    {/* 5 icon */}
-                    <div className="icon-content">
-                        <div className=" icon-div " >
-                            <MdDomain className=" icon" />
-                        </div>
-                        <p className="icon-text">Digital Marketing</p>
-
-                    </div>
-
-                    {/* 6 icon */}
-                    <div className="icon-content">
-                        <div className=" icon-div " >
-                            <MdDomain className=" icon" />
-                        </div>
-                        <p className="icon-text">UI/UX</p>
-
-                    </div>
-                    {/* 7 icon */}
-                    <div className="icon-content">
-                        <div className=" icon-div " >
-                            <MdDomain className=" icon" />
-                        </div>
-                        <p className="icon-text">Tech Consultency</p>
-
-                    </div>
-
-
-                </div>
-            </div>
+        <section className="">
             {/* content */}
             <div className="domain-content">
                 <div className="domain-content-text">

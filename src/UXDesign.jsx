@@ -1,12 +1,12 @@
 import React from 'react';
+import uxDesign from '../src/assets/iamges/ui.png'
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import { IoIosCheckmark } from 'react-icons/io';
-import CRMImage from '../src/assets/iamges/CRM.png'
 
-const CRM = () => {
+const UXDesign = () => {
     return (
-        <section className="">
-
+        <section>
+            
             {/* content */}
             <div className="domain-content">
                 {/* web Application Content */}
@@ -15,31 +15,31 @@ const CRM = () => {
                         <Row className="webapp-parent-row">
                             {/* Left Image */}
                             <Col md={6} className="webapp-image-col">
-                                <img src={CRMImage} alt="Web Application" className="webapp-image" />
+                                <img src={uxDesign} alt="Web Application" className="webapp-image" />
                             </Col>
 
                             {/* Right Content */}
                             <Col md={6} className="webapp-content">
-                                <h2 className="webapp-title">Custom CRM, POS, & SaaS Solutions.</h2>
+                                <h2 className="webapp-title">UI/UX Design That Drives Conversion.</h2>
                                 <p className="webapp-description">
-                                    At <span className="highlight">Coderlity</span>, we build the platforms that run modern business. We specialize in developing custom CRM, POS, and comprehensive SaaS platforms designed to integrate seamlessly with your operations, automate workflows, and deliver actionable data. We provide a high-performance, secure, and scalable system tailored exactly to your unique business process, maximizing efficiency and driving growth.
+                                    At <span className="highlight">Coderlity</span>, we believe that exceptional design is the engine of adoption. We specialize in creating intuitive, research-backed UI/UX designs for web, mobile, and enterprise applications. Our process blends aesthetics with psychology, ensuring every screen is beautiful, accessible, and engineered for a seamless user journey. We don't just make it look good; we make it perform by focusing on user flow, reduced friction, and maximizing your business goals.
                                 </p>
 
                                 {/* Features */}
                                 <Row className="webapp-features">
                                     <Col xs={12} sm={6}>
-                                        <p><IoIosCheckmark className="icon" /> Custom Workflow Automation
+                                        <p><IoIosCheckmark className="icon" />User-Centric Research
                                         </p>
-                                        <p><IoIosCheckmark className="icon" /> Cloud-Native & Scalable Architecture</p>
-                                        <p><IoIosCheckmark className="icon" /> Real-Time Reporting & Analytics</p>
+                                        <p><IoIosCheckmark className="icon" />Pixel-Perfect UI Design & Branding</p>
+                                        <p><IoIosCheckmark className="icon" />Conversion-Focused Wireframing</p>
                                     </Col>
                                     <Col xs={12} sm={6}>
-                                        <p><IoIosCheckmark className="icon" /> Ironclad Data Security & Compliance</p>
-                                        <p><IoIosCheckmark className="icon" /> User-Centric UI/UX Design</p>
-                                        <p><IoIosCheckmark className="icon" /> Dedicated, Ongoing Support</p>
+                                        <p><IoIosCheckmark className="icon" />Interactive Prototypes (Figma/Sketch)</p>
+                                        <p><IoIosCheckmark className="icon" />Accessibility & Performance Audits</p>
+                                        <p><IoIosCheckmark className="icon" />Design System Creation & Handoff</p>
                                     </Col>
                                 </Row>
-                                                             
+
                                 {/* Buttons */}
                                 <div className="webapp-buttons">
                                     <Button variant="primary" className="start-btn">Start Your Project Now</Button>
@@ -51,9 +51,8 @@ const CRM = () => {
                 </section>
 
             </div>
-
         </section>
     );
 };
 
-export default CRM;
+export default UXDesign;

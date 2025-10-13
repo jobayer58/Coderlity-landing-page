@@ -769,6 +769,22 @@
   .nav-li {
     gap: 2px;
   }
+  .banner-text-gradient h1 {
+    font-size: 150px;
+  }
+  .banner-btn-parent {
+    padding: 0px 0px;
+    gap: 1rem;
+    justify-content: center;
+
+  }
+  .spinning {
+    height: 120px;
+  }
+  .message-div {
+    width: 56px;
+    height: 56px;
+  }
 }
 
 /* Navigation items for mobile */

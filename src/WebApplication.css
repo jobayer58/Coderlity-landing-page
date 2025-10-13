@@ -83,7 +83,7 @@
 }
 
 .webapp-features p {
-    text-align: left ;
+    text-align: left;
     font-size: 14px;
     color: #222;
     margin-bottom: 10px;
@@ -123,6 +123,7 @@
 }
 
 
+
 /* 📲 Tablet (601px - 991px) */
 @media (min-width: 601px) and (max-width: 991px) {
     .webapp-parent-row {
@@ -143,21 +144,21 @@
     }
 
     .webapp-description {
+        font-size: 14px;
         text-align: center;
         padding: 0px;
 
     }
 
-    .webapp-features {
+    .webapp-features p {
         text-align: start;
-        font-size: 8px;
+        font-size: 9px;
     }
 
 }
 
 /* 💻 Laptop (992px - 1280px) */
 @media (min-width: 992px) and (max-width: 1280px) {
-
 
     .webapp-image {
         height: 200px;
@@ -173,13 +174,19 @@
 
     }
 
-    .webapp-features {
+    .webapp-features p {
         display: flex;
         text-align: start;
         font-size: 10px;
+        
     }
 
     .start-btn {
-        padding: 6px 10px;
+        font-size: 14px;
+        padding: 6px 8px;
+    }
+
+    .case-btn {
+        font-size: 14px;
     }
 }

@@ -1,7 +1,7 @@
 /* domain section */
 .domain-section {
   padding: 0px 0px;
-  margin: 0px 50px;
+  margin: 0px 80px;
   border-radius: 10px;
   background-color: rgb(252, 236, 249);
   /* another option */
@@ -32,17 +32,18 @@
   border-top-right-radius: 10px;
 }
 
+/*  */
 .icon-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
   transition: all 0.3s ease;
-
   position: relative;
   gap: 10px;
 }
 
+/* Hover Effect */
 .icon-content:hover::after {
   content: '';
   position: absolute;
@@ -50,6 +51,38 @@
   width: 100%;
   height: 1.5px;
   background-color: #007bff;
+}
+
+.icon-content:hover .icon-div {
+  background-color: #007bff;
+  transform: scale(1.1);
+}
+
+.icon-content:hover .icon {
+  color: white;
+}
+
+/* Active State - Same as Hover */
+.icon-content.active::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  width: 100%;
+  height: 1.5px;
+  background-color: #007bff;
+}
+
+.icon-content.active .icon-div {
+  background-color: #007bff;
+  transform: scale(1.1);
+}
+
+.icon-content.active .icon {
+  color: white;
+}
+
+.icon-content.active .domain-icon {
+  color: white !important;
 }
 
 .icon-div {
@@ -64,7 +97,8 @@
   transition: all 0.3s ease;
 }
 
-.icon {
+.domain-icon {
+  color: white;
   font-size: 24px;
   color: #333;
   transition: all 0.3s ease;
@@ -79,20 +113,11 @@
 
 }
 
-/* Optional: Add hover effects to icon too */
-.icon-content:hover .icon-div {
-  background-color: #007bff;
-  transform: scale(1.1);
-  color: white;
-}
-
-.icon-content:hover .icon {
-  color: white;
-}
-
 .domain-content {
   text-align: center;
-  padding: 70px 0px;
+  padding: 50px 10px;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
   height: 650px;
 }
 
@@ -151,6 +176,7 @@
   padding: 5px;
   background: white;
 }
+
 
 .input-text {
   flex: 1;
@@ -250,10 +276,11 @@
   .domain-content-text h1 {
     font-size: 36px;
   }
+
   .domain-content {
-  
-  height: auto;
-}
+
+    height: auto;
+  }
 
   .domain-search {
     width: 450px;
@@ -361,7 +388,8 @@
   .domain-content-text h1 {
     font-size: 20px;
   }
-  .domain-content-text p{
+
+  .domain-content-text p {
     font-size: 14px;
   }
 
@@ -382,15 +410,43 @@
   .icon-content {
     min-width: 70px;
   }
-  .domain-card-parent{
+
+  .domain-card-parent {
     padding: 0px 10px;
   }
 
   .domain-card {
     padding: 5px 4px;
   }
-  .domain-div h1{
+
+  .domain-div h1 {
     font-size: 20px;
   }
-  
+
+}
+
+/* 💻 Laptop (992px - 1280px) */
+@media (min-width: 992px) and (max-width: 1280px) {
+  .domain-section {
+    top: 816px;
+
+  }
+
+  .icon-div {
+
+    width: 40px;
+    height: 40px;
+
+  }
+
+  .domain-icon {
+    font-size: 20px;
+
+  }
+
+  .icon-text {
+    font-size: 10px;
+
+  }
+
 }

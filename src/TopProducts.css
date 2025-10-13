@@ -120,11 +120,12 @@
 /* 📱 Mobile Devices (0px - 576px) */
 
 @media (max-width: 576px) {
+  
   .product-description-br{
     display: none;
   }
   .top-products{
-    margin-top: 720px;
+    margin-top: 1360px;
   }
   .cards-container {
     gap: 12px;
@@ -156,11 +157,12 @@
 
 /* 💻 Tablet (769px - 992px) */
 @media (min-width: 768px) and (max-width: 992px) {
+
   .product-description-br{
     display: none;
   }
   .top-products{
-    margin-top: 700px;
+    margin-top: 1180px;
   }
   .cards-container {
     gap: 16px;

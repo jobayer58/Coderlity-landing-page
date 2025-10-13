@@ -1,0 +1,16 @@
+.solution-section{
+    background: #E6F3FF;
+}
+
+.solution-parent{
+    padding: 90px 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.solution-img-div{
+    display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}

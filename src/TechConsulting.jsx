@@ -1,11 +1,12 @@
 import React from 'react';
+import tech from '../src/assets/iamges/tech.png'
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import { IoIosCheckmark } from 'react-icons/io';
-import CRMImage from '../src/assets/iamges/CRM.png'
 
-const CRM = () => {
+
+const TechConsulting = () => {
     return (
-        <section className="">
+        <section>
 
             {/* content */}
             <div className="domain-content">
@@ -15,31 +16,31 @@ const CRM = () => {
                         <Row className="webapp-parent-row">
                             {/* Left Image */}
                             <Col md={6} className="webapp-image-col">
-                                <img src={CRMImage} alt="Web Application" className="webapp-image" />
+                                <img src={tech} alt="Web Application" className="webapp-image" />
                             </Col>
 
                             {/* Right Content */}
                             <Col md={6} className="webapp-content">
-                                <h2 className="webapp-title">Custom CRM, POS, & SaaS Solutions.</h2>
+                                <h2 className="webapp-title">Tech Consultancy Engineered for Growth.</h2>
                                 <p className="webapp-description">
-                                    At <span className="highlight">Coderlity</span>, we build the platforms that run modern business. We specialize in developing custom CRM, POS, and comprehensive SaaS platforms designed to integrate seamlessly with your operations, automate workflows, and deliver actionable data. We provide a high-performance, secure, and scalable system tailored exactly to your unique business process, maximizing efficiency and driving growth.
+                                    At <span className="highlight">Coderlity</span>, we turn complex technology challenges into clear strategic roadmaps. Our consultancy services provide your business with expert guidance, from selecting the right software architecture (SaaS, cloud, infrastructure) to optimizing team performance and minimizing technical debt. We partner with you to align technology investments directly with your core business objectives, ensuring every decision drives efficiency, scalability, and long-term competitive advantage.
                                 </p>
 
                                 {/* Features */}
                                 <Row className="webapp-features">
                                     <Col xs={12} sm={6}>
-                                        <p><IoIosCheckmark className="icon" /> Custom Workflow Automation
+                                        <p><IoIosCheckmark className="icon" />Digital Transformation Roadmaps
                                         </p>
-                                        <p><IoIosCheckmark className="icon" /> Cloud-Native & Scalable Architecture</p>
-                                        <p><IoIosCheckmark className="icon" /> Real-Time Reporting & Analytics</p>
+                                        <p><IoIosCheckmark className="icon" />System Audit & Optimization</p>
+                                        <p><IoIosCheckmark className="icon" />Software Architecture Review</p>
                                     </Col>
                                     <Col xs={12} sm={6}>
-                                        <p><IoIosCheckmark className="icon" /> Ironclad Data Security & Compliance</p>
-                                        <p><IoIosCheckmark className="icon" /> User-Centric UI/UX Design</p>
-                                        <p><IoIosCheckmark className="icon" /> Dedicated, Ongoing Support</p>
+                                        <p><IoIosCheckmark className="icon" />Technical Debt Reduction Plans</p>
+                                        <p><IoIosCheckmark className="icon" />Technology Stack Selection</p>
+                                        <p><IoIosCheckmark className="icon" />Security and Compliance Reviews</p>
                                     </Col>
                                 </Row>
-                                                             
+
                                 {/* Buttons */}
                                 <div className="webapp-buttons">
                                     <Button variant="primary" className="start-btn">Start Your Project Now</Button>
@@ -51,9 +52,8 @@ const CRM = () => {
                 </section>
 
             </div>
-
         </section>
     );
 };
 
-export default CRM;
+export default TechConsulting;

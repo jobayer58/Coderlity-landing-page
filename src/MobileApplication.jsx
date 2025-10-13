@@ -5,7 +5,7 @@ import { IoIosCheckmark } from 'react-icons/io';
 
 const MobileApplication = () => {
     return (
-        <section className="domain-section">
+        <section className="">
 
 
             {/* content */}

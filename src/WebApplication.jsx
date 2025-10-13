@@ -7,7 +7,7 @@ import { IoIosCheckmark, IoMdCheckmark } from 'react-icons/io';
 
 const WebApplication = () => {
     return (
-        <section className="domain-section">
+        <section className="">
             
 
             {/* content */}
