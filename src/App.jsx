@@ -12,6 +12,7 @@ import Featured from "./Featured"
 import DigitalSolution from "./DigitalSolution"
 import FAQ from "./FAQ"
 import Footer from "./Footer"
+import IdeaToSuccess from "./IdeaToSuccess"
 
 function App() {
 

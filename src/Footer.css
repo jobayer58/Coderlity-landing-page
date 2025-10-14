@@ -165,7 +165,8 @@
     justify-content: space-between;
     padding: 20px 0px;
     position: relative;
-    min-height: 120px; /* Fixed height */
+    min-height: 120px;
+    /* Fixed height */
 }
 
 .copyright {
@@ -179,10 +180,11 @@
 .footer-coderlity {
     position: absolute;
     top: 10%;
-    left: 53%;
+    left: 52%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    pointer-events: none; /* Click through korar jonno */
+    pointer-events: none;
+    /* Click through korar jonno */
 }
 
 .footer-coderlity h1 {
@@ -196,15 +198,64 @@
     background-clip: text;
     color: transparent;
     /* Text transparent kore dilam */
-    opacity: 0.5; /* Halka kore dilam background text */
+    opacity: 0.5;
+    /* Halka kore dilam background text */
     margin: 0;
     white-space: nowrap;
 }
 
-.footer-bottom > div:last-child {
+.footer-bottom>div:last-child {
     z-index: 2;
     position: relative;
 }
+
+/*  */
+.footer-Arrow {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+.Arrow-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 1px solid #7CAEFF;
+    
+}
+.arrow-icon{
+    font-size: 30px;
+    color:#007bff ;
+}
+
+.footer-social-sms-container {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social-sms {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.sms-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: #EAEAEA;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
 /* Responsive Design */
 
 /* Laptop Devices (992px - 1199px) */

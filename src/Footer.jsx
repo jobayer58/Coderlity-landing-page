@@ -3,8 +3,10 @@ import './Footer.css';
 import logo from '../src/assets/iamges/footer logo.png'
 import { FaFacebook, FaGithub, FaLinkedin, FaPinterest, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { FaSquareXTwitter } from 'react-icons/fa6';
-import footerSms from '../src/assets/iamges/Frame 1618873272.png'
-
+import massanger from '../src/assets/iamges/sms.png'
+import whatsapp from '../src/assets/iamges/whatsapp.png'
+import telegram from '../src/assets/iamges/telegram.png'
+import { IoMdArrowUp } from 'react-icons/io';
 const Footer = () => {
     return (
         <footer className="codarility-footer">
@@ -129,8 +131,32 @@ const Footer = () => {
                     <div className="footer-coderlity">
                         <h1>coderlity</h1>
                     </div>
-                    <div>
-                        <img src={footerSms} alt="" />
+                    {/* messenger */}
+                    <div className='footer-social-sms-container'>
+                        {/* Arrow up */}
+                        <div className='footer-Arrow'>
+                            <div className='Arrow-div'>
+                                <IoMdArrowUp className='arrow-icon' />
+                            </div>
+                        </div>
+                        {/* 1 */}
+                        <div className='footer-social-sms'>
+                            <div className='sms-div'>
+                                <img src={telegram} alt="" />
+                            </div>
+                        </div>
+                        {/* 2 */}
+                        <div className='footer-social-sms'>
+                            <div className='sms-div'>
+                                <img src={whatsapp} alt="" />
+                            </div>
+                        </div>
+                        {/* 3 */}
+                        <div className='footer-social-sms'>
+                            <div className='sms-div'>
+                                <img src={massanger} alt="" />
+                            </div>
+                        </div>
                     </div>
 
                 </div>
