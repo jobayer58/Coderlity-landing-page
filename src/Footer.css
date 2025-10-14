@@ -1,0 +1,348 @@
+/* Codarility Footer Styles */
+.codarility-footer {
+    background: #010015;
+    color: #ffffff;
+    padding: 0px 80px;
+    font-family: 'Arial', sans-serif;
+}
+
+
+/* Footer Content Grid */
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding: 100px 0px;
+
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Description Section */
+.description-section {
+    grid-column: span 1;
+}
+
+.footer-logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    /* margin-bottom: 20px; */
+    font-family: 'Arial', sans-serif;
+}
+
+.company-description {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #858396;
+    margin-top: 30px;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+/* Moving line effect */
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #007bff, transparent);
+    animation: moveLine 6s linear infinite;
+}
+
+@keyframes moveLine {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+/* Alternative: Continuous flowing line */
+.section-title.alternative::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    background: #007bff;
+    animation: flowLine 6s linear infinite;
+}
+
+@keyframes flowLine {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+/* Another Style: Gradient flow */
+.section-title.gradient::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg,
+            transparent,
+            #007bff,
+            #00a8ff,
+            #007bff,
+            transparent);
+    animation: gradientFlow 2.5s linear infinite;
+}
+
+@keyframes gradientFlow {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+/* Footer Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #858396;
+    text-decoration: none;
+    font-size: 12px;
+    transition: color 0.3s ease;
+    line-height: 1.4;
+}
+
+.footer-links a:hover {
+    color: #007bff;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-icon {
+    font-size: 24px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0px;
+    position: relative;
+    min-height: 120px; /* Fixed height */
+}
+
+.copyright {
+    text-align: start;
+    color: #FFFFFF;
+    font-size: 0.9rem;
+    z-index: 2;
+    position: relative;
+}
+
+.footer-coderlity {
+    position: absolute;
+    top: 10%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    pointer-events: none; /* Click through korar jonno */
+}
+
+.footer-coderlity h1 {
+    font-size: 180px;
+    font-weight: bold;
+    /* Gradient color */
+    background: linear-gradient(90deg, #171717, #484848, #171717);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* Optional for smoother rendering */
+    background-clip: text;
+    color: transparent;
+    /* Text transparent kore dilam */
+    opacity: 0.5; /* Halka kore dilam background text */
+    margin: 0;
+    white-space: nowrap;
+}
+
+.footer-bottom > div:last-child {
+    z-index: 2;
+    position: relative;
+}
+/* Responsive Design */
+
+/* Laptop Devices (992px - 1199px) */
+@media (max-width: 1199px) {
+    .footer-content {
+        gap: 25px;
+
+    }
+
+    .codarility-footer {
+        padding: 0px 40px;
+    }
+
+    .company-description {
+        font-size: 13px;
+    }
+
+    .section-title {
+        font-size: 14px;
+    }
+
+    .footer-links a {
+
+        font-size: 10px;
+
+    }
+}
+
+/* Tablet Devices (768px - 991px) */
+@media (max-width: 991px) {
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .description-section {
+        grid-column: 1 / -1;
+    }
+
+    .company-description {
+        font-size: 0.95rem;
+        max-width: 800px;
+    }
+
+    .codarility-footer {
+        padding: 50px 0 20px 0;
+    }
+
+    .codarility-footer {
+        padding: 0px 40px;
+    }
+}
+
+/* Mobile Devices (576px - 767px) */
+@media (max-width: 767px) {
+    .footer-container {
+        padding: 0 15px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .description-section {
+        grid-column: 1;
+    }
+
+    .footer-logo {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    .company-description {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .section-title {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    .footer-links a {
+        font-size: 0.85rem;
+    }
+
+    .codarility-footer {
+        padding: 40px 0 20px 0;
+    }
+}
+
+/* Small Mobile Devices (0px - 575px) */
+@media (max-width: 575px) {
+    .footer-container {
+        padding: 0 10px;
+    }
+
+    .footer-content {
+        gap: 25px;
+    }
+
+    .footer-logo {
+        font-size: 1.6rem;
+    }
+
+    .company-description {
+        font-size: 0.85rem;
+    }
+
+    .section-title {
+        font-size: 0.95rem;
+    }
+
+    .footer-links a {
+        font-size: 0.8rem;
+    }
+
+    .copyright {
+        font-size: 0.8rem;
+    }
+}
+
+/* Large Desktop (1200px and above) */
+@media (min-width: 1200px) {
+    .footer-container {
+        max-width: 1320px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .codarility-footer {
+        background: white !important;
+        color: black !important;
+    }
+
+    .footer-links a {
+        color: black !important;
+    }
+}

@@ -58,18 +58,18 @@ const DigitalSolution = () => {
                         <p>We provide a complete suite of services that covers web <br className='solution-br' /> development, app development, UI/UX design, API integration <br className='solution-br' /> (including e-invoicing ZATCA integration), digital marketing, IT <br className='solution-br' /> consultation, and domain hosting, ensuring all your digital needs <br className='solution-br' /> are met under one roof.</p>
                     </div>
                 </div>
-                <div className="service-container">
+                <div className="solution-service-container">
                     {services.map((service, index) => (
                         <div
                             key={service.id}
-                            className={`service-item ${activeIndex === index ? 'active' : ''}`}
+                            className={`solution-service-item ${activeIndex === index ? 'active' : ''}`}
                             onClick={() => toggleService(index)}
                         >
-                            <div className="service-title">
+                            <div className="solution-service-title">
                                 {service.title}
                             </div>
                             {activeIndex === index && (
-                                <p className="service-description">{service.description}</p>
+                                <p className="solution-service-description">{service.description}</p>
                             )}
                         </div>
                     ))}

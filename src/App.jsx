@@ -10,6 +10,8 @@ import CRM from "./CRM"
 import DomainBanner from "./DomainBanner"
 import Featured from "./Featured"
 import DigitalSolution from "./DigitalSolution"
+import FAQ from "./FAQ"
+import Footer from "./Footer"
 
 function App() {
 
@@ -26,6 +28,8 @@ function App() {
       <Sponsored></Sponsored>
       <Featured></Featured>
       <DigitalSolution></DigitalSolution>
+      <FAQ></FAQ>
+      <Footer></Footer>
     </main>
   )
 }
