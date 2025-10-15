@@ -13,6 +13,7 @@ import DigitalSolution from "./DigitalSolution"
 import FAQ from "./FAQ"
 import Footer from "./Footer"
 import IdeaToSuccess from "./IdeaToSuccess"
+import WorkProcess from "./WorkProcess"
 
 function App() {
 
@@ -29,6 +30,8 @@ function App() {
       <Sponsored></Sponsored>
       <Featured></Featured>
       <DigitalSolution></DigitalSolution>
+      <WorkProcess></WorkProcess>
+      {/* <IdeaToSuccess></IdeaToSuccess> */}
       <FAQ></FAQ>
       <Footer></Footer>
     </main>
