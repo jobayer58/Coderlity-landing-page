@@ -15,6 +15,7 @@ import Footer from "./Footer"
 import WorkProcess from "./WorkProcess"
 import ProcessTimeline from "./ProcessTimeline"
 import OurBlog from "./OurBlog"
+import MeetTeam from "./MeetTeam"
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
       <WorkProcess></WorkProcess>
       <FAQ></FAQ>
       <OurBlog></OurBlog>
+      <MeetTeam></MeetTeam>
       <Footer></Footer>
     </main>
   )

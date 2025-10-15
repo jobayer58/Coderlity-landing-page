@@ -23,24 +23,68 @@
     font-size: 1.1rem;
     margin: 0;
 }
-
-.browse-btn {
-    background-color: #fff;
-    color: #000;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 10px;
-    font-weight: 600;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+.browse-btn-div {
+    display: flex;
+    gap: 2px;
+    align-items: center;
+    position: relative;
+    width: fit-content;
+    /* margin-top: 40px; */
     cursor: pointer;
 }
 
-.browse-btn:hover {
-    /* background-color: #E6F3FF;
-    color: #0088FF;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); */
+.browse-btn {
+    background-color: #0088FF;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 40px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    white-space: nowrap;
+    order: 1;
+}
+
+.browse-btn-icon-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px ;
+    background: #0088FF;
+    border-radius: 50%;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    order: 2;
+}
+
+.browse-icon {
+    color: white;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effects - Icon moves to left, button moves to right */
+.browse-btn-div:hover .browse-btn {
+    transform: translateX(44px);
+    /* background: #0066CC; */
+}
+
+.browse-btn-div:hover .browse-btn-icon-div {
+    transform: translateX(-153px);
+    /* background: #0055AA; */
+    /* width: 50px; */
+    border-radius: 40px;
+}
+
+/* For better visual effect */
+.browse-btn-div {
+    perspective: 1000px;
 }
 
 /* Blog Grid */

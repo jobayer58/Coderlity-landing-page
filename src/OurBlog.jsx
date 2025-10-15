@@ -1,6 +1,8 @@
 import React from 'react';
 import './OurBlog.css';
 import blog from '../src/assets/iamges/blog.png';
+import { IoIosArrowRoundForward } from 'react-icons/io';
+import { FaArrowRightLong } from 'react-icons/fa6';
 
 const OurBlog = () => {
     return (
@@ -12,7 +14,13 @@ const OurBlog = () => {
                         <h2 className="blogs-title">Our Blogs</h2>
                         <p className="blogs-subtitle">Discover articles and tutorials to help you build better</p>
                     </div>
-                    <button className="browse-btn">Browse all animation btn</button>
+                    <div className='browse-btn-div'>
+                        <button className="browse-btn">Browse all</button>
+                        <div className='browse-btn-icon-div'>
+                           <FaArrowRightLong className='browse-icon'/>
+                        </div>
+                    </div>
+
                 </div>
 
                 {/* Blog Grid */}
