@@ -379,12 +379,6 @@
     }
 }
 
-/* Large Desktop (1200px and above) */
-@media (min-width: 1200px) {
-    .footer-container {
-        max-width: 1320px;
-    }
-}
 
 /* Print Styles */
 @media print {

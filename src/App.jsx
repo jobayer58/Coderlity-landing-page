@@ -12,8 +12,9 @@ import Featured from "./Featured"
 import DigitalSolution from "./DigitalSolution"
 import FAQ from "./FAQ"
 import Footer from "./Footer"
-import IdeaToSuccess from "./IdeaToSuccess"
 import WorkProcess from "./WorkProcess"
+import ProcessTimeline from "./ProcessTimeline"
+import OurBlog from "./OurBlog"
 
 function App() {
 
@@ -30,9 +31,10 @@ function App() {
       <Sponsored></Sponsored>
       <Featured></Featured>
       <DigitalSolution></DigitalSolution>
+      <ProcessTimeline></ProcessTimeline>
       <WorkProcess></WorkProcess>
-      {/* <IdeaToSuccess></IdeaToSuccess> */}
       <FAQ></FAQ>
+      <OurBlog></OurBlog>
       <Footer></Footer>
     </main>
   )

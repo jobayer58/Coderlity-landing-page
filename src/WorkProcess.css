@@ -117,7 +117,7 @@
     --line-end: 86%;    /* Line shesh  hobe */
     
     /* Dot er speed control */
-    --animation-duration: 8s; /* Dot er speed  */
+    --animation-duration: 14s; /* Dot er speed  */
     
     /* Dot er size control */
     --dot-size: 12px;   /* Dot er boro soto */
@@ -305,5 +305,10 @@
             top: 100%;
             transform: translateX(-50%) scale(1);
         }
+    }
+}
+@media (max-width: 1299px) {
+    .process-text p {
+        font-size: 12px;
     }
 }
