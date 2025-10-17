@@ -263,7 +263,6 @@
 /* banner section */
 .banner-section {
   padding: 3rem 0rem;
-  border: #000;
   position: relative;
 }
 
@@ -271,8 +270,9 @@
   padding: 1rem 0rem;
   font-family: "JetBrains Mono", monospace;
   text-align: center;
-  font-size: 24px;
-  color: #007CE8;
+  font-size: 29px;
+  color: var(--blue-color);
+  font-weight: 600;
 }
 
 .text-description {
@@ -281,26 +281,36 @@
   font-weight: 600;
 }
 
+.text-description-span {
+  color: var(--blue-color);
+}
+
 .btnToolbar {
-  gap: 8px;
-  align-items: center;
+  display: flex;
   justify-content: center;
-  /* background-color: #E6F3FF; */
-  padding: 2rem 0rem;
+  align-items: center;
+  gap: 8px;
+  background-color: #FAFAFA;
+  border-radius: 12px;
+  padding: 6px;
+  margin: 0 auto;
+  width: fit-content;
+  margin-top: 60px;
 }
 
 .bannerBtn1 {
-  padding: 10px 16px;
+  padding: 7px 16px;
   display: inline-flex;
+  border-radius: 12px;
   gap: 5px;
   align-items: center;
   font-weight: 600;
 }
 
 .bannerBtn2 {
-  border: 1px solid;
-  padding: 10px 16px;
-  border-radius: 6px;
+  border: 1.5px solid #9D9D9D;
+  padding: 7px 16px;
+  border-radius: 12px;
   gap: 5px;
   font-weight: 600;
 
@@ -310,7 +320,7 @@
   background-color: #0088FF;
   height: 24px;
   width: 24px;
-  padding: 4px;
+  padding: 5px;
   border-radius: 4px;
 
 }
@@ -319,32 +329,42 @@
   justify-content: center;
   align-items: center;
   gap: 4rem;
-  padding: 1rem 0rem;
+  margin-top: 8px;
+  padding: 16px 0px;
 }
 
+
+
 .banner-btn-parent {
-  padding: 0px 150px;
+  padding: 0px 110px;
   gap: 1rem;
   justify-content: center;
 
 }
 
 .banner-btn {
+  font-family: "JetBrains Mono", monospace;
   font-weight: 500;
   background-color: #E6F3FF;
   padding: 4px 12px;
   border-radius: 12px;
   color: black;
+  border: none;
 }
 
 .banner-btn:hover {
   color: white;
-  background-color: #00396B;
+  background-color:#00396B ;
 }
+.banner-btn.active {
+  background-color: #00396B ;
+  color: #fff ;
+}
+
 
 .input-Nav {
   justify-content: space-between;
-  padding: 0rem 6rem;
+  padding: 0px 80px;
   margin-top: 20px;
   align-items: center;
 }
@@ -380,12 +400,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 80px;
-
+  padding: 0px 80px;
 }
 
 .banner-text-gradient h1 {
-  font-size: 200px;
+  font-size: 218px;
   font-weight: bold;
   text-align: center;
 
@@ -425,57 +444,57 @@
 
 /* Different positions with original sizes */
 .logo-1 {
-  top: 5%;
-  left: 15%;
+  top: 6%;
+  left: 22%;
   animation-delay: 0s;
   max-width: 100px;
 }
 
 .logo-2 {
-  top: 8%;
-  right: 15%;
+  top: 14%;
+  left: 14%;
   animation-delay: 1s;
   max-width: 110px;
 }
 
 .logo-3 {
-  top: 25%;
-  left: 25%;
+  top: 6%;
+  right: 20%;
   animation-delay: 2s;
   max-width: 90px;
 }
 
 .logo-4 {
-  top: 19%;
-  right: 6%;
+  top: 35%;
+  left: 30%;
   animation-delay: 3s;
   max-width: 105px;
 }
 
 .logo-5 {
-  top: 37%;
-  right: 11%;
+  top: 27%;
+  left: 21%;
   animation-delay: 4s;
   max-width: 120px;
 }
 
 .logo-6 {
-  top: 32%;
-  left: 11%;
+  top: 14%;
+  right: 11%;
   animation-delay: 5s;
   max-width: 95px;
 }
 
 .logo-7 {
-  top: 25%;
-  right: 22%;
+  top: 33%;
+  right: 27%;
   animation-delay: 1.5s;
-  max-width: 85px;
+  max-width: 65px;
 }
 
 .logo-8 {
-  top: 15%;
-  left: 4%;
+  top: 25%;
+  right: 22%;
   animation-delay: 2.5s;
   max-width: 80px;
 }
@@ -771,18 +790,22 @@
   .nav-li {
     gap: 2px;
   }
+
   .banner-text-gradient h1 {
     font-size: 150px;
   }
+
   .banner-btn-parent {
     padding: 0px 0px;
     gap: 1rem;
     justify-content: center;
 
   }
+
   .spinning {
     height: 120px;
   }
+
   .message-div {
     width: 56px;
     height: 56px;

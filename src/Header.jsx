@@ -12,12 +12,12 @@ import logo from '../src/assets/iamges/web logo1 1 1.svg'
 import banner1 from '../src/assets/iamges/banner1.png'
 import banner2 from '../src/assets/iamges/banner2.png'
 import spinning from '../src/assets/iamges/spinning 1.png'
+import spinning2 from '../src/assets/iamges/image 780.png'
 import { IoApps, IoCall } from "react-icons/io5"
-import { Button, ButtonToolbar, Card, Col, InputGroup, Nav, Navbar, Row } from "react-bootstrap";
-import { PiDotsThreeVerticalBold, PiSignIn } from "react-icons/pi"
-import {FaGoogleDrive,  } from "react-icons/fa"
-import { MdDesignServices,  MdKeyboardArrowDown, MdPhoneIphone, MdShoppingCart, MdSupport, MdWeb } from "react-icons/md"
-import { BiMessageDetail } from 'react-icons/bi';
+import { Button,  Card, Col, InputGroup, Nav, Navbar, Row } from "react-bootstrap";
+import {  PiSignIn } from "react-icons/pi"
+import { FaGoogleDrive, } from "react-icons/fa"
+import { MdDesignServices, MdKeyboardArrowDown, MdPhoneIphone, MdShoppingCart, MdSupport, MdWeb } from "react-icons/md"
 
 
 const Header = () => {
@@ -586,16 +586,16 @@ const Header = () => {
                 <div>
                     <h5 className="text-banner">Looking for Your One Stop Solution? </h5>
                     <h1 className="text-description">Complete Digital Solutions <br />
-                        for Your Business</h1>
+                        for <span className='text-description-span'>Your Business</span></h1>
                 </div>
-                <ButtonToolbar className="btnToolbar">
+                <div className="btnToolbar">
                     <Button variant="dark" className="bannerBtn1">
                         <IoCall className="IoCall" /> Book an intro call
                     </Button>
                     <Button variant="light" className="bannerBtn2">
                         Explore Our Work
                     </Button>
-                </ButtonToolbar>
+                </div>
 
                 <InputGroup className="inputImg">
                     <img src={banner2} alt="" />
@@ -604,22 +604,22 @@ const Header = () => {
 
                 <Row className="input-Nav">
                     <Col xs="auto">
-                        <img src={spinning} className='spinning' alt="" />
+                        <img src={spinning2} className='spinning' alt="" />
                     </Col>
 
                     <Col>
                         <Nav className="banner-btn-parent ">
-                            <Nav.Link className="banner-btn">Web Application</Nav.Link>
-                            <Nav.Link className="banner-btn">Mobile Application</Nav.Link>
-                            <Nav.Link className="banner-btn">ERP Solution</Nav.Link>
-                            <Nav.Link className="banner-btn">CMS Solution</Nav.Link>
-                            <Nav.Link className="banner-btn">UI/UX</Nav.Link>
-                            <Nav.Link className="banner-btn">Digital Marketing</Nav.Link>
-                            <Nav.Link className="banner-btn">Tech Consultency</Nav.Link>
+                            <button className="banner-btn">Web Application</button>
+                            <button className="banner-btn">Mobile Application</button>
+                            <button className="banner-btn">ERP Solution</button>
+                            <button className="banner-btn">CMS Solution</button>
+                            <button className="banner-btn">UI/UX</button>
+                            <button className="banner-btn">Digital Marketing</button>
+                            <button className="banner-btn">Tech Consultency</button>
                         </Nav>
                     </Col>
 
-                    <Col xs="auto">
+                    {/* <Col xs="auto">
                         <Row className="message-parent g-2">
                             <Col xs="auto">
                                 <div className="message-div">
@@ -630,6 +630,9 @@ const Header = () => {
                                 <PiDotsThreeVerticalBold className="threeDot" />
                             </Col>
                         </Row>
+                    </Col> */}
+                    <Col xs="auto">
+                        <img src={spinning} className='spinning' alt="" />
                     </Col>
                 </Row>
 

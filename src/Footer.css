@@ -175,6 +175,7 @@
     font-size: 0.9rem;
     z-index: 2;
     position: relative;
+    margin: 0;
 }
 
 .footer-coderlity {
@@ -214,7 +215,7 @@
     display: flex;
     align-items: center;
     cursor: pointer;
-    
+
 }
 
 .Arrow-div {
@@ -225,15 +226,18 @@
     height: 70px;
     border-radius: 50%;
     border: 1px solid #7CAEFF;
-    
+
 }
-.arrow-icon{
+
+.arrow-icon {
     font-size: 30px;
-    color:#007bff ;
+    color: #007bff;
 }
 
 .footer-social-sms-container {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 15px;
 }
 
@@ -241,6 +245,7 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    justify-content: center;
     transition: all 0.3s ease;
     position: relative;
 }
@@ -279,13 +284,13 @@
 
     .footer-links a {
 
-        font-size: 10px;
+        font-size: 9px;
 
     }
 }
 
 /* Tablet Devices (768px - 991px) */
-@media (max-width: 991px) {
+@media (max-width: 992px) {
     .footer-content {
         grid-template-columns: 1fr 1fr;
         gap: 40px;
@@ -306,6 +311,10 @@
 
     .codarility-footer {
         padding: 0px 40px;
+    }
+
+    .footer-links a {
+        font-size: 16px;
     }
 }
 
@@ -351,7 +360,7 @@
 /* Small Mobile Devices (0px - 575px) */
 @media (max-width: 575px) {
     .footer-container {
-        padding: 0 10px;
+        padding: 0 20px;
     }
 
     .footer-content {
@@ -375,19 +384,23 @@
     }
 
     .copyright {
-        font-size: 0.8rem;
-    }
-}
-
-
-/* Print Styles */
-@media print {
-    .codarility-footer {
-        background: white !important;
-        color: black !important;
+        font-size: 8px;
     }
 
-    .footer-links a {
-        color: black !important;
+    .footer-coderlity h1 {
+        font-size: 80px;
     }
+
+    .Arrow-div {
+        width: 50px;
+        height: 50px;
+
+    }
+
+    .sms-div {
+        width: 30px;
+        height: 30px;
+    }
+
+
 }
