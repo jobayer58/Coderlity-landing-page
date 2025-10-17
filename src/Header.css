@@ -1,6 +1,8 @@
 /* header */
 .headerBg {
   background: linear-gradient(90deg, #d3eaff, #ffffff, #d3eaff);
+  /* background: linear-gradient(75.71deg, rgba(255, 255, 255, 0.25) 2.2%, #FFFFFF 2.21%, rgba(211, 234, 255, 0.25) 55.27%); */
+
 }
 
 /* navbar section */

@@ -1,7 +1,7 @@
 .timeline-section {
   text-align: center;
   background: #f9f9f9;
-  padding: 80px 0;
+  padding: 80px 80px;
 }
 
 .timeline-title {
@@ -18,109 +18,116 @@
   line-height: 1.6;
 }
 
-/* --- Container --- */
-.timeline-container {
+/*  */
+/* === container === */
+.process-container {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 100px;
   flex-wrap: wrap;
-  position: relative;
+  /* gap: 50px; */
 }
 
-/* --- Step --- */
-.timeline-step {
+/* === each item === */
+.process-item {
+  position: relative;
+  width: 165px;
+  height: 250px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  position: relative;
+  justify-content: center;
 }
 
-/* --- Cards --- */
-.timeline-card {
+/* positioning */
+.process-item.top {
+  align-items: flex-start;
+}
+
+.process-item.center {
+  align-items: center;
+}
+
+.process-item.bottom {
+  align-items: flex-end;
+}
+
+/* === buttons === */
+.process-btn {
   padding: 10px 20px;
   border-radius: 6px;
+  width: 100%;
   color: #fff;
-  font-weight: 500;
-  font-size: 14px;
-  min-width: 150px;
+  font-size: 12px;
+  font-weight: 600;
   text-align: center;
-  position: relative;
   z-index: 2;
+  position: relative;
+  margin-right: 2px;
 }
 
-.timeline-card.top {
-  margin-bottom: 80px;
-}
-
-/* --- Colors --- */
-.blue {
-  background-color: #0084ff;
-}
-
-.orange {
-  background-color: #ff7b00;
-}
-
-.black,
-.dark {
-  background-color: #1c1c1c;
-}
-
-/* --- Dotted Line --- */
-.timeline-line {
+/* === dotted lines === */
+.dotted-line {
   position: absolute;
-  top: 45px;
-  height: 110px;
+  top: 0;
+  bottom: 0;
   width: 2px;
-  border: 1px ;
-  /* border: 2px dotted #dcdcdc; */
-  background: repeating-linear-gradient(
-    to bottom,
-    #bbb,
-    #bbb 6px,
-    transparent 6px,
-    transparent 12px
-  );
-  z-index: 1;
+  border-left: 2px dashed #ccc;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
 }
 
-/* --- Responsive --- */
-@media (max-width: 992px) {
-  .timeline-container {
-    gap: 60px;
+.dotted-line.left {
+  left: 0;
+}
+
+.dotted-line.right {
+  right: 0;
+}
+
+/* === moving dot animation === */
+/* .dot {
+  width: 10px;
+  height: 10px;
+  background: #007CE8;
+  border-radius: 50%;
+  position: absolute;
+  animation: moveUpDown 3s ease-in-out infinite;
+} */
+
+@keyframes moveUpDown {
+  0% { top: 0%; }
+  50% { top: 90%; }
+  100% { top: 0%; }
+}
+
+/* === responsive === */
+@media (max-width: 1024px) {
+  .process-container {
+    /* gap: 40px; */
   }
 }
 
 @media (max-width: 768px) {
-  .timeline-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 60px;
+  .process-container {
+    flex-wrap: wrap;
+    gap: 30px;
   }
-
-  .timeline-step {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  .timeline-line {
-    position: relative;
-    top: auto;
-    width: 60px;
-    height: 2px;
-    background: repeating-linear-gradient(
-      to right,
-      #bbb,
-      #bbb 6px,
-      transparent 6px,
-      transparent 12px
-    );
-  }
-
-  .timeline-card.top {
-    margin-bottom: 0;
+  .process-item {
+    height: 200px;
   }
 }
+
+@media (max-width: 480px) {
+  .process-item {
+    width: 100px;
+    height: 180px;
+  }
+  .process-btn {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+}
+
+
+/*  */

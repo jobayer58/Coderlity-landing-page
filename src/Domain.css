@@ -4,6 +4,8 @@
   margin: 0px 80px;
   border-radius: 10px;
   background-color: rgb(252, 236, 249);
+  /* background: radial-gradient(20.96% 107.45% at 19.7% 25.04%, #002F7B 0%, #65A1FF 0.01%, #000000 100%), linear-gradient(0deg, rgba(1, 51, 234, 0.2), rgba(1, 51, 234, 0.2)); */
+
   /* another option */
   position: absolute;
   top: 966px;
@@ -18,7 +20,6 @@
 
 .domain-banner {
   border-bottom: 1px solid #E9EBF1;
-
 
 }
 
