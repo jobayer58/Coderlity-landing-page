@@ -1,5 +1,6 @@
 .webapp-section {
     /* padding: 80px 0; */
+    
 }
 
 .webapp-image-col {
@@ -21,13 +22,13 @@
     text-align: start;
     font-size: 34px;
     font-weight: 700;
-    color: #111;
+    color: white;
     margin-bottom: 16px;
 }
 
 .webapp-description {
     text-align: start;
-    color: #444;
+    color: white;
     font-size: 16px;
     line-height: 1.7;
     margin-bottom: 20px;
@@ -72,7 +73,7 @@
 }
 
 .case-btn {
-    color: #00396B;
+    color: #8AC8FF;
     text-decoration: none;
     font-weight: 500;
     margin-left: 15px;
@@ -85,7 +86,7 @@
 .webapp-features p {
     text-align: left;
     font-size: 14px;
-    color: #222;
+    color: white;
     margin-bottom: 10px;
     display: flex;
     align-items: center;

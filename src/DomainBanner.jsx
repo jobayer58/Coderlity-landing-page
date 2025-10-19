@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
+import './DomainBanner.css'
 import Domain from './Domain';
 import Hosting from './Hosting';
 import WebApplication from './WebApplication';
+import MobileApplication from './MobileApplication';
+import DigitalMarketing from './DigitalMarketing';
+import TechConsulting from './TechConsulting';
+import UXDesign from './UXDesign';
 import { MdDomain } from 'react-icons/md';
 import { SiHostinger } from 'react-icons/si';
-import MobileApplication from './MobileApplication';
 import CRM from './CRM';
-import DigitalMarketing from './DigitalMarketing';
-import UXDesign from './UXDesign';
-import TechConsulting from './TechConsulting';
 
 const DomainBanner = () => {
     const [activeTab, setActiveTab] = useState('domain');
@@ -122,7 +123,7 @@ const DomainBanner = () => {
                 </div>
             </div>
             {/* content */}
-            <div className='domain-content'>
+            <div className=''>
                 {componentMap[activeTab]}
             </div>
         </section>

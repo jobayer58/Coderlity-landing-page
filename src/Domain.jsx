@@ -92,7 +92,6 @@ const Domain = () => {
                 </div>
             </div>
 
-
         </section>
     );
 };

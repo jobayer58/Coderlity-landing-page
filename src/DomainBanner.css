@@ -1,0 +1,113 @@
+.domain-section {
+  padding: 0px 0px;
+  margin: 0px 80px;
+  border-radius: 10px;
+  /* background-color: rgb(252, 236, 249); */
+  /* background: radial-gradient(20.96% 107.45% at 19.7% 25.04%, #002F7B 0%, #65A1FF 0.01%, #000000 100%), linear-gradient(0deg, rgba(1, 51, 234, 0.2), rgba(1, 51, 234, 0.2)); */
+
+  /* another option */
+  position: absolute;
+  top: 865px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  /* anther option */
+  /* position: relative;
+  top: -186px; */
+
+}
+
+.domain-banner {
+  /* border-bottom: 1px solid #E9EBF1; */
+
+}
+
+.icon-parent {
+  /* background-color: white; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 24px 0px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/*  */
+.icon-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  gap: 10px;
+}
+
+/* Hover Effect */
+.icon-content:hover::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  width: 120%;
+  height: 1.5px;
+  background-color: #007bff;
+}
+
+.icon-content:hover .icon-div {
+  background-color: #007bff;
+  transform: scale(1.1);
+}
+
+.icon-content:hover .icon {
+  color: white;
+}
+
+/* Active State - Same as Hover */
+.icon-content.active::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  width: 120%;
+  height: 1.5px;
+  background-color: #007bff;
+}
+
+.icon-content.active .icon-div {
+  background-color: #007bff;
+  transform: scale(1.1);
+}
+
+.icon-content.active .icon {
+  color: white;
+}
+
+.icon-content.active .domain-icon {
+  color: white !important;
+}
+
+.icon-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: #2A2A2A;
+  border-radius: 50%;
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
+}
+
+.domain-icon {
+  color: white;
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+
+.icon-text {
+  margin: 0;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  position: relative;
+  font-weight: 500;
+
+}

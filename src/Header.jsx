@@ -13,9 +13,10 @@ import banner1 from '../src/assets/iamges/banner1.png'
 import banner2 from '../src/assets/iamges/banner2.png'
 import spinning from '../src/assets/iamges/spinning 1.png'
 import spinning2 from '../src/assets/iamges/image 780.png'
+import group from '../src/assets/iamges/Group 1321314595.png'
 import { IoApps, IoCall } from "react-icons/io5"
-import { Button,  Card, Col, InputGroup, Nav, Navbar, Row } from "react-bootstrap";
-import {  PiSignIn } from "react-icons/pi"
+import { Button, Card, Col, InputGroup, Nav, Navbar, Row } from "react-bootstrap";
+import { PiSignIn } from "react-icons/pi"
 import { FaGoogleDrive, } from "react-icons/fa"
 import { MdDesignServices, MdKeyboardArrowDown, MdPhoneIphone, MdShoppingCart, MdSupport, MdWeb } from "react-icons/md"
 
@@ -434,20 +435,20 @@ const Header = () => {
 
 
 
-const [scrolled, setScrolled] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
 
 
@@ -591,69 +592,36 @@ const [scrolled, setScrolled] = useState(false);
 
             {/*banner section */}
             <section className="banner-section">
-                {/* Background Floating Logos */}
-                <div className="floating-logos">
-                    <img src={logo1} alt="" className="floating-logo logo-1" />
-                    <img src={logo2} alt="" className="floating-logo logo-2" />
-                    <img src={logo3} alt="" className="floating-logo logo-3" />
-                    <img src={logo4} alt="" className="floating-logo logo-4" />
-                    <img src={logo5} alt="" className="floating-logo logo-5" />
-                    <img src={logo6} alt="" className="floating-logo logo-6" />
-                    <img src={logo7} alt="" className="floating-logo logo-7" />
-                    <img src={logo8} alt="" className="floating-logo logo-8" />
+
+                <div className="text-banner-parent">
+                    {/* left side */}
+                    <div className="text-banner-left">
+                        <div>
+                            <h5 className="text-banner">Searching for the Perfect Solution All in One Place?</h5>
+                            <h1 className="text-description">Complete Digital Solutions <br />
+                                for ! <span className='text-description-span'>Your Business</span></h1>
+                        </div>
+                        <div className="btnToolbar">
+                            <Button variant="dark" className="bannerBtn1">
+                                <IoCall className="IoCall" /> Book an intro call
+                            </Button>
+                            <Button variant="light" className="bannerBtn2">
+                                Explore Our Work
+                            </Button>
+                        </div>
+
+                        <InputGroup className="inputImg">
+                            <img src={banner2} alt="" />
+                            <img src={banner1} alt="" />
+                        </InputGroup>
+
+                    </div>
+                    {/* right side */}
+                    <div>
+                        <img src={group} alt="" />
+                    </div>
                 </div>
-                <div>
-                    <h5 className="text-banner">Looking for Your One Stop Solution? </h5>
-                    <h1 className="text-description">Complete Digital Solutions <br />
-                        for <span className='text-description-span'>Your Business</span></h1>
-                </div>
-                <div className="btnToolbar">
-                    <Button variant="dark" className="bannerBtn1">
-                        <IoCall className="IoCall" /> Book an intro call
-                    </Button>
-                    <Button variant="light" className="bannerBtn2">
-                        Explore Our Work
-                    </Button>
-                </div>
 
-                <InputGroup className="inputImg">
-                    <img src={banner2} alt="" />
-                    <img src={banner1} alt="" />
-                </InputGroup>
-
-                <Row className="input-Nav">
-                    <Col xs="auto">
-                        <img src={spinning2} className='spinning' alt="" />
-                    </Col>
-
-                    <Col>
-                        <Nav className="banner-btn-parent ">
-                            <button className="banner-btn">Web Application</button>
-                            <button className="banner-btn">Mobile Application</button>
-                            <button className="banner-btn">ERP Solution</button>
-                            <button className="banner-btn">CMS Solution</button>
-                            <button className="banner-btn">UI/UX</button>
-                            <button className="banner-btn">Digital Marketing</button>
-                            <button className="banner-btn">Tech Consultency</button>
-                        </Nav>
-                    </Col>
-
-                    {/* <Col xs="auto">
-                        <Row className="message-parent g-2">
-                            <Col xs="auto">
-                                <div className="message-div">
-                                    <BiMessageDetail className="message" />
-                                </div>
-                            </Col>
-                            <Col xs="auto">
-                                <PiDotsThreeVerticalBold className="threeDot" />
-                            </Col>
-                        </Row>
-                    </Col> */}
-                    <Col xs="auto">
-                        <img src={spinning} className='spinning' alt="" />
-                    </Col>
-                </Row>
 
                 <div className="banner-text-gradient">
                     <h1>Our Services</h1>
