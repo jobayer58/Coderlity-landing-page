@@ -2,7 +2,7 @@ import React from "react";
 import "./ProcessTimeline.css";
 
 const ProcessTimeline = () => {
-   const buttons = [
+  const buttons = [
     { id: 1, label: "Idea Generation", position: "top", color: "#007CE8" },
     { id: 2, label: "Market Research", position: "bottom", color: "#2A2A2A" },
     { id: 3, label: "Strategy Planning", position: "top", color: "#007CE8" },
@@ -19,22 +19,26 @@ const ProcessTimeline = () => {
       <p className="timeline-subtitle">
         Experience our systematic approach to digital excellence. We meticulously guide you through every phase, ensuring <br /> a seamless and successful transformation of your vision into reality.
       </p>
-      {/*  */}
-        <div className="process-container">
+
+      <div className="process-container">
         {buttons.map((btn, index) => (
           <div key={btn.id} className={`process-item ${btn.position}`}>
-            {/* 🟢 Add left dotted line only for the first button */}
+            {/* Left dotted line for first btn only */}
             {index === 0 && (
               <div className="dotted-line left">
                 <div className="dot"></div>
               </div>
             )}
 
-            <div className="process-btn" style={{ backgroundColor: btn.color }}>
+            {/* Button that moves along left dotted border */}
+            <div
+              className="process-btn border-move"
+              style={{ backgroundColor: btn.color }}
+            >
               {btn.label}
             </div>
 
-            {/* Right dotted line for all buttons */}
+            {/* Right dotted line for all */}
             <div className="dotted-line right">
               <div className="dot"></div>
             </div>

@@ -54,8 +54,8 @@ const DigitalSolution = () => {
                 <div className='solution-img-div'>
                     <div><img src={digital} alt="" /></div>
                     <div>
-                        <h1>Our Complete  Digital <br /> Solutions</h1>
-                        <p>We provide a complete suite of services that covers web <br className='solution-br' /> development, app development, UI/UX design, API integration <br className='solution-br' /> (including e-invoicing ZATCA integration), digital marketing, IT <br className='solution-br' /> consultation, and domain hosting, ensuring all your digital needs <br className='solution-br' /> are met under one roof.</p>
+                        <h1>Our Complete  Digital <br className='' /> Solutions</h1>
+                        <p>We provide a complete suite of services that covers web  development, app development, UI <br  className='solution-br'/>/UX  design, API integration  (including e-invoicing ZATCA integration), digital marketing, IT <br className='solution-br' /> consultation, and domain hosting, ensuring all your digital needs  are met under one roof.</p>
                     </div>
                 </div>
                 <div className="solution-service-container">

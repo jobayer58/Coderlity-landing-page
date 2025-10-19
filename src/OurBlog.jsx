@@ -1,13 +1,12 @@
 import React from 'react';
 import './OurBlog.css';
 import blog from '../src/assets/iamges/blog.png';
-import { IoIosArrowRoundForward } from 'react-icons/io';
 import { FaArrowRightLong } from 'react-icons/fa6';
 
 const OurBlog = () => {
     return (
         <section className="blogs-section">
-            <div className="blog-container">
+            
                 {/* Header */}
                 <div className="blogs-header">
                     <div>
@@ -77,7 +76,7 @@ const OurBlog = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+           
         </section>
     );
 };

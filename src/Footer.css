@@ -306,10 +306,6 @@
     }
 
     .codarility-footer {
-        padding: 50px 0 20px 0;
-    }
-
-    .codarility-footer {
         padding: 0px 40px;
     }
 
@@ -321,7 +317,7 @@
 /* Mobile Devices (576px - 767px) */
 @media (max-width: 767px) {
     .footer-container {
-        padding: 0 15px;
+        padding: 0 20px;
     }
 
     .footer-content {

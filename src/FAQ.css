@@ -37,7 +37,7 @@
 }
 
 .faq-item {
-    
+
     width: 743px;
     border-bottom: 1px solid #D0D0D0;
     cursor: pointer;
@@ -45,16 +45,15 @@
     padding: 36px 0px;
 }
 
-
-
 .faq-title {
     display: flex;
     justify-content: space-between;
     font-weight: 500;
     font-size: 26px;
-   
+
 }
-.plus{
+
+.plus {
     font-size: 24px;
     margin-right: 10px;
 }
@@ -69,13 +68,14 @@
     color: #0088FF;
 }
 
-.faq-btn{
+.faq-btn {
     color: white;
     padding: 10px 36px;
     border-radius: 10px;
     border: none;
     background-color: #0088FF;
 }
+
 /* animation */
 @keyframes fadeIn {
     from {
@@ -107,11 +107,12 @@
     }
 
     .faq-item {
-       
+
         width: 420px;
-        
+
         padding: 10px 0px;
     }
+
     .faq-br {
         display: none;
     }
@@ -142,9 +143,10 @@
 
     .faq-container {
         width: 100%;
-       
+
     }
-    .faq-title{
+
+    .faq-title {
         font-size: 24px;
     }
 
@@ -173,9 +175,6 @@
         font-size: 14px;
     }
 
-    .faq-container {
-        padding: 0 10px;
-    }
 
     .faq-item {
         width: 100%;
@@ -197,8 +196,14 @@
 
 /* Small Mobile (<=480px) */
 @media (max-width: 480px) {
+    .faq-text-div h1 {
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 1.3;
+    }
+
     .faq-parent {
-        padding: 50px 15px;
+        padding: 50px 20px;
     }
 
     .faq-img-div h1 {
@@ -226,3 +231,37 @@
         display: none;
     }
 }
+
+/* large device responsive*/
+@media (min-width:1600px) {
+    .faq-text-div h1 {
+        font-size: 66px;
+    }
+    .faq-text-div p{
+        font-size: 20px;
+    }
+
+    .faq-container {
+        max-width: 800px;
+
+    }
+    .faq-description{
+        font-size: 20px;
+    }
+
+    .faq-item {
+        width: 800px;
+        padding: 36px 0px;
+    }
+
+    .faq-title {
+        font-size: 32px;
+
+    }
+
+    .plus {
+        font-size: 28px;
+
+    }
+}
+

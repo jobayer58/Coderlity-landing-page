@@ -2,7 +2,7 @@
 .top-products {
   padding: 60px 0;
   background-color: #F3F4F6;
-  margin-top: 550px;
+  margin-top: 630px;
   /* margin: 0px; */
 }
 
@@ -120,6 +120,9 @@
 /* 📱 Mobile Devices (0px - 576px) */
 
 @media (max-width: 576px) {
+  .top-products{
+    padding: 30px 5px;
+  }
   
   .product-description-br{
     display: none;
@@ -138,6 +141,7 @@
   .product-card {
     margin: 0 auto;
   }
+
 }
 
 /* 📱 Mobile Large (577px - 768px) */
@@ -153,6 +157,7 @@
     width: calc(50% - 7px);
     /* 2 cards with gap */
   }
+  
 }
 
 /* 💻 Tablet (769px - 992px) */

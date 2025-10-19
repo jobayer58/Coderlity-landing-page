@@ -24,14 +24,13 @@
 
 .solution-img-div p {
     color: #2a2a2a;
-    /* font-size: 16px;
-  line-height: 1.7; */
+    font-size: 14px;
 }
 
 
 /* toggle */
 .solution-service-container {
-    max-width: 700px;
+    max-width: 800px;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -43,7 +42,7 @@
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
-    padding: 14px 20px;
+    padding: 20px 20px;
 }
 
 .solution-service-item:hover {
@@ -90,7 +89,7 @@
 /* ✅ Responsive Design Starts */
 
 /* Laptop (<=1200px) */
-@media (max-width: 1200px) {
+@media (max-width: 1350px) {
     .solution-parent {
         padding: 70px 40px;
         gap: 70px;
@@ -113,6 +112,9 @@
 
     .solution-br {
         display: none;
+    }
+    .solution-img-div img {
+        width: 60%;
     }
 
 }
@@ -157,7 +159,7 @@
 @media (max-width: 767px) {
     .solution-parent {
         flex-direction: column;
-        padding: 60px 25px;
+        padding: 60px 20px;
         gap: 10px;
     }
 
@@ -193,9 +195,6 @@
 
 /* Small Mobile (<=480px) */
 @media (max-width: 480px) {
-    .solution-parent {
-        /* padding: 50px 15px; */
-    }
 
     .solution-img-div h1 {
         text-align: start;
@@ -223,4 +222,30 @@
     .solution-br {
         display: none;
     }
+    .solution-img-div img {
+        width: 100%;
+    }
 }
+
+/* large device responsive*/
+@media (min-width:1700px) {
+    .solution-img-div h1 {
+        font-size: 56px;
+    }
+    .solution-img-div p {
+        font-size: 16px;
+    }
+    .solution-service-title{
+        font-size: 24px;
+    }
+    .solution-service-item {
+        width: 720px;
+        padding: 22px 14px;
+    }
+    
+}
+
+
+
+
+
