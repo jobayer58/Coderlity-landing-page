@@ -1,18 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './Header.css'
-import logo1 from '../src/assets/iamges/logo1.png'
-import logo2 from '../src/assets/iamges/logo2.png'
-import logo3 from '../src/assets/iamges/logo3.png'
-import logo4 from '../src/assets/iamges/logo4.png'
-import logo5 from '../src/assets/iamges/logo5.png'
-import logo6 from '../src/assets/iamges/logo6.png'
-import logo7 from '../src/assets/iamges/logo7.png'
-import logo8 from '../src/assets/iamges/logo8.png'
 import logo from '../src/assets/iamges/web logo1 1 1.svg'
 import banner1 from '../src/assets/iamges/banner1.png'
 import banner2 from '../src/assets/iamges/banner2.png'
-import spinning from '../src/assets/iamges/spinning 1.png'
-import spinning2 from '../src/assets/iamges/image 780.png'
 import group from '../src/assets/iamges/Group 1321314595.png'
 import { IoApps, IoCall } from "react-icons/io5"
 import { Button, Card, Col, InputGroup, Nav, Navbar, Row } from "react-bootstrap";
