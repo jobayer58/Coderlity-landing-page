@@ -2,11 +2,11 @@
 .domain-content {
   background: radial-gradient(20.96% 107.45% at 19.7% 25.04%, #002F7B 0%, #65A1FF 0.01%, #000000 100%), linear-gradient(0deg, rgba(1, 51, 234, 0.2), rgba(1, 51, 234, 0.2));
   text-align: center;
-  padding: 80px 10px;
+  padding: 80px 0px;
   /* border-bottom-left-radius: 14px;
   border-bottom-right-radius: 14px; */
   border-radius: 14px;
-  height: 650px;
+  height: 680px;
 }
 
 .domain-content-text h1 {

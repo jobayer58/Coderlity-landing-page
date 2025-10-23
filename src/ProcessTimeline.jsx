@@ -26,7 +26,7 @@ const ProcessTimeline = () => {
             {/* Left dotted line for first btn only */}
             {index === 0 && (
               <div className="dotted-line left">
-                <div className="dot"></div>
+               
               </div>
             )}
 
@@ -40,7 +40,7 @@ const ProcessTimeline = () => {
 
             {/* Right dotted line for all */}
             <div className="dotted-line right">
-              <div className="dot"></div>
+              
             </div>
           </div>
         ))}

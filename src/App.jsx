@@ -16,6 +16,7 @@ import WorkProcess from "./WorkProcess"
 import ProcessTimeline from "./ProcessTimeline"
 import OurBlog from "./OurBlog"
 import MeetTeam from "./MeetTeam"
+import ProcessWork from "./ProcessWork"
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
       <DigitalSolution></DigitalSolution>
       <ProcessTimeline></ProcessTimeline>
       <WorkProcess></WorkProcess>
+      <ProcessWork></ProcessWork>
       <FAQ></FAQ>
       <OurBlog></OurBlog>
       <MeetTeam></MeetTeam>
