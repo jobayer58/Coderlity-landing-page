@@ -3,7 +3,7 @@ import './Hosting.css'
 import { MdDomain } from 'react-icons/md';
 import { SiHostinger } from 'react-icons/si';
 import { Button, Card, Col, Container, Row } from 'react-bootstrap';
-import { BsCheckCircle } from 'react-icons/bs';
+import { BsCheckCircle, BsCheckCircleFill } from 'react-icons/bs';
 
 const plans = [
     {
@@ -72,7 +72,7 @@ const Hosting = () => {
                                         <ul className="pricing-list">
                                             {plan.features.map((feature, i) => (
                                                 <li key={i} className="pricing-list-item">
-                                                    <BsCheckCircle className="pricing-icon" />
+                                                    <BsCheckCircleFill className="pricing-icon" />
                                                     {feature}
                                                 </li>
                                             ))}

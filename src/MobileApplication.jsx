@@ -6,21 +6,19 @@ import { IoIosCheckmark } from 'react-icons/io';
 const MobileApplication = () => {
     return (
         <section className="">
-
-
             {/* content */}
             <div className="domain-content">
                 {/* web Application Content */}
                 <section className="webapp-section">
-                    <Container>
-                        <Row className="webapp-parent-row">
+                    <div>
+                        <div className="webapp-parent-row">
                             {/* Left Image */}
                             <Col md={6} className="webapp-image-col">
                                 <img src={mobileImage} alt="Web Application" className="webapp-image" />
                             </Col>
 
                             {/* Right Content */}
-                            <Col md={6} className="webapp-content">
+                            <div md={6} className="webapp-content">
                                 <h2 className="webapp-title">Stunning Mobile Experiences for
                                     Your Users</h2>
                                 <p className="webapp-description">
@@ -28,28 +26,28 @@ const MobileApplication = () => {
                                 </p>
 
                                 {/* Features */}
-                                <Row className="webapp-features">
-                                    <Col xs={12} sm={6}>
+                                <div className="webapp-features">
+                                    <div xs={12} sm={6}>
                                         <p><IoIosCheckmark className="icon" /> Native & Cross-Platform Builds
                                         </p>
                                         <p><IoIosCheckmark className="icon" /> Flawless API & System Integration</p>
                                         <p><IoIosCheckmark className="icon" /> Intuitive UI/UX Design</p>
-                                    </Col>
-                                    <Col xs={12} sm={6}>
+                                    </div>
+                                    <div xs={12} sm={6}>
                                         <p><IoIosCheckmark className="icon" /> App Store Submission & Guidance</p>
                                         <p><IoIosCheckmark className="icon" /> Performance-First Architecture</p>
                                         <p><IoIosCheckmark className="icon" /> Dedicated, Ongoing Support</p>
-                                    </Col>
-                                </Row>
+                                    </div>
+                                </div>
                                 
                                 {/* Buttons */}
                                 <div className="webapp-buttons">
                                     <Button variant="primary" className="start-btn">Start Your Project Now</Button>
                                     <Button variant="link" className="case-btn">View Our Case Studies</Button>
                                 </div>
-                            </Col>
-                        </Row>
-                    </Container>
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
             </div>

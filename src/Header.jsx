@@ -612,11 +612,6 @@ const Header = () => {
                     </div>
                 </div>
 
-
-                <div className="banner-text-gradient">
-                    <h1>Our Services</h1>
-                </div>
-
             </section>
         </header>
     );

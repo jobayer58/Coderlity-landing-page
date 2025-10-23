@@ -23,11 +23,14 @@ const DomainBanner = () => {
         'erp-solution': <CRM />,
         'digital-marketing': <DigitalMarketing />,
         'ui-ux': <UXDesign />,
-        'tech-consultency': <TechConsulting/>
+        'tech-consultency': <TechConsulting />
     };
-    
+
     return (
         <section className='domain-section'>
+            <div className="banner-text-gradient">
+                <h1>Our Services</h1>
+            </div>
             {/* icon */}
             <div className="domain-banner">
                 <div className="icon-parent">

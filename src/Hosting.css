@@ -8,30 +8,28 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 30px;
     /* gap between cards */
 }
 
 /* ✅ Card styling */
 .pricing-card {
     width: 250px;
-    height: 400px;
+    height: 420px;
     border: none;
-    border-radius: 12px;
-    /* transition: all 0.3s ease;
-  background-color: #fff; */
+    border-radius: 24px;
+    background-color: #1E6FFF1A;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
+    box-shadow: 
+    6px 6px 12px 0px rgba(189, 200, 223, 0.7),
+    -6px -6px 12px 0px rgba(255, 255, 255, 0.7);
 }
 
-/* .pricing-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-} */
 
 /* ✅ Inner content */
 .pricing-title {
+    font-size: 18px;
     font-weight: 600;
     margin-bottom: 12px;
     text-align: start;
@@ -40,21 +38,22 @@
 .pricing-divider {
     width: 100%;
     height: 2px;
-    background: linear-gradient(to right, #B7B7B7, #2454A0);
+    background: #1E6FFF33;
     margin-bottom: 16px;
 }
 
 .pricing-price {
     text-align: start;
-    font-size: 28px;
-    font-weight: 700;
+    font-size: 24px;
+    font-weight: 600;
     margin-bottom: 5px;
 }
 
 .pricing-subtitle {
     text-align: start;
-    color: #777;
-    font-size: 15px;
+    color: #777C82;
+    font-size: 14px;
+    margin-top: 10px;
     margin-bottom: 20px;
 }
 
@@ -62,10 +61,15 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    width: 80%;
-    border-radius: 8px;
-    font-weight: 500;
+    padding: 12px 0px;
+    width: 100%;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 400;
     margin-bottom: 24px;
+    box-shadow: 
+    0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+    inset 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
 }
 
 .pricing-list {
@@ -79,21 +83,22 @@
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-    color: #333;
-    font-size: 15px;
+    color: #2A2A2A;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .pricing-icon {
-    color: #007bff;
+    color: #1E6FFF;
     margin-right: 8px;
     font-size: 18px;
 }
 
 .pricing-footer {
     text-align: start;
-    color: #888;
-    font-size: 13px;
-    margin-top: 15px;
+    color: #555555;
+    font-size: 11px;
+    margin-top: 35px;
 }
 
 

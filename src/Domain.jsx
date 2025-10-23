@@ -3,6 +3,7 @@ import { MdDomain } from 'react-icons/md';
 import { SiHostinger } from 'react-icons/si';
 import iconSearch from '../src/assets/iamges/icon serch.png'
 import './Domain.css'
+import { GoSearch } from 'react-icons/go';
 const Domain = () => {
     
     return (
@@ -10,13 +11,14 @@ const Domain = () => {
             {/* content */}
             <div className="domain-content">
                 <div className="domain-content-text">
-                    <h1>Find Your Perfect Domain</h1>
-                    <p>Discover, buy, and register your unique web address using our <br className='domain-text-br' /> powerful search or get creative with our AI Generator.</p>
+                    <h1>Find Your Perfect Domain ?</h1>
+                    <p>Discover, buy, and register your unique web address using our powerful search or <br className='domain-text-br' /> get creative with our AI Generator.</p>
                 </div>
                 {/* search */}
                 <div className="search-div">
                     <div className="domain-search">
-                        <input type="text" className="input-text" placeholder="Type the domain name or a descriptive phrase..." />
+                        {/* <input type="text" className="input-text" placeholder="Type the domain name or a descriptive phrase..." /> */}
+                        <p className='input-text'> <GoSearch />Type the domain name or a descriptive phrase...</p>
                         <button className="search-btn">Search Domain</button>
                     </div>
                     <div className="search-left-text">
@@ -33,7 +35,7 @@ const Domain = () => {
                             <p className="original-price">USD $17.99/yr</p>
                         </div>
                         <div className="domain-pricing">
-                            <div className="discount-price">USD <span>$2.99/yr</span></div>
+                            <div className="discount-price">USD $2.99/yr</div>
                         </div>
                     </div>
                     {/* 2 */}
@@ -43,7 +45,7 @@ const Domain = () => {
                             <p className="original-price">USD $17.99/yr</p>
                         </div>
                         <div className="domain-pricing">
-                            <div className="discount-price">USD <span>$2.99/yr</span></div>
+                            <div className="discount-price">USD $2.99/yr</div>
                         </div>
                     </div>
                     {/* 3 */}
@@ -53,7 +55,7 @@ const Domain = () => {
                             <p className="original-price">USD $17.99/yr</p>
                         </div>
                         <div className="domain-pricing">
-                            <div className="discount-price">USD <span>$2.99/yr</span></div>
+                            <div className="discount-price">USD $2.99/yr</div>
                         </div>
                     </div>
                     {/* 4 */}
@@ -63,7 +65,7 @@ const Domain = () => {
                             <p className="original-price">USD $17.99/yr</p>
                         </div>
                         <div className="domain-pricing">
-                            <div className="discount-price">USD <span>$2.99/yr</span></div>
+                            <div className="discount-price">USD $2.99/yr</div>
                         </div>
                     </div>
                     {/* 5 */}
@@ -73,7 +75,7 @@ const Domain = () => {
                             <p className="original-price">USD $17.99/yr</p>
                         </div>
                         <div className="domain-pricing">
-                            <div className="discount-price">USD <span>$2.99/yr</span></div>
+                            <div className="discount-price">USD $2.99/yr</div>
                         </div>
                     </div>
                     {/* 6 */}
@@ -83,7 +85,7 @@ const Domain = () => {
                             <p className="original-price">USD $17.99/yr</p>
                         </div>
                         <div className="domain-pricing">
-                            <div className="discount-price">USD <span>$2.99/yr</span></div>
+                            <div className="discount-price">USD $2.99/yr</div>
                         </div>
                     </div>
                 </div>
