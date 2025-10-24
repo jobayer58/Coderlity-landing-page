@@ -113,7 +113,7 @@
 }
 
 .featured-img img {
-  width:412px;
+  width:auto;
   height:275px;
   object-fit: cover;
 }

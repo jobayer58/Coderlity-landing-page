@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './DigitalSolution.css';
-import digital from '../src/assets/iamges/digital solution.png'
+import digital from '../src/assets/iamges/solution.png'
 
 
 const DigitalSolution = () => {
@@ -9,37 +9,43 @@ const DigitalSolution = () => {
     const services = [
         {
             id: 1,
-            title: '01 Web Development',
+            count: "01",
+            title: 'Web Development',
             description:
-                'Our web application services focus on developing scalable, secure, and user-friendly platforms tailored to your business needs. From custom-built solutions to seamless integration, we ensure your web application enhances your online presence and meets your goals effectively.',
+                'Our web application services focus on developing scalable, secure, and user-friendly platforms tailored to your business needs. From custom-built solutions to seamless integration.',
         },
         {
             id: 2,
-            title: '02 Mobile Application',
+            count: "02",
+            title: 'Mobile Application',
             description:
                 'We build high-performing mobile apps with intuitive UI and cross-platform compatibility to deliver a seamless user experience on all devices.',
         },
         {
             id: 3,
-            title: '03 UI/UX Design',
+            count: "03",
+            title: 'UI/UX Design',
             description:
                 'We create engaging user experiences through intuitive design, ensuring usability and aesthetics blend perfectly together.',
         },
         {
             id: 4,
-            title: '04 Domain Hosting',
+            count: "04",
+            title: 'Domain Hosting',
             description:
                 'Reliable and secure hosting solutions to keep your website online and performing at its best all the time.',
         },
         {
             id: 5,
-            title: '05 Digital Marketing',
+            count: "05",
+            title: 'Digital Marketing',
             description:
                 'Boost your brand’s visibility with data-driven marketing strategies, SEO optimization, and targeted campaigns.',
         },
         {
             id: 6,
-            title: '06 Tech Consultancy',
+            count: "06",
+            title: 'Tech Consultancy',
             description:
                 'We provide expert technology consulting to help you choose, implement, and optimize the best digital solutions for your business.',
         },
@@ -55,7 +61,7 @@ const DigitalSolution = () => {
                     <div><img src={digital} alt="" /></div>
                     <div>
                         <h1>Our Complete  Digital <br className='' /> Solutions</h1>
-                        <p>We provide a complete suite of services that covers web  development, app development, UI <br  className='solution-br'/>/UX  design, API integration  (including e-invoicing ZATCA integration), digital marketing, IT <br className='solution-br' /> consultation, and domain hosting, ensuring all your digital needs  are met under one roof.</p>
+                        <p>We provide a complete suite of services that covers web  development, app development, UI <br className='solution-br' />/UX  design, API integration  (including e-invoicing ZATCA integration), digital marketing, IT <br className='solution-br' /> consultation, and domain hosting, ensuring all your digital needs  are met under one roof.</p>
                     </div>
                 </div>
                 <div className="solution-service-container">
@@ -66,7 +72,8 @@ const DigitalSolution = () => {
                             onClick={() => toggleService(index)}
                         >
                             <div className="solution-service-title">
-                                {service.title}
+                                <div className='solution-count'>{service.count}</div> 
+                                <div>{service.title}</div>
                             </div>
                             {activeIndex === index && (
                                 <p className="solution-service-description">{service.description}</p>
