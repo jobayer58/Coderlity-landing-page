@@ -10,8 +10,9 @@
   height: 750px;
   margin: 0px 80px;
   box-shadow: 
-    4px 4px 8px 0px #BDC8DFB2,
-    -4px -4px 8px 0px #FFFFFF;
+    6px 6px 12px 0px rgba(189, 200, 223, 0.7),
+    -6px -6px 12px 0px rgba(255, 255, 255, 0.7);
+
     
 }
 

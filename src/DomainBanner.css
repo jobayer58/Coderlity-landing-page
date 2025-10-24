@@ -67,14 +67,13 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 130%;
+  top: 950px;
   margin: 0px 80px;
   background-color: #E9EAF0;
   border-radius: 16px;
   box-shadow: 
     6px 6px 12px 0px rgba(189, 200, 223, 0.7),
     -6px -6px 12px 0px rgba(255, 255, 255, 0.7);
-
 
 }
 
@@ -198,3 +197,4 @@
   font-weight: 500;
 
 }
+

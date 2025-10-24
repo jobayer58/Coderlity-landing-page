@@ -30,7 +30,7 @@ function App() {
       {/* <MobileApplication></MobileApplication> */}
       {/* <CRM></CRM> */}
       <TopProducts></TopProducts>
-      <Sponsored></Sponsored>
+      {/* <Sponsored></Sponsored> */}
       <Featured></Featured>
       <DigitalSolution></DigitalSolution>
       <ProcessTimeline></ProcessTimeline>

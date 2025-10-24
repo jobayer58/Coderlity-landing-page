@@ -5,15 +5,16 @@ import { FaStar } from 'react-icons/fa';
 import image1 from '../src/assets/iamges/image1.png'
 import image2 from '../src/assets/iamges/image2.png'
 import image3 from '../src/assets/iamges/image3.png'
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
 const TopProducts = () => {
     return (
         <div>
             <section className="top-products">
-                <Container>
+                <div>
                     {/* text section */}
                     <div className="text-div">
-                        <h1>Our Top Products</h1>
+                        <h1 className='product-title-text'>Our Top Products</h1>
                         <p className="product-description">
                             We offer a range of high-quality digital products, including PHP
                             Laravel frameworks, HTML React JS <br className="product-description-br" />
@@ -33,7 +34,7 @@ const TopProducts = () => {
                                 </div>
                                 <Card.Body>
                                     <Card.Title className="card-title">
-                                        SignalLab - Forex And Crypto <br /> Trading Signal Platform
+                                        SignalLab - Forex And Crypto  Trading Signal
                                     </Card.Title>
                                     <div className="rating">
                                         Ratting: <span className="span-tag">5/5</span>
@@ -60,8 +61,40 @@ const TopProducts = () => {
                         <div className="card-wrapper">
                             <Card className="product-card">
                                 <div className="card-image-container">
-                                    <Card.Img variant="top" src={image2} />
+                                    <Card.Img variant="top" src={image3} />
                                     <div className="version-badge version-bg-color2">Version <span className="span-badge-text">3.1</span></div>
+                                </div>
+                                <Card.Body>
+                                    <Card.Title className="card-title">
+                                        HYIPLAB - Complete HYIP  Investment System
+                                    </Card.Title>
+                                    <div className="rating">
+                                        Ratting: <span className="span-tag">5/5</span>
+                                        <div className="stars">
+                                            <FaStar />
+                                            <FaStar />
+                                            <FaStar />
+                                            <FaStar />
+                                            <FaStar />
+                                        </div>
+                                    </div>
+                                    <p>
+                                        Category: <span className="span-tag">Laravel</span>
+                                    </p>
+                                    <hr />
+                                    <p className="price-line">
+                                        Live Preview: <span className="dollarSize">$199</span>
+                                    </p>
+                                </Card.Body>
+                            </Card>
+                        </div>
+
+                        {/* Card 3 */}
+                        <div className="card-wrapper">
+                            <Card className="product-card">
+                                <div className="card-image-container">
+                                    <Card.Img variant="top" src={image2} />
+                                    <div className="version-badge version-bg-color3">Version <span className="span-badge-text">5.6</span></div>
                                 </div>
                                 <Card.Body>
                                     <Card.Title className="card-title">
@@ -88,16 +121,16 @@ const TopProducts = () => {
                             </Card>
                         </div>
 
-                        {/* Card 3 */}
+                        {/* Card 4 */}
                         <div className="card-wrapper">
                             <Card className="product-card">
                                 <div className="card-image-container">
-                                    <Card.Img variant="top" src={image3} />
+                                    <Card.Img variant="top" src={image2} />
                                     <div className="version-badge version-bg-color3">Version <span className="span-badge-text">5.6</span></div>
                                 </div>
                                 <Card.Body>
                                     <Card.Title className="card-title">
-                                        HYIPLAB - Complete HYIP <br /> Investment System
+                                        Xcash - Ultimate Wallet <br /> Solution
                                     </Card.Title>
                                     <div className="rating">
                                         Ratting: <span className="span-tag">5/5</span>
@@ -114,13 +147,23 @@ const TopProducts = () => {
                                     </p>
                                     <hr />
                                     <p className="price-line">
-                                        Live Preview: <span className="dollarSize">$199</span>
+                                        Live Preview: <span className="dollarSize">$149</span>
                                     </p>
                                 </Card.Body>
                             </Card>
                         </div>
                     </div>
-                </Container>
+                    {/* slider arrow  */}
+                    <div className='arrow-div'>
+                        <div className='arrow-icon-div'>
+                            <IoIosArrowBack className='arrow-icon' />
+                        </div>
+                        <div className='arrow-icon-div'>
+                            <IoIosArrowForward className='arrow-icon' />
+                        </div>
+                    </div>
+
+                </div>
             </section>
         </div>
     );
