@@ -33,9 +33,9 @@ function App() {
       {/* <Sponsored></Sponsored> */}
       <Featured></Featured>
       <DigitalSolution></DigitalSolution>
-      <ProcessTimeline></ProcessTimeline>
-      <WorkProcess></WorkProcess>
-      <ProcessWork></ProcessWork>
+      {/* <ProcessTimeline></ProcessTimeline> */}
+      {/* <WorkProcess></WorkProcess> */}
+      {/* <ProcessWork></ProcessWork> */}
       <FAQ></FAQ>
       <OurBlog></OurBlog>
       <MeetTeam></MeetTeam>

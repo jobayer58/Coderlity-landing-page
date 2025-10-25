@@ -3,12 +3,23 @@ import './Header.css'
 import logo from '../src/assets/iamges/web logo1 1 1.svg'
 import banner1 from '../src/assets/iamges/banner1.png'
 import banner2 from '../src/assets/iamges/banner2.png'
-import group from '../src/assets/iamges/Group 1321314595.png'
+import moon from '../src/assets/iamges/navbarlight.png'
 import { IoApps, IoCall } from "react-icons/io5"
 import { Button, Card, Col, InputGroup, Nav, Navbar, Row } from "react-bootstrap";
 import { PiSignIn } from "react-icons/pi"
 import { FaGoogleDrive, } from "react-icons/fa"
 import { MdDesignServices, MdKeyboardArrowDown, MdPhoneIphone, MdShoppingCart, MdSupport, MdWeb } from "react-icons/md"
+import { FaFacebook } from 'react-icons/fa6';
+import dev from '../src/assets/iamges/dev.png'
+import icon1 from '../src/assets/iamges/icon1.png'
+import icon2 from '../src/assets/iamges/icon2.png'
+import icon3 from '../src/assets/iamges/icon3.png'
+import icon4 from '../src/assets/iamges/icon4.png'
+import icon5 from '../src/assets/iamges/icon5.png'
+import icon6 from '../src/assets/iamges/icon6.png'
+import icon7 from '../src/assets/iamges/icon7.png'
+import icon8 from '../src/assets/iamges/icon8.png'
+import icon9 from '../src/assets/iamges/icon9.png'
 
 
 const Header = () => {
@@ -442,7 +453,6 @@ const Header = () => {
 
 
 
-
     return (
         <header className="headerBg" >
             {/* navbar */}
@@ -537,7 +547,7 @@ const Header = () => {
                                     <PiSignIn /> My Account
                                 </Button>
                             </Col>
-                            <Col xs="auto" className="apps-menu-wrapper" ref={dropdownRef}>
+                            {/* <Col xs="auto" className="apps-menu-wrapper" ref={dropdownRef}>
                                 <IoApps className="ioApps" onClick={toggleAppsMenu} />
                                 {showApps && (
                                     <div className="apps-dropdown">
@@ -549,7 +559,7 @@ const Header = () => {
                                         ))}
                                     </div>
                                 )}
-                            </Col>
+                            </Col> */}
                         </Row>
                     </div>
                 </Navbar.Collapse>
@@ -557,11 +567,6 @@ const Header = () => {
                 {/* ✅ Account + Apps visible only on large screens */}
                 <div className="d-none d-lg-flex">
                     <Row className="account-div">
-                        <Col xs="auto">
-                            <Button variant="dark" className="accountBtn">
-                                <PiSignIn /> My Account
-                            </Button>
-                        </Col>
                         <Col xs="auto" className="apps-menu-wrapper" ref={dropdownRef}>
                             <IoApps className="ioApps" onClick={toggleAppsMenu} />
                             {showApps && (
@@ -574,6 +579,16 @@ const Header = () => {
                                     ))}
                                 </div>
                             )}
+                        </Col>
+                        <Col xs="auto">
+                            <Button className="accountBtn">
+                                <PiSignIn /> Account
+                            </Button>
+                        </Col>
+                        <Col>
+                            <div className='dark-mode'>
+                                <img src={moon} alt="" />
+                            </div>
                         </Col>
                     </Row>
                 </div>
@@ -589,7 +604,7 @@ const Header = () => {
                         <div>
                             <h5 className="text-banner">Searching for the Perfect Solution All in One Place?</h5>
                             <h1 className="text-description">Complete Digital Solutions <br />
-                                for ! <span className='text-description-span'>Your Business</span></h1>
+                                for <span className='text-description-span'>Web Development</span></h1>
                         </div>
                         <div className="btnToolbar">
                             <Button variant="dark" className="bannerBtn1">
@@ -605,10 +620,48 @@ const Header = () => {
                             <img src={banner1} alt="" />
                         </InputGroup>
 
+                        {/* user calculation */}
+                        <div className='user-parent'>
+                            <div className='user-div'>
+                                <h4>2500+</h4>
+                                <p>customers</p>
+                            </div>
+                            <div className='user-div'>
+                                <h4>12+</h4>
+                                <p>Years</p>
+                            </div>
+                            <div className='user-div'>
+                                <h4>5000+</h4>
+                                <p>Projects</p>
+                            </div>
+                            <div className='user-div'>
+                                <h4>100+</h4>
+                                <p> Members </p>
+                            </div>
+                        </div>
+
                     </div>
                     {/* right side */}
-                    <div>
+                    {/* <div>
                         <img src={group} alt="" />
+                    </div> */}
+
+                    <div className="circle-container">
+                        <div className="center-image">
+                            <img src={dev} alt="center" />
+                        </div>
+
+                        <div className="rotating-circle">
+                            <div className="icon"><img src={icon1} alt="" /></div>
+                            <div className="icon"><img src={icon2} alt="" /></div>
+                            <div className="icon"><img src={icon3} alt="" /></div>
+                            <div className="icon"><img src={icon4} alt="" /></div>
+                            <div className="icon"><img src={icon5} alt="" /></div>
+                            <div className="icon"><img src={icon6} alt="" /></div>
+                            <div className="icon"><img src={icon7} alt="" /></div>
+                            <div className="icon"><img src={icon8} alt="" /></div>
+                            <div className="icon"><img src={icon9} alt="" /></div>
+                        </div>
                     </div>
                 </div>
 

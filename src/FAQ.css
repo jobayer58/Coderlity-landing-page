@@ -5,7 +5,7 @@
 .faq-parent {
     padding: 90px 80px;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
 
 }
@@ -17,15 +17,50 @@
 }
 
 .faq-text-div h1 {
-    font-size: 52px;
+    font-size: 54px;
     font-weight: 600;
+    color: #0F1724;
     line-height: 1.3;
 }
 
 .faq-text-div p {
-    color: #2a2a2a;
+    color: #777C82;
     /* font-size: 16px;
   line-height: 1.7; */
+}
+
+.lats-talk-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: #1E6FFF;
+  color: white;
+  font: 18px;
+  font-weight: 400;
+  border: none;
+  padding: 12px 70px;
+  border-radius: 12px;
+  cursor: pointer;
+   box-shadow: 
+    0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+    inset 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+.lats-talk-btn:hover {
+  background: #E9EAF0;
+  color: black;
+  box-shadow: 
+    6px 6px 12px 0px rgba(189, 200, 223, 0.7),
+    -6px -6px 12px 0px rgba(255, 255, 255, 0.7);
+
+}
+
+
+.shape-img{
+    position: relative;
+    top: 20px;
+    left: 150px;
 }
 
 
@@ -88,6 +123,7 @@
         transform: translateY(0);
     }
 }
+
 
 /* ✅ Responsive Design Starts */
 

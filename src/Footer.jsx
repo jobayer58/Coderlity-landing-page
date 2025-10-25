@@ -1,12 +1,12 @@
 import React from 'react';
 import './Footer.css';
 import logo from '../src/assets/iamges/footer logo.png'
-import { FaFacebook, FaGithub, FaLinkedin, FaPinterest, FaTwitter, FaYoutube } from 'react-icons/fa';
-import { FaSquareXTwitter } from 'react-icons/fa6';
+import { FaFacebook, FaGithub, FaTwitterSquare, FaYoutube } from 'react-icons/fa';
 import massanger from '../src/assets/iamges/sms.png'
-import whatsapp from '../src/assets/iamges/whatsapp.png'
-import telegram from '../src/assets/iamges/telegram.png'
 import { IoMdArrowUp } from 'react-icons/io';
+import trustReview from '../src/assets/iamges/trustreview.png'
+import trustPilot from '../src/assets/iamges/trustpilot.png'
+import { FaTwitter } from 'react-icons/fa6';
 const Footer = () => {
     return (
         <footer className="codarility-footer">
@@ -18,18 +18,35 @@ const Footer = () => {
                         <div>
                             <img src={logo} alt="" />
                             <p className="company-description">
-                                Codarility.com is a leading provider of complete digital solutions, offering a wide range of services including web development, app development, EIP solutions, UI/UX design, digital marketing, IT consultation, and domain hosting. We also offer premium digital products such as PHP Launch, HTML React JS front-end templates, and MERN projects. Our mission is to empower businesses by providing innovative, high-quality, and scalable digital solutions that meet your unique needs.
+                                Ignite digital success with our 360-Degree solution. We provide  everything from concept to design and development, domain and hosting to marketing. Trust us as your partner in the journey to your success.
                             </p>
+                            <div className='footer-social'>
+                                <div className='footer-div'>
+                                    <a href="https://www.facebook.com/coderlity" target='_blank'><FaFacebook className='footer-icon' /></a>
+                                </div>
+                                <div className='footer-div'>
+                                    <a href="https://www.youtube.com/@coderlity" target='_blank'><FaYoutube className='footer-icon' /></a>
+                                </div>
+                                <div className='footer-div'>
+                                    <a href="https://github.com/coderlity" target='_blank'><FaGithub className='footer-icon' /></a>
+                                </div>
+                                <div className='footer-div'>
+                                    <a href="https://x.com/coderlity" target='_blank'><FaTwitter className='footer-icon' /></a>
+                                </div>
+                            </div>
                         </div>
-                        <div className='footer-social'>
-                            <FaFacebook className='footer-icon' />
-                            <FaYoutube className='footer-icon' />
-                            <FaLinkedin className='footer-icon' />
-                            <FaSquareXTwitter className='footer-icon' />
-                            <FaPinterest className='footer-icon' />
-                            <FaGithub className='footer-icon' />
+                        <div className='trust-div'>
+                            <div>
+                                <a href="https://trustreview.net/businesses/coderlity" target='_blank'><img src={trustReview} alt="" /></a>
+                            </div>
+                            <div>
+                                <a href="https://www.trustpilot.com/review/coderlity.com" target='_blank'><img src={trustPilot} alt="" /></a>
+                            </div>
                         </div>
+
+
                     </div>
+
 
                     {/* Service Links */}
                     <div className="footer-section">
@@ -137,18 +154,6 @@ const Footer = () => {
                         <div className='footer-Arrow'>
                             <div className='Arrow-div'>
                                 <IoMdArrowUp className='arrow-icon' />
-                            </div>
-                        </div>
-                        {/* 1 */}
-                        <div className='footer-social-sms'>
-                            <div className='sms-div'>
-                                <img src={telegram} alt="" />
-                            </div>
-                        </div>
-                        {/* 2 */}
-                        <div className='footer-social-sms'>
-                            <div className='sms-div'>
-                                <img src={whatsapp} alt="" />
                             </div>
                         </div>
                         {/* 3 */}

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './FAQ.css'
 import { GoPlus } from 'react-icons/go';
 import { VscChromeMinimize } from 'react-icons/vsc';
+import shape from '../src/assets/iamges/curvedshape.png'
 
 const FAQ = () => {
     const [activeIndex, setActiveIndex] = useState(null);
@@ -42,7 +43,8 @@ const FAQ = () => {
                     <div>
                         <h1>Freequently <br />asked Questions </h1>
                         <p>Have questions about our services, process, or pricing? Our FAQ <br className='br' /> section is here to provide clear answers and help you better <br className='br' /> understand how Coderlity can support your digital journey.</p>
-                        <button className='faq-btn'>Lats Talk</button>
+                        <button className='lats-talk-btn'>Lats Talk</button>
+                        <img className='shape-img' src={shape} alt="" />
                     </div>
                 </div>
                 <div className="faq-container">

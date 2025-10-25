@@ -81,7 +81,7 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.section-title {
+/* .section-title {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 60px;
@@ -99,7 +99,7 @@
   height: 4px;
   background: linear-gradient(to right, #4a90e2, #7b68ee);
   border-radius: 2px;
-}
+} */
 
 .process-container {
   position: relative;

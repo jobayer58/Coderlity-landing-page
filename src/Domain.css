@@ -103,7 +103,12 @@
 }
 
 .search-btn:hover {
-  background: #0056b3;
+  background: #E9EAF0;
+  color: black;
+  box-shadow: 
+    6px 6px 12px 0px rgba(189, 200, 223, 0.7),
+    -6px -6px 12px 0px rgba(255, 255, 255, 0.7);
+
 }
 
 /* domain card */
