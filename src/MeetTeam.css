@@ -6,15 +6,30 @@
 
 .meet-div {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   text-align: center;
   border-radius: 30px;
-  padding: 55px 40px;
+  padding: 0px 0px;
   gap: 20px;
   background: #C0E1FF;
 }
+
+.meet-left {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.meet-right {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.meet-text {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
 .meet-div h1 {
   font-size: 54px;
   font-weight: 700;
@@ -28,10 +43,6 @@
 
 /* btn */
 .meet-team {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
   background: #1E6FFF;
   color: white;
   font: 18px;
@@ -40,7 +51,7 @@
   padding: 12px 40px;
   border-radius: 12px;
   cursor: pointer;
-   box-shadow: 
+  box-shadow:
     0px 4px 4px 0px rgba(0, 0, 0, 0.25),
     inset 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
 }
@@ -48,15 +59,16 @@
 .meet-team:hover {
   background: #E9EAF0;
   color: black;
-  box-shadow: 
+  box-shadow:
     6px 6px 12px 0px rgba(189, 200, 223, 0.7),
     -6px -6px 12px 0px rgba(255, 255, 255, 0.7);
 
 }
 
-.meet-team span{
- font-size: 20px;
- font-weight: bold;
+.meet-team span {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 10px;
 }
 
 
