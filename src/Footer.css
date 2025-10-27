@@ -207,7 +207,7 @@
 }
 
 .footer-coderlity h1 {
-    font-size: 160px;
+    font-size: 148px;
     font-weight: bold;
     /* Gradient color */
      background: linear-gradient(90deg, 
@@ -282,6 +282,26 @@
     background: #EAEAEA;
     border-radius: 50%;
     transition: all 0.3s ease;
+}
+
+.scrollUp-div{
+  position: absolute;
+  right: 60px;
+  bottom: -10px;
+}
+.scrollIcon-up{
+  position: absolute;
+  right: 54px;
+  bottom: -5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.scroll-text-up{
+  font-size: 14px;
+  font-weight: 400;
 }
 
 /* Responsive Design */

@@ -501,6 +501,26 @@
 .icon:nth-child(9) { top: 10%; left: 22%; transform: translate(-50%, -50%) rotate(20deg); }
 
 
+.scrollDown-div{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.scrollIcon-div{
+  position: absolute;
+  right: 42px;
+  bottom: -10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.scroll-text{
+  font-size: 14px;
+  font-weight: 400;
+}
+
 /* ========== RESPONSIVE ========== */
 
 /* Tablet Devices (768px - 991px) */

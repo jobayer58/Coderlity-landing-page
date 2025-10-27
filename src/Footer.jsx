@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Footer.css';
 import logo from '../src/assets/iamges/footer logo.png'
 import { FaFacebook, FaGithub, FaTwitterSquare, FaYoutube } from 'react-icons/fa';
@@ -7,7 +7,36 @@ import { IoMdArrowUp } from 'react-icons/io';
 import trustReview from '../src/assets/iamges/trustreview.png'
 import trustPilot from '../src/assets/iamges/trustpilot.png'
 import { FaTwitter } from 'react-icons/fa6';
+import scroll from '../src/assets/iamges/scrollUp.png'
+import scrollIcon from '../src/assets/iamges/scrollupicon.png'
+import { useState } from 'react';
 const Footer = () => {
+    const [isVisible, setIsVisible] = useState(false);
+
+    // Show button when page is scrolled down
+    const toggleVisibility = () => {
+        if (window.pageYOffset > 300) {
+            setIsVisible(true);
+        } else {
+            setIsVisible(false);
+        }
+    };
+
+    // Scroll to top smoothly
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', toggleVisibility);
+
+        return () => {
+            window.removeEventListener('scroll', toggleVisibility);
+        };
+    }, []);
     return (
         <footer className="codarility-footer">
             <div className="footer-container">
@@ -151,9 +180,15 @@ const Footer = () => {
                     {/* messenger */}
                     <div className='footer-social-sms-container'>
                         {/* Arrow up */}
-                        <div className='footer-Arrow'>
-                            <div className='Arrow-div'>
-                                <IoMdArrowUp className='arrow-icon' />
+                        <div
+                            className={`scrollUp-div ${isVisible ? '' : 'hidden'}`}
+                            onClick={scrollToTop}
+                            style={{ cursor: 'pointer' }}
+                        >
+                            <img src={scroll} alt="Scroll background" />
+                            <div className='scrollIcon-up'>
+                                <img src={scrollIcon} alt="Scroll to top" />
+                                <p className='scroll-text-up'>Scroll Up</p>
                             </div>
                         </div>
                         {/* 3 */}

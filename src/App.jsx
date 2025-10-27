@@ -24,18 +24,13 @@ function App() {
     <main>
       <Header></Header>
       <DomainBanner></DomainBanner>
-      {/* <Domain></Domain> */}
-      {/* <Hosting></Hosting> */}
-      {/* <WebApplication></WebApplication> */}
-      {/* <MobileApplication></MobileApplication> */}
-      {/* <CRM></CRM> */}
       <TopProducts></TopProducts>
-      <Sponsored></Sponsored>
+      {/* <Sponsored></Sponsored> */}
       <Featured></Featured>
       <DigitalSolution></DigitalSolution>
       <ProcessTimeline></ProcessTimeline>
-      <WorkProcess></WorkProcess>
-      <ProcessWork></ProcessWork>
+      {/* <WorkProcess></WorkProcess> */}
+      {/* <ProcessWork></ProcessWork> */}
       <FAQ></FAQ>
       <OurBlog></OurBlog>
       <MeetTeam></MeetTeam>

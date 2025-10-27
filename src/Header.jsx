@@ -20,6 +20,8 @@ import icon6 from '../src/assets/iamges/icon6.png'
 import icon7 from '../src/assets/iamges/icon7.png'
 import icon8 from '../src/assets/iamges/icon8.png'
 import icon9 from '../src/assets/iamges/icon9.png'
+import scroll from '../src/assets/iamges/scrollDown.png'
+import scrollIcon from '../src/assets/iamges/scrolldownicon.png'
 
 
 const Header = () => {
@@ -665,7 +667,15 @@ const Header = () => {
                     </div>
                 </div>
 
+                <div className='scrollDown-div'>
+                    <img src={scroll} alt="" />
+                    <div className='scrollIcon-div'>
+                        <img src={scrollIcon} alt="" />
+                        <p className='scroll-text'>Scroll Down</p>
+                    </div>
+                </div>
             </section>
+
         </header>
     );
 };
